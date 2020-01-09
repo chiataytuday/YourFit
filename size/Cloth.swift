@@ -26,12 +26,12 @@ class Cloth {
     var model:String
     var brand:String
     var price:Int
-    var clothImage:UIImage
+    var clothImage:UIImage?
     var url:String
     var recommendSize:String
     
     
-    init(model:String, brand:String, price:Int, clothImage:UIImage, url:String, recommendSize:String){
+    init(model:String, brand:String, price:Int, clothImage:UIImage?, url:String, recommendSize:String){
         self.model=model
         self.brand=brand
         self.price=price
