@@ -10,9 +10,21 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
- 
+ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return self.ClothMenu.count
+ }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
+        let rowData = self.ClothMenu[indexPath.row]
+        
+        cell.model.text = rowData.model
+        cell.brand.text = rowData.brand
+        cell.price.text = "\(rowData.price)"
+        cell.recommendSize.text = rowData.recommendSize
+        return cell
+    }
     
     @IBOutlet weak var clothTableView: UITableView!
     let ClothMenu:[Cloth] = [
@@ -25,27 +37,26 @@ class ViewController: UIViewController {
         clothTableView.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "clothDetail" {
+            let menu = sender as? Cloth
+            if menu != nil {
+                let detailController = segue.destination as? ClothDetailViewController
+                if detailController != nil {
+                    detailController!.clothDetail = menu
+
+                }
+            }
+        }
+    }
    
 }
 
-extension ViewController: UITableViewDelegate{}
-
-extension ViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ClothMenu.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
-        let rowData = self.ClothMenu[indexPath.row]
-        
-        cell.model.text = rowData.model
-        cell.brand.text = rowData.brand
-        cell.price.text = "\(rowData.price)"
-        cell.recommendSize.text = rowData.recommendSize
-        return cell
-    }
-    
-    
-    
+extension ViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           
+           performSegue(withIdentifier: "clothDetail", sender: self.ClothMenu[indexPath.row])
+       }
 }
+
