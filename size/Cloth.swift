@@ -50,7 +50,40 @@ class MyClothSize {
     }
 }
 
+
+
 // 비교 함수 생성하기
 func size(size:[ClothLengthInformation])->String{
     return "S"
+}
+
+struct Liked {
+    // Singleton
+    static var shared = Liked()
+    
+    var saves : [Cloth] = []
+    
+    func isLiked(_ item: Cloth) -> Bool {
+        for one in saves {
+            // 제품 이름으로 같다고 비교한다. TODO : equal operator 작성
+            if one.model == item.model{
+                return true
+            }
+        }
+        return false
+    }
+    
+    mutating func add(_ item: Cloth) {
+        self.saves.append(item)
+    }
+    
+    mutating func remove(_ item: Cloth) {
+        for (index, one) in saves.enumerated() {
+            // 제품 이름으로 같다고 비교한다. TODO : equal operator 작성
+            if one.model == item.model {
+                saves.remove(at: index)
+                return
+            }
+        }
+    }
 }
