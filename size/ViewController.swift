@@ -18,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
         let rowData = self.ClothMenu[indexPath.row]
-        //let rowDataa = Liked.shared.saves[indexPath.row]
         cell.model.text = rowData.model
         cell.brand.text = rowData.brand
         cell.price.text = "\(rowData.price)"
@@ -29,7 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var clothTableView: UITableView!
     let ClothMenu:[Cloth] = [
-        Cloth(model:"Heritage black mannish crop fit",brand:"FATALISM",price:68600, clothImage: #imageLiteral(resourceName: "Image") ,url:"https://store.musinsa.com/app/product/detail/947581/0", recommendSize: "S")
+        Cloth(model:"Heritage black mannish crop fit",brand:"FATALISM",price:68600, clothImage: #imageLiteral(resourceName: "Image") ,url:"https://store.musinsa.com/app/product/detail/947581/0", recommendSize: "S"),
+        Cloth(model:"Moderation indigo straight fit",brand:"FATALISM",price:83000,clothImage: #imageLiteral(resourceName: "Image"),url:"https://store.musinsa.com/app/product/detail/1159065/0", recommendSize: "M"),
+        Cloth(model:"off-white straight fit",brand:"FATALISM",price:86000,clothImage: #imageLiteral(resourceName: "Image"),url:"https://store.musinsa.com/app/product/detail/1087572/0", recommendSize: "L")
                
     ]
     override func viewDidLoad() {

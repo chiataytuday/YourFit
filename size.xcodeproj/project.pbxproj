@@ -20,6 +20,7 @@
 		0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */; };
 		0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19823C5D4C900FEDE69 /* Cloth.swift */; };
 		0CACA19B23C5D81F00FEDE69 /* ClothData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19A23C5D81F00FEDE69 /* ClothData.swift */; };
+		0CB1BF9C23D31CFF00659794 /* MyTabularClassifier.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		0CACA19223C5D49E00FEDE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CACA19823C5D4C900FEDE69 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		0CACA19A23C5D81F00FEDE69 /* ClothData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothData.swift; sourceTree = "<group>"; };
+		0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyTabularClassifier.mlproj; path = ../../../../Downloads/my_project/MyTabularClassifier.mlproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		0CACA18323C5D49A00FEDE69 /* size */ = {
 			isa = PBXGroup;
 			children = (
+				0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */,
 				0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */,
 				0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */,
 				0CACA18823C5D49A00FEDE69 /* ViewController.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
+				0CB1BF9C23D31CFF00659794 /* MyTabularClassifier.mlproj in Resources */,
 				0CACA18C23C5D49A00FEDE69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

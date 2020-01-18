@@ -54,8 +54,10 @@ class MyClothSize {
 
 // 비교 함수 생성하기
 func size(size:[ClothLengthInformation])->String{
+    
     return "S"
 }
+
 
 struct Liked {
     // Singleton
