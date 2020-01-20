@@ -44,7 +44,7 @@ class ClothDetailViewController: UIViewController {
         brandLabel?.text = clothDetail?.brand
         modelLabel?.text = clothDetail?.model
         recommendSizeLabel?.text = clothDetail?.recommendSize
-        priceLabel?.text = "\(clothDetail?.price)"
+        priceLabel?.text = clothDetail?.price
     }
 
 

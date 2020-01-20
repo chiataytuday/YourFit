@@ -147,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-pg-pjL">
-                                <rect key="frame" x="0.0" y="37" width="414" height="823"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -165,8 +165,8 @@
                                                         <constraint firstAttribute="width" constant="150" id="pkf-1m-xtv"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2TL-Cq-LBs">
-                                                    <rect key="frame" x="182" y="41" width="124" height="148"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2TL-Cq-LBs">
+                                                    <rect key="frame" x="182" y="40" width="124" height="148"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsH-tE-OSS">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
@@ -214,6 +214,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-eI-d87">
+                                <rect key="frame" x="20" y="103" width="296" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -221,6 +228,7 @@
                     <navigationItem key="navigationItem" title="shopping list" id="jFM-wX-9m9"/>
                     <connections>
                         <outlet property="clothTableView" destination="Nok-pg-pjL" id="jWt-ch-geJ"/>
+                        <outlet property="recommendLabelz" destination="z6c-eI-d87" id="RZc-OV-TVQ"/>
                         <segue destination="HRN-c6-WTb" kind="show" identifier="clothDetail" id="Rgk-Ny-Ocn"/>
                     </connections>
                 </viewController>

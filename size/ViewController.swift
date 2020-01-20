@@ -18,31 +18,80 @@ class ViewController: UIViewController, UITableViewDataSource {
     var outseamSize = String()
     var result = Int64()
     
+    func readDataFromCSV(fileName:String, fileType: String)-> String!{
+                  guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
+                      else {
+                          return nil
+                  }
+                  do {
+                      var contents = try String(contentsOfFile: filepath, encoding: .utf8)
+                      contents = cleanRows(file: contents)
+                      return contents
+                  } catch {
+                      print("File Read Error for file \(filepath)")
+                      return nil
+                  }
+              }
+
+      
+
+          func cleanRows(file:String)->String{
+              var cleanFile = file
+              cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
+              cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
+              //        cleanFile = cleanFile.replacingOccurrences(of: ";;", with: "")
+              //        cleanFile = cleanFile.replacingOccurrences(of: ";\n", with: "")
+              return cleanFile
+          }
+          
+          func csv(data: String) -> [[String]] {
+              var result: [[String]] = []
+              let rows = data.components(separatedBy: "\n")
+              for row in rows {
+                  let columns = row.components(separatedBy: ",")
+                  result.append(columns)
+              }
+              return result
+          }
+    
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return self.ClothMenu.count
+     return ClothMenu.count
     }
+    
+    func addFittering()->Void{
+           var data = readDataFromCSV(fileName: "latestdata", fileType: ".csv")
+                           data = cleanRows(file: data!)
+                           let csvRows = csv(data: data!)
+                           for i in 0...79 {
+                            if Int64(csvRows[i][0]) == self.result{
+                                   ClothMenu.append(Cloth(model: csvRows[i][5], brand: csvRows[i][6], price: csvRows[i][10], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                               }
+           }
+           
+
+       }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
         let rowData = self.ClothMenu[indexPath.row]
-        cell.model.text = rowData.model
-        cell.brand.text = rowData.brand
-        cell.price.text = "\(rowData.price)"
-        cell.recommendSize.text = rowData.recommendSize
+        cell.model.text = "상품명 : " + rowData.model
+        cell.brand.text = "브랜드 : " + rowData.brand
+        cell.price.text = "가격 : " + rowData.price
+        cell.recommendSize.text = "추천사이즈 : " + rowData.recommendSize
         cell.imageee.image = rowData.clothImage
         return cell
     }
 
+    @IBOutlet weak var recommendLabelz: UILabel!
     
+   
     
     
     @IBOutlet weak var clothTableView: UITableView!
-    let ClothMenu:[Cloth] = [
-        Cloth(model:"Heritage black mannish crop fit",brand:"FATALISM",price:68600, clothImage: #imageLiteral(resourceName: "Image") ,url:"https://store.musinsa.com/app/product/detail/947581/0", recommendSize: "S"),
-        Cloth(model:"Moderation indigo straight fit",brand:"FATALISM",price:83000,clothImage: #imageLiteral(resourceName: "Image"),url:"https://store.musinsa.com/app/product/detail/1159065/0", recommendSize: "M"),
-        Cloth(model:"off-white straight fit",brand:"FATALISM",price:86000,clothImage: #imageLiteral(resourceName: "Image"),url:"https://store.musinsa.com/app/product/detail/1087572/0", recommendSize: "L")
-               
-    ]
+    var ClothMenu:[Cloth] = []
     override func viewDidLoad() {
+        recommendLabelz.text = "\(result)로 검색한 결과 입니다."
+        addFittering()
         super.viewDidLoad()
         clothTableView.dataSource = self
         clothTableView.delegate = self
@@ -75,4 +124,3 @@ extension ViewController: UITableViewDelegate{
            performSegue(withIdentifier: "clothDetail", sender: self.ClothMenu[indexPath.row])
        }
 }
-
