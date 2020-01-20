@@ -12,6 +12,12 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
+    var waistSize = String()
+    var thighSize = String()
+    var hemSize = String()
+    var outseamSize = String()
+    var result = Int64()
+    
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      return self.ClothMenu.count
     }
@@ -25,6 +31,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.imageee.image = rowData.clothImage
         return cell
     }
+
+    
+    
     
     @IBOutlet weak var clothTableView: UITableView!
     let ClothMenu:[Cloth] = [
@@ -37,6 +46,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         clothTableView.dataSource = self
         clothTableView.delegate = self
+        
+        
+        //let sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize, size: "S")
+        
         // Do any additional setup after loading the view.
     }
     

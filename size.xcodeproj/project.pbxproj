@@ -20,7 +20,8 @@
 		0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */; };
 		0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19823C5D4C900FEDE69 /* Cloth.swift */; };
 		0CACA19B23C5D81F00FEDE69 /* ClothData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19A23C5D81F00FEDE69 /* ClothData.swift */; };
-		0CB1BF9C23D31CFF00659794 /* MyTabularClassifier.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */; };
+		0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */; };
+		0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,8 @@
 		0CACA19223C5D49E00FEDE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CACA19823C5D4C900FEDE69 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		0CACA19A23C5D81F00FEDE69 /* ClothData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothData.swift; sourceTree = "<group>"; };
-		0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyTabularClassifier.mlproj; path = ../../../../Downloads/my_project/MyTabularClassifier.mlproj; sourceTree = "<group>"; };
+		0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SizeTabularClassifier.mlmodel; sourceTree = "<group>"; };
+		0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterSizeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,7 @@
 		0CACA18323C5D49A00FEDE69 /* size */ = {
 			isa = PBXGroup;
 			children = (
-				0CB1BF9B23D31CFF00659794 /* MyTabularClassifier.mlproj */,
+				0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */,
 				0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */,
 				0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */,
 				0CACA18823C5D49A00FEDE69 /* ViewController.swift */,
@@ -98,6 +100,7 @@
 				0C9C936623CDC4A500F07D3C /* WebViewController.swift */,
 				0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */,
 				0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */,
+				0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -162,7 +165,6 @@
 			files = (
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
-				0CB1BF9C23D31CFF00659794 /* MyTabularClassifier.mlproj in Resources */,
 				0CACA18C23C5D49A00FEDE69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */,
 				0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */,
 				0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */,
 				0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */,
@@ -183,6 +186,7 @@
 				0CACA19B23C5D81F00FEDE69 /* ClothData.swift in Sources */,
 				0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */,
 				0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */,
+				0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

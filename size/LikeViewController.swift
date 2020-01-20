@@ -25,6 +25,7 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var likeTableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         likeTableView.dataSource = self
@@ -54,6 +55,6 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     override func viewWillAppear(_ animated: Bool) {
-        //self.likeTableView.reloadData()
+        self.likeTableView.reloadData()
     }
 }

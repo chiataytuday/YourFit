@@ -15,6 +15,8 @@ class ClothDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var recommendSizeLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    
     
     @IBAction func gotoShop(_ sender: UIButton) {
         if let url = URL(string: clothDetail?.url ?? "http://naver.com"){
@@ -26,11 +28,12 @@ class ClothDetailViewController: UIViewController {
         if let store = self.clothDetail{
             if Liked.shared.isLiked(store){
                 Liked.shared.remove(store)
-                //likeButton.isSelected = false
+                likeButton.tintColor = UIColor.link
+
             }
             else{
                 Liked.shared.add(store)
-                //likeButton.isSelected = true
+                 likeButton.tintColor = UIColor.red
             }
         }
         

@@ -11,13 +11,13 @@ import UIKit
 
 
 struct ClothLengthInformation{
-    var waist:Double    //허리
-    var seat:Double     //힙
-    var rise:Double     //밑위
-    var thigh:Double    //허벅지
-    var hem:Double      //밑단
-    var outseam:Double  //총장
-    var size:String     //사이트 내 사이즈
+    var waist:String    //허리
+    //var seat:String     //힙
+    //var rise:Double     //밑위
+    var thigh:String    //허벅지
+    var hem:String      //밑단
+    var outseam:String  //총장
+    var size:Int64     //사이트 내 사이즈
 }
 
 
