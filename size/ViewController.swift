@@ -62,9 +62,14 @@ class ViewController: UIViewController, UITableViewDataSource {
            var data = readDataFromCSV(fileName: "latestdata", fileType: ".csv")
                            data = cleanRows(file: data!)
                            let csvRows = csv(data: data!)
-                           for i in 0...79 {
-                            if Int64(csvRows[i][0]) == self.result{
-                                   ClothMenu.append(Cloth(model: csvRows[i][11], brand: csvRows[i][6], price: csvRows[i][10], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                           for i in 1...79 {
+                            //입력된 사이즈가 없을 때
+                            if result == 0 {
+                                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                            }
+                            //입력된 사이즈가 있을 때
+                            else if Int64(csvRows[i][0]) == self.result{
+                                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
                                }
            }
            
@@ -76,8 +81,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         let rowData = self.ClothMenu[indexPath.row]
         cell.model.text = "상품명 : " + rowData.model
         cell.brand.text = "브랜드 : " + rowData.brand
-        cell.price.text = "가격 : " + rowData.price
-        cell.recommendSize.text = "추천사이즈 : " + rowData.recommendSize
+        cell.price.text = "가격 : " + rowData.price + "원"
+        cell.discountRate.text = rowData.discountRate + "%"
+        cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
         cell.imageee.image = rowData.clothImage
         return cell
     }
@@ -90,7 +96,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var clothTableView: UITableView!
     var ClothMenu:[Cloth] = []
     override func viewDidLoad() {
-        recommendLabelz.text = "\(result)로 검색한 결과 입니다."
+        if result != 0{
+            recommendLabelz.text = "\(result)로 검색한 결과 입니다."
+        }
+        else {
+            recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
+        }
         addFittering()
         super.viewDidLoad()
         clothTableView.dataSource = self

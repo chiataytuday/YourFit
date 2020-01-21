@@ -17,9 +17,10 @@ class EnterSizeViewController: UIViewController {
     @IBOutlet weak var hemValue: UITextField!
     @IBOutlet weak var outseamValue: UITextField!
     @IBOutlet weak var probability: UILabel!
+    @IBOutlet weak var sizeCheckButton: UIButton!
+    @IBOutlet weak var sizeSearchButton: UIButton!
     
     var result = Int64()
-    
     
     @IBAction func runPredict(_ sender: Any) {
         if let waist = Double(waistValue.text ?? ""),
@@ -31,18 +32,26 @@ class EnterSizeViewController: UIViewController {
                 result = prediction.size
                 print(result)
 
-
                 if let high = prediction.sizeProbability[prediction.size] {
-                    probability.text = "\(Int(high*100))% 확률로 \(prediction.size) 에 있습니다."
+                    probability.text = "사용자의 추천 사이즈는 \(Int(high*100))% 확률로 \(prediction.size) 입니다."
                 }
             }
         }
+        
     }
 
-        
+    override func viewWillAppear(_ animated: Bool) {
+        sizeCheckButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
+        sizeCheckButton.layer.borderWidth = 2
+        sizeCheckButton.layer.cornerRadius = 2
+        sizeSearchButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
+        sizeSearchButton.layer.borderWidth = 2
+        sizeSearchButton.layer.cornerRadius = 2
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

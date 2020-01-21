@@ -16,6 +16,8 @@ class ClothDetailViewController: UIViewController {
     @IBOutlet weak var recommendSizeLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var realPriceLabel: UILabel!
+    @IBOutlet weak var discountRateLabel: UILabel!
     
     
     @IBAction func gotoShop(_ sender: UIButton) {
@@ -28,8 +30,7 @@ class ClothDetailViewController: UIViewController {
         if let store = self.clothDetail{
             if Liked.shared.isLiked(store){
                 Liked.shared.remove(store)
-                likeButton.tintColor = UIColor.link
-
+                likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
             }
             else{
                 Liked.shared.add(store)
@@ -41,10 +42,12 @@ class ClothDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageLabel?.image = clothDetail?.clothImage
-        brandLabel?.text = clothDetail?.brand
-        modelLabel?.text = clothDetail?.model
-        recommendSizeLabel?.text = clothDetail?.recommendSize
-        priceLabel?.text = clothDetail?.price
+        brandLabel.text = clothDetail?.brand
+        modelLabel.text = clothDetail?.model
+        recommendSizeLabel.text = clothDetail?.recommendSize
+        priceLabel.text = clothDetail?.price
+        discountRateLabel.text = clothDetail?.discountRate
+        realPriceLabel.text = clothDetail?.realPrice
     }
 
 

@@ -10,9 +10,10 @@ import UIKit
 
 class ClothInformationCell: UITableViewCell {
 
+    @IBOutlet weak var discountRate: UILabel!
+    @IBOutlet weak var realPrice: UILabel!
     @IBOutlet weak var brand: UILabel!
     @IBOutlet weak var model: UILabel!
     @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var recommendSize: UILabel!
     @IBOutlet var imageee: UIImageView!
 }

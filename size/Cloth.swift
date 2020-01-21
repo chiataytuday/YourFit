@@ -12,8 +12,6 @@ import UIKit
 
 struct ClothLengthInformation{
     var waist:String    //허리
-    //var seat:String     //힙
-    //var rise:Double     //밑위
     var thigh:String    //허벅지
     var hem:String      //밑단
     var outseam:String  //총장
@@ -26,15 +24,19 @@ class Cloth {
     var model:String
     var brand:String
     var price:String
+    var discountRate:String
+    var realPrice:String
     var clothImage:UIImage
     var url:String
     var recommendSize:String
     
     
-    init(model:String, brand:String, price:String, clothImage:UIImage, url:String, recommendSize:String){
+    init(model:String, brand:String, price:String, discountRate:String, realPrice:String, clothImage:UIImage, url:String, recommendSize:String){
         self.model=model
         self.brand=brand
         self.price=price
+        self.discountRate = discountRate
+        self.realPrice = realPrice
         self.clothImage=clothImage
         self.url = url
         self.recommendSize = recommendSize

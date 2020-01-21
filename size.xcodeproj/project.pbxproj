@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C2A27C723D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */; };
 		0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9C936923CDD3D800F07D3C /* WebKit.framework */; };
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */; };
+		0CA2CE5223D6CE4100F16AE0 /* NoRecommendSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2CE5123D6CE4100F16AE0 /* NoRecommendSizeViewController.swift */; };
+		0CA2CE5423D6D4B100F16AE0 /* latestdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */; };
 		0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */; };
 		0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */; };
 		0CACA18523C5D49A00FEDE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */; };
@@ -20,18 +21,17 @@
 		0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18D23C5D49E00FEDE69 /* Assets.xcassets */; };
 		0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */; };
 		0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19823C5D4C900FEDE69 /* Cloth.swift */; };
-		0CACA19B23C5D81F00FEDE69 /* ClothData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19A23C5D81F00FEDE69 /* ClothData.swift */; };
 		0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */; };
 		0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */; };
-		0CEA767323D5B716006BCFE1 /* latestdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0CEA767223D5B716006BCFE1 /* latestdata.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg"; path = "../../../../../Pictures/사진 보관함.photoslibrary/originals/E/EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg"; sourceTree = "<group>"; };
 		0C9C936623CDC4A500F07D3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0C9C936923CDD3D800F07D3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
 		0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothInformationCell.swift; sourceTree = "<group>"; };
+		0CA2CE5123D6CE4100F16AE0 /* NoRecommendSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecommendSizeViewController.swift; sourceTree = "<group>"; };
+		0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = latestdata.csv; sourceTree = "<group>"; };
 		0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailViewController.swift; sourceTree = "<group>"; };
 		0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		0CACA18123C5D49A00FEDE69 /* size.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = size.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +43,8 @@
 		0CACA19023C5D49E00FEDE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CACA19223C5D49E00FEDE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CACA19823C5D4C900FEDE69 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
-		0CACA19A23C5D81F00FEDE69 /* ClothData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothData.swift; sourceTree = "<group>"; };
 		0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SizeTabularClassifier.mlmodel; sourceTree = "<group>"; };
 		0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterSizeViewController.swift; sourceTree = "<group>"; };
-		0CEA767223D5B716006BCFE1 /* latestdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = latestdata.csv; path = ../../../../../Desktop/latestdata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,24 +87,23 @@
 		0CACA18323C5D49A00FEDE69 /* size */ = {
 			isa = PBXGroup;
 			children = (
-				0CEA767223D5B716006BCFE1 /* latestdata.csv */,
+				0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */,
 				0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */,
 				0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */,
 				0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */,
 				0CACA18823C5D49A00FEDE69 /* ViewController.swift */,
 				0CACA18A23C5D49A00FEDE69 /* Main.storyboard */,
-				0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */,
 				0CACA18D23C5D49E00FEDE69 /* Assets.xcassets */,
 				0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */,
 				0CACA19223C5D49E00FEDE69 /* Info.plist */,
 				0CACA19823C5D4C900FEDE69 /* Cloth.swift */,
-				0CACA19A23C5D81F00FEDE69 /* ClothData.swift */,
 				0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */,
 				0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */,
 				0C9C936623CDC4A500F07D3C /* WebViewController.swift */,
 				0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */,
 				0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */,
 				0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */,
+				0CA2CE5123D6CE4100F16AE0 /* NoRecommendSizeViewController.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -172,8 +169,7 @@
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
 				0CACA18C23C5D49A00FEDE69 /* Main.storyboard in Resources */,
-				0CEA767323D5B716006BCFE1 /* latestdata.csv in Resources */,
-				0C2A27C723D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg in Resources */,
+				0CA2CE5423D6D4B100F16AE0 /* latestdata.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,12 +182,12 @@
 			files = (
 				0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */,
 				0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */,
+				0CA2CE5223D6CE4100F16AE0 /* NoRecommendSizeViewController.swift in Sources */,
 				0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */,
 				0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */,
 				0CACA18923C5D49A00FEDE69 /* ViewController.swift in Sources */,
 				0CACA18523C5D49A00FEDE69 /* AppDelegate.swift in Sources */,
 				0CACA18723C5D49A00FEDE69 /* SceneDelegate.swift in Sources */,
-				0CACA19B23C5D81F00FEDE69 /* ClothData.swift in Sources */,
 				0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */,
 				0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */,
 				0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */,
