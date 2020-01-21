@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2A27C723D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */; };
 		0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9C936923CDD3D800F07D3C /* WebKit.framework */; };
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg"; path = "../../../../../Pictures/사진 보관함.photoslibrary/originals/E/EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg"; sourceTree = "<group>"; };
 		0C9C936623CDC4A500F07D3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0C9C936923CDD3D800F07D3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */,
 				0CACA18823C5D49A00FEDE69 /* ViewController.swift */,
 				0CACA18A23C5D49A00FEDE69 /* Main.storyboard */,
+				0C2A27C623D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg */,
 				0CACA18D23C5D49E00FEDE69 /* Assets.xcassets */,
 				0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */,
 				0CACA19223C5D49E00FEDE69 /* Info.plist */,
@@ -170,6 +173,7 @@
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
 				0CACA18C23C5D49A00FEDE69 /* Main.storyboard in Resources */,
 				0CEA767323D5B716006BCFE1 /* latestdata.csv in Resources */,
+				0C2A27C723D6C3DB002831D2 /* EA6C1AD4-6944-4B80-A643-D0CD0DE71F9C.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

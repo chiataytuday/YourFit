@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                            let csvRows = csv(data: data!)
                            for i in 0...79 {
                             if Int64(csvRows[i][0]) == self.result{
-                                   ClothMenu.append(Cloth(model: csvRows[i][5], brand: csvRows[i][6], price: csvRows[i][10], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                                   ClothMenu.append(Cloth(model: csvRows[i][11], brand: csvRows[i][6], price: csvRows[i][10], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
                                }
            }
            
