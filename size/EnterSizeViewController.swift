@@ -20,6 +20,7 @@ class EnterSizeViewController: UIViewController {
     @IBOutlet weak var sizeCheckButton: UIButton!
     @IBOutlet weak var sizeSearchButton: UIButton!
     
+
     var result = Int64()
     
     @IBAction func runPredict(_ sender: Any) {
@@ -37,7 +38,7 @@ class EnterSizeViewController: UIViewController {
                 }
             }
         }
-        
+        sizeSearchButton.alpha  = 1;
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,8 @@ class EnterSizeViewController: UIViewController {
         sizeSearchButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
         sizeSearchButton.layer.borderWidth = 2
         sizeSearchButton.layer.cornerRadius = 2
+        sizeSearchButton.alpha  = 0;
+
     }
     
     override func viewDidLoad() {

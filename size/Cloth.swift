@@ -29,6 +29,7 @@ class Cloth {
     var clothImage:UIImage
     var url:String
     var recommendSize:String
+    //var modelDetail:String
     
     
     init(model:String, brand:String, price:String, discountRate:String, realPrice:String, clothImage:UIImage, url:String, recommendSize:String){

@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="-1833" y="1096"/>
         </scene>
-        <!--setting-->
+        <!--View Controller-->
         <scene sceneID="SWk-D5-4ZK">
             <objects>
                 <viewController id="f0z-8b-HKw" sceneMemberID="viewController">
@@ -134,11 +134,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="f43-Bx-XF9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="setting" image="person" catalog="system" selectedImage="person.fill" id="ncH-XB-EO8"/>
+                    <navigationItem key="navigationItem" id="huJ-zR-wac"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLf-o0-I7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997" y="1979"/>
+            <point key="canvasLocation" x="-2086.9565217391305" y="1978.7946428571427"/>
         </scene>
         <!--shopping list-->
         <scene sceneID="tne-QT-ifu">
@@ -272,10 +272,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-gp-PzP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-gp-PzP">
                                                 <rect key="frame" x="0.0" y="68.5" width="50.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="model">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-5U-wux">
@@ -396,7 +402,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bHB-nN-zAt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VBj-th-fhW" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VBj-th-fhW" customClass="TabBarController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Rl-Lh-gDb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -408,7 +414,7 @@
                         <segue destination="fGF-0a-eT6" kind="relationship" relationship="viewControllers" id="X3t-YZ-445"/>
                         <segue destination="t6a-Ta-6Yf" kind="relationship" relationship="viewControllers" id="HTX-ru-FJJ"/>
                         <segue destination="BBA-HL-xth" kind="relationship" relationship="viewControllers" id="kdH-Q3-1Uo"/>
-                        <segue destination="f0z-8b-HKw" kind="relationship" relationship="viewControllers" id="UBY-SE-HaA"/>
+                        <segue destination="0rD-Ap-m27" kind="relationship" relationship="viewControllers" id="UBY-SE-HaA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ey-ad-wxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -443,6 +449,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A5S-IO-UuD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="barTintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -644,6 +652,26 @@
             </objects>
             <point key="canvasLocation" x="-2997.1014492753625" y="237.72321428571428"/>
         </scene>
+        <!--setting-->
+        <scene sceneID="nds-QE-CeG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0rD-Ap-m27" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="setting" image="person" catalog="system" selectedImage="person.fill" id="ncH-XB-EO8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iaM-x1-jxM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f0z-8b-HKw" kind="relationship" relationship="rootViewController" id="dsI-bz-blQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwY-ZU-mDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2997.1014492753625" y="1978.7946428571427"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="466" height="607"/>
@@ -658,7 +686,7 @@
         <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rgk-Ny-Ocn"/>
+        <segue reference="saF-PV-Vr8"/>
         <segue reference="b4C-yX-1bz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -106,7 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         clothTableView.dataSource = self
         clothTableView.delegate = self
-        
+
         
         //let sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize, size: "S")
         
