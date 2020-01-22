@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9A43449E-EA6C-40FD-9AC6-91AFA6B8C4EB"
+            uuid = "0A724B6D-7AA1-4816-AAC8-9A304B0B2109"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "size/LikeViewController.swift"
+            filePath = "size/ClothDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "saveData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

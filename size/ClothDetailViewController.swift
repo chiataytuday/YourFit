@@ -11,8 +11,10 @@ import RealmSwift
 
 class ClothDetailViewController: UIViewController {
     var clothDetail: Cloth? = nil
-    let db = try? Realm() //db생성
+    let realm = try? Realm() //db생성
     var clothes : Clothes?
+    var mycloth : Results<Clothes>?
+
     
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
@@ -33,23 +35,15 @@ class ClothDetailViewController: UIViewController {
     @IBAction func onClick(_ sender: Any) {
         if let store = self.clothDetail{
             if Liked.shared.isLiked(store){
-                Liked.shared.remove(store)
+                //Liked.shared.remove(store)
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
-                do{
-                    try self.db?.write{
-                        self.db?.delete(self.clothes!)
-                    }
-                } catch{
-                    print("\(error)")
-                }
-                
-                
+                deleteClothData()
             }
             else{
                 Liked.shared.add(store)
                  likeButton.tintColor = UIColor.red
                 saveData()
-                let clothess = db?.objects(Clothes.self)
+                let clothess = realm?.objects(Clothes.self)
                 print(clothess)
                 
             }
@@ -82,33 +76,52 @@ class ClothDetailViewController: UIViewController {
         
         //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
         
-        db.model = Liked.shared.saves[0].model
-        db.brand = Liked.shared.saves[0].brand
+        db.model = clothDetail!.model
+        db.brand = clothDetail!.brand
+        db.price = clothDetail!.price
+        db.discountRate = clothDetail!.discountRate
+        db.realPrice = clothDetail!.realPrice
+        db.url = clothDetail!.url
+        db.recommendSize = clothDetail!.recommendSize
+        
         return db
     }
     func addClothData(){
-        var clothes = Clothes()
-        clothes = inputDataToClothData(db: clothes)
+        clothes = Clothes()
+        clothes = inputDataToClothData(db: clothes!)
         //input Realm
-        try? db?.write {
-            db?.add(clothes)
+        if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothes!.model)'"), exsist.count == 0 {
+            try? realm?.write {
+                realm?.add((clothes)!)
+            }
         }
 //        let cloth = db?.objects(Clothes.self)
 //                    print(cloth)
     }
-    func updateClothData(){
-        try? db?.write {
-            clothes = inputDataToClothData(db: clothes!)
-        }
-    }
+//    func updateClothData(){
+//        try? realm?.write {
+//            clothes = inputDataToClothData(db: clothes!)
+//        }
+//    }
     func saveData(){
-        if clothes == nil{
-            addClothData()
-        }else{
-            updateClothData()
-        }
-        
+        addClothData()
+//        if realm?.objects(Clothes.self) == nil{
+//            addClothData()
+//        }else{
+//            updateClothData()
+//        }
         navigationController?.popViewController(animated: true)
+    }
+    func deleteClothData(){
+        if realm?.objects(Clothes.self) == nil{
+            try self.realm?.write {
+                self.realm?.delete(self.clothes)
+            }
+            try self.realm?.write{
+                self.realm?.delete(self.clothes![indexPath.row])
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -118,9 +131,8 @@ class Clothes: Object  {
     @objc dynamic var price = ""
     @objc dynamic var discountRate = ""
     @objc dynamic var realPrice = ""
-    //@objc dynamic var clothImage =
+    //@objc dynamic var clothImage = ""
     @objc dynamic var url = ""
     @objc dynamic var recommendSize = ""
 
 }
-

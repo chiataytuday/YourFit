@@ -11,7 +11,6 @@
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */; };
 		0CA2CE5423D6D4B100F16AE0 /* latestdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */; };
-		0CA2CE5623D71F5B00F16AE0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2CE5523D71F5B00F16AE0 /* TabBarController.swift */; };
 		0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */; };
 		0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */; };
 		0CACA18523C5D49A00FEDE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
 		0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothInformationCell.swift; sourceTree = "<group>"; };
 		0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = latestdata.csv; sourceTree = "<group>"; };
-		0CA2CE5523D71F5B00F16AE0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailViewController.swift; sourceTree = "<group>"; };
 		0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		0CACA18123C5D49A00FEDE69 /* size.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = size.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +108,6 @@
 				0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */,
 				0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */,
 				0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */,
-				0CA2CE5523D71F5B00F16AE0 /* TabBarController.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 			files = (
 				0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */,
 				0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */,
-				0CA2CE5623D71F5B00F16AE0 /* TabBarController.swift in Sources */,
 				0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */,
 				0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */,
 				0CACA18923C5D49A00FEDE69 /* ViewController.swift in Sources */,

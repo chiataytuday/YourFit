@@ -19,13 +19,12 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let realm = try? Realm()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clothes?.count
         if let count = clothes?.count {
                    return count
-        }else {
+        } else {
              return 1
          }
-       return Liked.shared.saves.count
+       //return Liked.shared.saves.count
     }
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeTableViewCell", for: indexPath) as! LikeTableViewCell
@@ -43,6 +42,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let db = clothes?[indexPath.row]{
             cell.brandLabel.text = db.brand
             cell.modelLabel.text = db.model
+            cell.priceLabel.text = db.price
+            cell.recommendSizeLabel.text = db.recommendSize
         }
         
            return cell
@@ -55,28 +56,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         likeTableView.dataSource = self
         likeTableView.delegate = self
-        //addPersonData()
-        
+        //print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
-    
-
-        
-//        do {
-//
-//        if db != nil{
-//            try? db?.write { //모든 쓰기 작업은 이곳에서 / 실 시 간 업 데 이 트 가 됨.
-//                var clothes = Clothes()
-//                clothes = inputDataToPersionData(db: clothes)
-//                db?.add(clothes) // dogToAdd 에 담긴 정보가 db에 저장됨
-//            }
-//            //읽기
-//            let dogs = db?.objects(Clothes.self)
-//            print(dogs)
-//
-//            }} catch {
-//            print(error)
-//        }
-//
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "likeDetail" {
@@ -85,12 +66,11 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 let detailController = segue.destination as? ClothDetailViewController
                 if detailController != nil {
                     detailController!.clothes = menu
-
                 }
             }
-            
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = clothes?[indexPath.row]
         performSegue(withIdentifier: "likeDetail", sender: data)
@@ -100,36 +80,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     override func viewWillAppear(_ animated: Bool) {
-
+        clothes = realm?.objects(Clothes.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
         self.likeTableView.reloadData()
     }
 }
-
-//class ViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        do {
-//        let db = try? Realm() //db생성
-//        if db != nil{
-//
-//            try? db?.write { //모든 쓰기 작업은 이곳에서 / 실 시 간 업 데 이 트 가 됨.
-//                let dogToAdd = Dog()
-//
-//                dogToAdd.name = "Fido"
-//                db?.add(dogToAdd) // dogToAdd 에 담긴 정보가 db에 저장됨
-//            }
-//            //읽기
-//            let dogs = db?.objects(Dog.self)
-//            print(dogs)
-//
-//            }} catch {
-//            print(error)
-//        }
-//
-//    }
-//
-//}
-////
 
