@@ -65,7 +65,6 @@ class ViewController: UIViewController, UITableViewDataSource {
                            for i in 1...79 {
                             //입력된 사이즈가 없을 때
                             if result == 0 {
-                                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
                             }
                             //입력된 사이즈가 있을 때
                             else if Int64(csvRows[i][0]) == self.result{

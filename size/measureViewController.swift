@@ -140,5 +140,15 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var endOfMeasure: UIButton!
     
+    @IBAction func endAction(_ sender: Any) {
+        performSegue(withIdentifier: "measure", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "measure"{
+            let nextVC = segue.destination as! EnterSizeViewController
+            nextVC.data = measureSize
+        }
+        
+    }
     
 }

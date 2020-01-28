@@ -9,7 +9,7 @@
 import UIKit
 
 class EnterSizeViewController: UIViewController {
-
+    
     private let model = SizeTabularClassifier()
 
     @IBOutlet weak var waistValue: UITextField!
@@ -20,7 +20,7 @@ class EnterSizeViewController: UIViewController {
     @IBOutlet weak var sizeCheckButton: UIButton!
     @IBOutlet weak var sizeSearchButton: UIButton!
     
-
+    var data:[Float] = []
     var result = Int64()
     
     @IBAction func runPredict(_ sender: Any) {
@@ -54,8 +54,11 @@ class EnterSizeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        waistValue.text = String(data[0])
+        thighValue.text = String(data[1])
+        hemValue.text = String(data[2])
+        outseamValue.text = String(data[3])
     }
     
 
@@ -72,5 +75,4 @@ class EnterSizeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }

@@ -14,12 +14,12 @@ import RealmSwift
 
 class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var clothes : Results<Clothes>?
+    var likeClothes : Results<Clothes>?
     //Realm에 저장된 데이터를 가져옵니다.
     let realm = try? Realm()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = clothes?.count {
+        if let count = likeClothes?.count {
                    return count
         } else {
              return 1
@@ -28,18 +28,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeTableViewCell", for: indexPath) as! LikeTableViewCell
-            //let rowData = Liked.shared.saves[indexPath.row]
         
-//        cell.imageLabelll.image = realm.
-//           //cell.modelLabel.text = rowData.model
-//           cell.brandLabel.text = rowData.brand
-//           cell.priceLabel.text = "\(rowData.price)"
-//           cell.recommendSizeLabel.text = rowData.recommendSize
-        
-        // 안되는거 당연한거 아는데 어떻게 해야할지를 모르겠네ㅠㅠㅠㅠㅠㅠ
-        //cell.modelLabel.text = db?.objects(Clothes.self)
-        
-        if let db = clothes?[indexPath.row]{
+        if let db = likeClothes?[indexPath.row]{
             cell.brandLabel.text = db.brand
             cell.modelLabel.text = db.model
             cell.priceLabel.text = db.price
@@ -61,18 +51,18 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "likeDetail" {
-            let menu = sender as? Clothes
-            if menu != nil {
+            if let menu = sender as? Clothes {
                 let detailController = segue.destination as? ClothDetailViewController
                 if detailController != nil {
-                    detailController!.clothes = menu
+                    detailController!.clothesDetail = menu
                 }
             }
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = clothes?[indexPath.row]
+        let data = likeClothes?[indexPath.row]
+        
         performSegue(withIdentifier: "likeDetail", sender: data)
     }
     
@@ -80,8 +70,7 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     override func viewWillAppear(_ animated: Bool) {
-        clothes = realm?.objects(Clothes.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
+        likeClothes = realm?.objects(Clothes.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
         self.likeTableView.reloadData()
     }
 }
-
