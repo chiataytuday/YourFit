@@ -65,11 +65,23 @@ class ViewController: UIViewController, UITableViewDataSource {
                            for i in 1...79 {
                             //입력된 사이즈가 없을 때
                             if result == 0 {
-                                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                                if csvRows[i][5] != csvRows[i-1][5]{
+                                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: #imageLiteral(resourceName: "Image"), modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
+                                }
+                                
                             }
                             //입력된 사이즈가 있을 때
                             else if Int64(csvRows[i][0]) == self.result{
-                                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+//                                var cl = Clothes()
+//                                cl.brand = csvRows[i][10]
+//                                cl.brand = csvRows[i][6]
+//                                cl.price = csvRows[i][7]
+//                                cl.discountRate = csvRows[i][8]
+//                                cl.realPrice = csvRows[i][9]
+//                                cl.url = "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5]
+//                                cl.recommendSize = csvRows[i][0]
+//                                ClothMenu.append(cl)
                                }
            }
            
@@ -84,7 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.price.text = "가격 : " + rowData.price + "원"
         cell.discountRate.text = rowData.discountRate + "%"
         cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
-        cell.imageee.image = rowData.clothImage
+        //cell.imageee.image = rowData.clothImage
         return cell
     }
 

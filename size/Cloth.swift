@@ -29,16 +29,17 @@ class Cloth {
     var clothImage:UIImage
     var url:String
     var recommendSize:String
-    //var modelDetail:String
+    var modelDetail:String
     
     
-    init(model:String, brand:String, price:String, discountRate:String, realPrice:String, clothImage:UIImage, url:String, recommendSize:String){
+    init(model:String, brand:String, price:String, discountRate:String, realPrice:String, clothImage:UIImage, modelDetail:String, url:String, recommendSize:String){
         self.model=model
         self.brand=brand
         self.price=price
         self.discountRate = discountRate
         self.realPrice = realPrice
         self.clothImage=clothImage
+        self.modelDetail = modelDetail
         self.url = url
         self.recommendSize = recommendSize
     }
@@ -67,6 +68,8 @@ struct Liked {
     static var shared = Liked()
     
     var saves : [Cloth] = []
+    
+    
     
     func isLiked(_ item: Cloth) -> Bool {
         for one in saves {
