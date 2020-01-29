@@ -115,6 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var recommendLabelz: UILabel!
     
     @IBAction func fromVC3ToVC1 (segue : UIStoryboardSegue) {}
+    @IBAction func fromVC4ToVC2 (segue : UIStoryboardSegue) {}
 
     
     @IBOutlet weak var clothTableView: UITableView!
