@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 
 class ViewController: UIViewController, UITableViewDataSource {
-
+    var userInfo: UserSizeInformation? = nil
     var result = Int64() {
         didSet {
             DispatchQueue.main.async {
@@ -112,6 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var recommendLabelz: UILabel!
     
     @IBAction func fromVC3ToVC1 (segue : UIStoryboardSegue) {}
+
     
     @IBOutlet weak var clothTableView: UITableView!
     var ClothMenu:[Cloth] = []
