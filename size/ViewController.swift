@@ -12,10 +12,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
-    var waistSize = String()
-    var thighSize = String()
-    var hemSize = String()
-    var outseamSize = String()
     var result = Int64()
     
     func readDataFromCSV(fileName:String, fileType: String)-> String!{

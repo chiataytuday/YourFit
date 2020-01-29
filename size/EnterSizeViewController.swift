@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EnterSizeViewController: UIViewController {
-    
+    let usersDB = try? Realm()
+    var userSize : UserSizeInformation?
+
+
     private let model = SizeTabularClassifier()
 
     @IBOutlet weak var waistValue: UITextField!
@@ -37,6 +41,7 @@ class EnterSizeViewController: UIViewController {
                     probability.text = "사용자의 추천 사이즈는 \(Int(high*100))% 확률로 \(prediction.size) 입니다."
                 }
             }
+            addUserData(waist: String(waist), thigh: String(thigh), hem: String(hem), outseam: String(outseam))
         }
         sizeSearchButton.alpha  = 1;
     }
@@ -55,24 +60,50 @@ class EnterSizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        waistValue.text = String(data[0])
-        thighValue.text = String(data[1])
-        hemValue.text = String(data[2])
-        outseamValue.text = String(data[3])
+//        waistValue.text = String(data[0])
+//        thighValue.text = String(data[1])
+//        hemValue.text = String(data[2])
+//        outseamValue.text = String(data[3])
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let DestViewController: ViewController = segue.destination as! ViewController
-            
+        let DestViewController: SaveSizeViewController = segue.destination as! SaveSizeViewController
         DestViewController.waistSize = waistValue.text!
         DestViewController.thighSize = thighValue.text!
         DestViewController.hemSize = hemValue.text!
         DestViewController.outseamSize = outseamValue.text!
-        DestViewController.result = result
+        //DestViewController.result = result
         }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    func inputSizeToUserSizeData (db : UserSizeInformation, waist: String, thigh: String, hem: String, outseam: String) -> UserSizeInformation {
+          
+          //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
+        db.waist = waist
+        db.thigh = thigh
+        db.hem = hem
+        db.outseam = outseam
+        return db
+      }
+    
+    func addUserData(waist: String, thigh: String, hem: String, outseam: String){
+        userSize = UserSizeInformation()
+        userSize = inputSizeToUserSizeData(db: userSize!, waist: waist, thigh: thigh, hem: hem, outseam: outseam)
+        //input Realm
+        try? usersDB?.write {
+            usersDB?.add((userSize)!)
+        }
+    }
+}
+
+class UserSizeInformation: Object  {
+    @objc dynamic var waist = ""
+    @objc dynamic var thigh = ""
+    @objc dynamic var hem = ""
+    @objc dynamic var outseam = ""
+    
 }
