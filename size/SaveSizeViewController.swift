@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SaveSizeViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class SaveSizeViewController: UITableViewController {
     
     var waistSize: String? = nil
     var thighSize: String? = nil

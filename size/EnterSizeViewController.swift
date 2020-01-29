@@ -24,9 +24,12 @@ class EnterSizeViewController: UIViewController {
     @IBOutlet weak var sizeCheckButton: UIButton!
     @IBOutlet weak var sizeSearchButton: UIButton!
     
-    var data:[Float] = []
+    var data:[Float] = [0,0,0,0]
     var result = Int64()
     
+    @IBAction func searchClothButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toVC1", sender: "FROM VC3 TO VC1")
+    }
     @IBAction func runPredict(_ sender: Any) {
         if let waist = Double(waistValue.text ?? ""),
             let thigh = Double(thighValue.text ?? ""),
@@ -68,12 +71,17 @@ class EnterSizeViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DestViewController: SaveSizeViewController = segue.destination as! SaveSizeViewController
-        DestViewController.waistSize = waistValue.text!
-        DestViewController.thighSize = thighValue.text!
-        DestViewController.hemSize = hemValue.text!
-        DestViewController.outseamSize = outseamValue.text!
-        //DestViewController.result = result
+//        let DestViewController: ViewController = segue.destination as! ViewController
+//        DestViewController.waistSize = waistValue.text!
+//        DestViewController.thighSize = thighValue.text!
+//        DestViewController.hemSize = hemValue.text!
+//        DestViewController.outseamSize = outseamValue.text!
+//        DestViewController.result = result
+        if segue.identifier == "toVC1" {
+            if let DestViewController = segue.destination as? ViewController {
+                DestViewController.result = result
+            }
+        }
         }
     
     override func didReceiveMemoryWarning() {

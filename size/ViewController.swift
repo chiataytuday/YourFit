@@ -12,8 +12,30 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
-    var result = Int64()
+    var result = Int64() {
+        didSet {
+            DispatchQueue.main.async {
+                if self.result != 0 {
+                    self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
+                    self.SizeChooseLabel.text = "다른 옷 사이즈로 검색하기"
+                }
+                else {
+                    self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
+                    self.SizeChooseLabel.text = "사이즈 검색하기"
+                }
+                self.addFittering()
+                self.clothTableView.reloadData()
+            }
+        }
+    }
+    @IBOutlet weak var SizeChooseLabel: UILabel!
     
+//    @IBAction func sizeChooseButton(_ sender: Any) {
+//        if let tab = self.navigationController?.tabBarController {
+//            tab.selectedIndex = 1
+//        }
+//    }
+
     func readDataFromCSV(fileName:String, fileType: String)-> String!{
                   guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
                       else {
@@ -70,18 +92,8 @@ class ViewController: UIViewController, UITableViewDataSource {
                             else if Int64(csvRows[i][0]) == self.result{
                                     ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "Image"), modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
 //                                var cl = Clothes()
-//                                cl.brand = csvRows[i][10]
-//                                cl.brand = csvRows[i][6]
-//                                cl.price = csvRows[i][7]
-//                                cl.discountRate = csvRows[i][8]
-//                                cl.realPrice = csvRows[i][9]
-//                                cl.url = "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5]
-//                                cl.recommendSize = csvRows[i][0]
-//                                ClothMenu.append(cl)
                                }
            }
-           
-
        }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,23 +110,26 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var recommendLabelz: UILabel!
     
-   
-    
+    @IBAction func fromVC3ToVC1 (segue : UIStoryboardSegue) {}
     
     @IBOutlet weak var clothTableView: UITableView!
     var ClothMenu:[Cloth] = []
+    
     override func viewDidLoad() {
-        if result != 0{
-            recommendLabelz.text = "\(result)로 검색한 결과 입니다."
-        }
-        else {
-            recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
-        }
+        
         addFittering()
         super.viewDidLoad()
         clothTableView.dataSource = self
         clothTableView.delegate = self
-
+        
+        if self.result != 0 {
+            self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
+            self.SizeChooseLabel.text = "다른 옷 사이즈로 검색하기"
+        }
+        else {
+            self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
+            self.SizeChooseLabel.text = "사이즈 검색하기"
+        }
         
         //let sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize, size: "S")
         
@@ -134,6 +149,9 @@ class ViewController: UIViewController, UITableViewDataSource {
             
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+         self.clothTableView.reloadData()
+     }
    
 }
 
