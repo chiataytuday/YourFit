@@ -55,81 +55,141 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FB7E02AD-B687-40F3-A2F3-ACD10A047AA3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "size/ClothDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "addClothData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "152276E9-DAD8-4CE8-B058-921EDB98DC30"
+            uuid = "E7527B35-4220-476B-9013-762D8D1D7D45"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "size/ClothDetailViewController.swift"
+            filePath = "size/EnterSizeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "saveData()"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0EF3DC7D-10EE-427D-ABBB-5D1EF42C828E"
-            shouldBeEnabled = "Yes"
+            uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "size/ClothDetailViewController.swift"
+            filePath = "size/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "addClothData()"
-            landmarkType = "7">
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "ViewController"
+            landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "0EF3DC7D-10EE-427D-ABBB-5D1EF42C828E - 3c2037e91e222ff4"
-                  shouldBeEnabled = "Yes"
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - f5b8ecbc6010861"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "size.ClothDetailViewController.addClothData() -&gt; ()"
+                  symbolName = "size.ViewController.ClothMenu.getter : Swift.Array&lt;size.Cloth&gt;"
                   moduleName = "size"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dgulinc/Downloads/size/size/ClothDetailViewController.swift"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "143"
-                  endingLineNumber = "143"
-                  offsetFromSymbolStart = "1378">
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "122">
                </Location>
                <Location
-                  uuid = "0EF3DC7D-10EE-427D-ABBB-5D1EF42C828E - 6dc4aa36efe3df8"
-                  shouldBeEnabled = "Yes"
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - 4ed6f6559c7ebc75"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in size.ClothDetailViewController.addClothData() -&gt; ()"
+                  symbolName = "size.ViewController.ClothMenu.setter : Swift.Array&lt;size.Cloth&gt;"
                   moduleName = "size"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dgulinc/Downloads/size/size/ClothDetailViewController.swift"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "41">
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - 1260790956b97b66"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "size.ViewController.ClothMenu.modify : Swift.Array&lt;size.Cloth&gt;"
+                  moduleName = "size"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - acf161841e9e9efe"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "size.ViewController.ClothMenu.modify : Swift.Array&lt;size.Cloth&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "size"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - de248788ea39c8af"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "size.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; size.ViewController"
+                  moduleName = "size"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "559">
+               </Location>
+               <Location
+                  uuid = "50596805-E87E-438D-A528-8C4B4E4D7F86 - b23d18258a75ecac"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "size.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;size.ViewController&gt;"
+                  moduleName = "size"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dgulinc/Documents/GitHub/size/size/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "490">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BD0CADB-4FBD-4033-956C-F085CE3B479D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "size/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "result"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

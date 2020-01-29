@@ -15,7 +15,13 @@ struct ClothLengthInformation{
     var thigh:String    //허벅지
     var hem:String      //밑단
     var outseam:String  //총장
-    var size:Int64     //사이트 내 사이즈
+    //var size:Int64     //사이트 내 사이즈
+    init(waist: String, thigh: String, hem: String, outseam: String) {
+        self.waist = waist
+        self.thigh = thigh
+        self.hem = hem
+        self.outseam = outseam
+    }
 }
 
 
