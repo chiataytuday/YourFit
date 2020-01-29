@@ -17,8 +17,7 @@ class SaveSizeViewController: UITableViewController {
     var outseamSize: String? = nil
     var sizeInformation: Results<UserSizeInformation>?
     let usersDB = try? Realm()
-
-    @IBAction func fromVC4ToVC2 (segue : UIStoryboardSegue) {}
+    var result: String? = nil
 
     //var sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize)
     
@@ -39,6 +38,7 @@ class SaveSizeViewController: UITableViewController {
             cell.UserThighSize.text = db.thigh
             cell.UserHemSize.text = db.hem
             cell.UserOutseamSize.text = db.outseam
+            result = db.recommendSize
         }
         return cell
     }
@@ -59,21 +59,16 @@ class SaveSizeViewController: UITableViewController {
     //        DestViewController.hemSize = hemValue.text!
     //        DestViewController.outseamSize = outseamValue.text!
     //        DestViewController.result = result
-            if segue.identifier == "toShopping" {
-                if let sizeInfo = sender as? UserSizeInformation {
-                    let destController = segue.destination as? ViewController
-                    if destController != nil {
-                        destController!.userInfo = sizeInfo
-                    }
+            if segue.identifier == "toVC2" {
+                if let DestViewController = segue.destination as? ViewController {
+                    DestViewController.result = Int64(result!)!
                 }
             }
-            }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = sizeInformation?[indexPath.row]
-        
-        performSegue(withIdentifier: "toShopping", sender: data)
-    }
-    
+        }
+//    @IBAction func tableview(_ sender: Any) {
+//        self.performSegue(withIdentifier: "toVC2", sender: "FROM VC4 TO VC2")
+//    }
+
     override func viewWillAppear(_ animated: Bool) {
         sizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
         self.SaveSizeTableView.reloadData()
