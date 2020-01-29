@@ -100,8 +100,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
         let rowData = self.ClothMenu[indexPath.row]
-        cell.model.text = "상품명 : " + rowData.model
-        cell.brand.text = "브랜드 : " + rowData.brand
+        cell.model.text = rowData.model
+        cell.brand.text = rowData.brand
         cell.price.text = "가격 : " + rowData.price + "원"
         cell.discountRate.text = rowData.discountRate + "%"
         cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
