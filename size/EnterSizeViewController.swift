@@ -20,7 +20,7 @@ class EnterSizeViewController: UIViewController {
     @IBOutlet weak var sizeCheckButton: UIButton!
     @IBOutlet weak var sizeSearchButton: UIButton!
     
-    var data:[Float] = []
+    var data:[Float] = [0,0,0,0]
     var result = Int64()
     
     @IBAction func runPredict(_ sender: Any) {
