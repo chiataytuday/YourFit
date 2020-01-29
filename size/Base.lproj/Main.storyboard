@@ -56,8 +56,12 @@
                         <viewLayoutGuide key="safeArea" id="yw9-M4-ryt"/>
                     </view>
                     <navigationItem key="navigationItem" title="SIZE" id="n6B-XB-cAh"/>
+                    <connections>
+                        <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC2" unwindAction="fromVC4ToVC2WithSegue:" id="qJS-AB-M8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7b6-2R-hwc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-406" y="-1448"/>
         </scene>
@@ -257,6 +261,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="SaveSizeTableView" destination="qtW-eR-JT6" id="MSs-bc-qiM"/>
+                        <segue destination="t6a-Ta-6Yf" kind="show" identifier="toShopping" id="tTJ-1X-K8D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLf-o0-I7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -915,6 +920,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t6a-Ta-6Yf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="shopping" image="bag" catalog="system" selectedImage="bag.fill" id="ry9-Ed-fBd"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="v3L-gK-7gT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eb1-2F-aGG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -969,6 +975,7 @@
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tTJ-1X-K8D"/>
         <segue reference="hU3-Ik-rWD"/>
         <segue reference="FhZ-Na-PUD"/>
         <segue reference="Rgk-Ny-Ocn"/>

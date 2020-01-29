@@ -11,9 +11,8 @@ import UIKit
 class FirstEnterSizeViewController: UIViewController {
 
     @IBAction func goClosetButton(_ sender: Any) {
-        if let tab = self.navigationController?.tabBarController {
-            tab.selectedIndex = 2
-        }
+        self.performSegue(withIdentifier: "toVC2", sender: "FROM VC4 TO VC2")
+
     }
     
     override func viewDidLoad() {

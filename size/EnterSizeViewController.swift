@@ -44,7 +44,7 @@ class EnterSizeViewController: UIViewController {
                     probability.text = "사용자의 추천 사이즈는 \(Int(high*100))% 확률로 \(prediction.size) 입니다."
                 }
             }
-            addUserData(waist: String(waist), thigh: String(thigh), hem: String(hem), outseam: String(outseam))
+            addUserData(waist: String(waist), thigh: String(thigh), hem: String(hem), outseam: String(outseam), recommendSize: String(result))
         }
         sizeSearchButton.alpha  = 1;
     }
@@ -88,19 +88,20 @@ class EnterSizeViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func inputSizeToUserSizeData (db : UserSizeInformation, waist: String, thigh: String, hem: String, outseam: String) -> UserSizeInformation {
+    func inputSizeToUserSizeData (db : UserSizeInformation, waist: String, thigh: String, hem: String, outseam: String, recommendSize: String) -> UserSizeInformation {
           
           //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
         db.waist = waist
         db.thigh = thigh
         db.hem = hem
         db.outseam = outseam
+        db.recommendSize = recommendSize
         return db
       }
     
-    func addUserData(waist: String, thigh: String, hem: String, outseam: String){
+    func addUserData(waist: String, thigh: String, hem: String, outseam: String, recommendSize: String){
         userSize = UserSizeInformation()
-        userSize = inputSizeToUserSizeData(db: userSize!, waist: waist, thigh: thigh, hem: hem, outseam: outseam)
+        userSize = inputSizeToUserSizeData(db: userSize!, waist: waist, thigh: thigh, hem: hem, outseam: outseam, recommendSize: recommendSize)
         //input Realm
         try? usersDB?.write {
             usersDB?.add((userSize)!)
@@ -113,5 +114,5 @@ class UserSizeInformation: Object  {
     @objc dynamic var thigh = ""
     @objc dynamic var hem = ""
     @objc dynamic var outseam = ""
-    
+    @objc dynamic var recommendSize = ""
 }

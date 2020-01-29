@@ -15,16 +15,17 @@ class SaveSizeViewController: UITableViewController {
     var thighSize: String? = nil
     var hemSize: String? = nil
     var outseamSize: String? = nil
-    var SizeInformation: Results<UserSizeInformation>?
+    var sizeInformation: Results<UserSizeInformation>?
     let usersDB = try? Realm()
 
+    @IBAction func fromVC4ToVC2 (segue : UIStoryboardSegue) {}
 
     //var sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize)
     
     @IBOutlet weak var SaveSizeTableView: UITableView!
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = SizeInformation?.count {
+        if let count = sizeInformation?.count {
                    return count
         } else {
              return 1
@@ -33,7 +34,7 @@ class SaveSizeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SaveSizeTableViewCell", for: indexPath) as! SaveSizeTableViewCell
-        if let db = SizeInformation?[indexPath.row]{
+        if let db = sizeInformation?[indexPath.row]{
             cell.UserWaistSize.text = db.waist
             cell.UserThighSize.text = db.thigh
             cell.UserHemSize.text = db.hem
@@ -50,8 +51,31 @@ class SaveSizeViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let DestViewController: ViewController = segue.destination as! ViewController
+    //        DestViewController.waistSize = waistValue.text!
+    //        DestViewController.thighSize = thighValue.text!
+    //        DestViewController.hemSize = hemValue.text!
+    //        DestViewController.outseamSize = outseamValue.text!
+    //        DestViewController.result = result
+            if segue.identifier == "toShopping" {
+                if let sizeInfo = sender as? UserSizeInformation {
+                    let destController = segue.destination as? ViewController
+                    if destController != nil {
+                        destController!.userInfo = sizeInfo
+                    }
+                }
+            }
+            }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = sizeInformation?[indexPath.row]
+        
+        performSegue(withIdentifier: "toShopping", sender: data)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        SizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
+        sizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
         self.SaveSizeTableView.reloadData()
     }
 }
