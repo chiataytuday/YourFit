@@ -15,9 +15,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     var result = Int64() {
         didSet {
             DispatchQueue.main.async {
+                
                 if self.result != 0 {
                     self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
                     self.SizeChooseLabel.text = "다른 옷 사이즈로 검색하기"
+
                 }
                 else {
                     self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
@@ -50,9 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                       return nil
                   }
               }
-
-      
-
+    
           func cleanRows(file:String)->String{
               var cleanFile = file
               cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
@@ -80,6 +80,7 @@ class ViewController: UIViewController, UITableViewDataSource {
            var data = readDataFromCSV(fileName: "latestdata", fileType: ".csv")
                            data = cleanRows(file: data!)
                            let csvRows = csv(data: data!)
+        ClothMenu.removeAll()
                            for i in 1...79 {
                             //입력된 사이즈가 없을 때
                             if result == 0 {
@@ -130,10 +131,6 @@ class ViewController: UIViewController, UITableViewDataSource {
             self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
             self.SizeChooseLabel.text = "사이즈 검색하기"
         }
-        
-        //let sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize, size: "S")
-        
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -146,7 +143,6 @@ class ViewController: UIViewController, UITableViewDataSource {
 
                 }
             }
-            
         }
     }
     override func viewWillAppear(_ animated: Bool) {
