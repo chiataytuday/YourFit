@@ -11,6 +11,7 @@
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */; };
 		0C9E844C23E13962009CE23B /* SaveSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844B23E13962009CE23B /* SaveSizeTableViewCell.swift */; };
+		0C9E844E23E17E14009CE23B /* FirstEnterSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844D23E17E14009CE23B /* FirstEnterSizeViewController.swift */; };
 		0C9EFE0823DFFFF400440799 /* measureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EFE0723DFFFF400440799 /* measureViewController.swift */; };
 		0C9EFE0B23E0004700440799 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9EFE0923E0004700440799 /* ARKit.framework */; };
 		0C9EFE0C23E0004700440799 /* libswiftARKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9EFE0A23E0004700440799 /* libswiftARKit.tbd */; };
@@ -38,6 +39,7 @@
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
 		0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSizeViewController.swift; sourceTree = "<group>"; };
 		0C9E844B23E13962009CE23B /* SaveSizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSizeTableViewCell.swift; sourceTree = "<group>"; };
+		0C9E844D23E17E14009CE23B /* FirstEnterSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterSizeViewController.swift; sourceTree = "<group>"; };
 		0C9EFE0723DFFFF400440799 /* measureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = measureViewController.swift; sourceTree = "<group>"; };
 		0C9EFE0923E0004700440799 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		0C9EFE0A23E0004700440799 /* libswiftARKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftARKit.tbd; path = usr/lib/swift/libswiftARKit.tbd; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 				0C9EFE0F23E0007100440799 /* Extensions.swift */,
 				0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */,
 				0C9E844B23E13962009CE23B /* SaveSizeTableViewCell.swift */,
+				0C9E844D23E17E14009CE23B /* FirstEnterSizeViewController.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				0CACA18523C5D49A00FEDE69 /* AppDelegate.swift in Sources */,
 				0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */,
 				0CACA18723C5D49A00FEDE69 /* SceneDelegate.swift in Sources */,
+				0C9E844E23E17E14009CE23B /* FirstEnterSizeViewController.swift in Sources */,
 				0C9EFE1023E0007100440799 /* Extensions.swift in Sources */,
 				0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */,
 				0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */,

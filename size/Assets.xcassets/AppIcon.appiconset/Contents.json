@@ -3,7 +3,7 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "40아이콘.png",
+      "filename" : "40아이콘.png",
       "scale" : "2x"
     },
     {
@@ -14,7 +14,7 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "58아이콘.png",
+      "filename" : "58아이콘.png",
       "scale" : "2x"
     },
     {
@@ -25,7 +25,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "80아이콘.png",
+      "filename" : "80아이콘.png",
       "scale" : "2x"
     },
     {
@@ -36,7 +36,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "120아이콘.png",
+      "filename" : "120아이콘.png",
       "scale" : "2x"
     },
     {
@@ -92,7 +92,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "아이콘.001.png",
+      "filename" : "아이콘.001.png",
       "scale" : "1x"
     }
   ],

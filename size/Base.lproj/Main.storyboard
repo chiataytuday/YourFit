@@ -10,7 +10,7 @@
         <!--EnterSize-->
         <scene sceneID="vGY-or-2l3">
             <objects>
-                <viewController id="ZFu-IF-sxN" userLabel="EnterSize" sceneMemberID="viewController">
+                <viewController id="ZFu-IF-sxN" userLabel="EnterSize" customClass="FirstEnterSizeViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XaT-mz-VcE" customClass="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                         <state key="normal" title="옷장에서 가져오기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goClosetButton:" destination="ZFu-IF-sxN" eventType="touchUpInside" id="czL-W4-djR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -56,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2014.4927536231885" y="-591.29464285714278"/>
+            <point key="canvasLocation" x="-406" y="-1448"/>
         </scene>
         <!--Like View Controller-->
         <scene sceneID="nm0-YI-CSM">
@@ -145,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYO-zU-xJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1833" y="1096"/>
+            <point key="canvasLocation" x="-1997" y="285"/>
         </scene>
         <!--Save Size View Controller-->
         <scene sceneID="SWk-D5-4ZK">
@@ -239,14 +242,26 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="f43-Bx-XF9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="huJ-zR-wac"/>
+                    <navigationItem key="navigationItem" id="huJ-zR-wac">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" style="plain" id="FUi-NH-g68">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hgg-ao-7SY">
+                                <rect key="frame" x="322" y="11" width="72" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="fGF-0a-eT6" kind="presentation" id="hU3-Ik-rWD"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SaveSizeTableView" destination="qtW-eR-JT6" id="MSs-bc-qiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLf-o0-I7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2086.9565217391305" y="1978.7946428571427"/>
+            <point key="canvasLocation" x="-1997" y="1252"/>
         </scene>
         <!--shopping list-->
         <scene sceneID="tne-QT-ifu">
@@ -362,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156.52173913043478" y="100.44642857142857"/>
+            <point key="canvasLocation" x="-1997" y="-591"/>
         </scene>
         <!--Cloth Detail View Controller-->
         <scene sceneID="0Fm-vY-ci6">
@@ -474,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvU-Pq-ScN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446.376811594203" y="-591.29464285714278"/>
+            <point key="canvasLocation" x="-926" y="-591"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="6Oy-Vy-eyJ">
@@ -573,7 +588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syq-jl-64Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997" y="1096"/>
+            <point key="canvasLocation" x="-2997" y="285"/>
         </scene>
         <!--Measure View Controller-->
         <scene sceneID="REF-rA-gs8">
@@ -720,7 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCL-LG-ZYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823.1884057971015" y="-1309.1517857142856"/>
+            <point key="canvasLocation" x="361" y="-2298"/>
         </scene>
         <!--사이즈 입력-->
         <scene sceneID="x17-8M-SET">
@@ -864,7 +879,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBS-Z8-tLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Cz5-Kd-g1i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-833.33333333333337" y="-591.29464285714278"/>
+            <point key="canvasLocation" x="361" y="-1448"/>
         </scene>
         <!--SIZE-->
         <scene sceneID="yxC-v4-gum">
@@ -892,7 +907,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yo-tG-LUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997" y="-591"/>
+            <point key="canvasLocation" x="-1235" y="-1448"/>
         </scene>
         <!--shopping-->
         <scene sceneID="nJK-4q-INk">
@@ -916,7 +931,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1a-db-QHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997.1014492753625" y="237.72321428571428"/>
+            <point key="canvasLocation" x="-2997" y="-591"/>
         </scene>
         <!--setting-->
         <scene sceneID="nds-QE-CeG">
@@ -936,7 +951,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwY-ZU-mDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997.1014492753625" y="1978.7946428571427"/>
+            <point key="canvasLocation" x="-2997" y="1253"/>
         </scene>
     </scenes>
     <resources>
@@ -951,8 +966,10 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hU3-Ik-rWD"/>
         <segue reference="FhZ-Na-PUD"/>
         <segue reference="Rgk-Ny-Ocn"/>
     </inferredMetricsTieBreakers>
