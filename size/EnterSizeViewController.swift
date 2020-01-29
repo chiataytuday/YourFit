@@ -63,10 +63,10 @@ class EnterSizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        waistValue.text = String(data[0])
-//        thighValue.text = String(data[1])
-//        hemValue.text = String(data[2])
-//        outseamValue.text = String(data[3])
+        waistValue.text = String(data[0])
+        thighValue.text = String(data[1])
+        hemValue.text = String(data[2])
+        outseamValue.text = String(data[3])
     }
     
 
@@ -103,8 +103,14 @@ class EnterSizeViewController: UIViewController {
         userSize = UserSizeInformation()
         userSize = inputSizeToUserSizeData(db: userSize!, waist: waist, thigh: thigh, hem: hem, outseam: outseam, recommendSize: recommendSize)
         //input Realm
-        try? usersDB?.write {
-            usersDB?.add((userSize)!)
+        do{
+        try usersDB?.write {
+            if userSize != nil {
+                usersDB?.add(userSize!)
+            }
+        }
+        } catch {
+            print(error)
         }
     }
 }

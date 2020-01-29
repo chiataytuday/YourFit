@@ -18,12 +18,12 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 if self.result != 0 {
                     self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
-                    self.SizeChooseLabel.text = "다른 옷 사이즈로 검색하기"
+                    self.SizeChooseLabel.text = "다른 옷 사이즈로 측정하기"
 
                 }
                 else {
                     self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
-                    self.SizeChooseLabel.text = "사이즈 검색하기"
+                    self.SizeChooseLabel.text = "사이즈 측정하기"
                 }
                 self.addFittering()
                 self.clothTableView.reloadData()
@@ -31,7 +31,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     @IBOutlet weak var SizeChooseLabel: UILabel!
+    @IBOutlet weak var sizeChooseButton: UIButton!
     
+    
+  
 //    @IBAction func sizeChooseButton(_ sender: Any) {
 //        if let tab = self.navigationController?.tabBarController {
 //            tab.selectedIndex = 1
@@ -147,6 +150,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
+        sizeChooseButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
+          sizeChooseButton.layer.borderWidth = 2
+          sizeChooseButton.layer.cornerRadius = 2
          self.clothTableView.reloadData()
      }
    
