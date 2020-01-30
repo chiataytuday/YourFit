@@ -58,6 +58,7 @@
                     <navigationItem key="navigationItem" title="SIZE" id="n6B-XB-cAh"/>
                     <connections>
                         <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC2" unwindAction="fromVC4ToVC2WithSegue:" id="qJS-AB-M8Z"/>
+                        <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC5" unwindAction="fromVC6ToVC5WithSegue:" id="18w-rv-Aoj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,16 +197,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlN-xu-b61">
-                                                    <rect key="frame" x="299" y="52" width="170" height="57"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="이 사이즈로 쇼핑하기" image="checkmark.square" catalog="system">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="goShoppingButton:" destination="f0z-8b-HKw" eventType="touchUpInside" id="eAC-3q-QTG"/>
-                                                    </connections>
-                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7IR-VG-0ff">
                                                     <rect key="frame" x="184" y="16" width="118" height="103"/>
                                                     <subviews>
@@ -293,6 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-pg-pjL">
+                                <rect key="frame" x="0.0" y="209" width="414" height="651"/>
                                 <rect key="frame" x="0.0" y="179" width="414" height="681"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1007,7 +999,6 @@
         <image name="Image" width="466" height="607"/>
         <image name="bag" catalog="system" width="64" height="64"/>
         <image name="bag.fill" catalog="system" width="64" height="64"/>
-        <image name="checkmark.square" catalog="system" width="64" height="56"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="house" catalog="system" width="64" height="54"/>
@@ -1017,6 +1008,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="37a-Ef-orf"/>
+        <segue reference="FhZ-Na-PUD"/>
+        <segue reference="kkB-oZ-I8X"/>
         <segue reference="CTH-lI-qLq"/>
         <segue reference="Rgk-Ny-Ocn"/>
     </inferredMetricsTieBreakers>

@@ -10,10 +10,10 @@ import UIKit
 
 class FirstEnterSizeViewController: UIViewController {
 
-//    @IBAction func goClosetButton(_ sender: Any) {
-//        self.performSegue(withIdentifier: "toVC2", sender: "FROM VC4 TO VC2")
-//
-//    }
+    @IBAction func goClosetButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toVC5", sender: "FROM VC6 TO VC5")
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
