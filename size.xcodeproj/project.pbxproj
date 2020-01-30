@@ -18,6 +18,10 @@
 		0C9EFE0E23E0005800440799 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9EFE0D23E0005800440799 /* SceneKit.framework */; };
 		0C9EFE1023E0007100440799 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EFE0F23E0007100440799 /* Extensions.swift */; };
 		0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */; };
+		0CA2461223E2E7AE00847ADE /* Closet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2461023E2E7AE00847ADE /* Closet.storyboard */; };
+		0CA2461423E2E7DD00847ADE /* EnterSize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2461323E2E7DD00847ADE /* EnterSize.storyboard */; };
+		0CA2461723E2E80C00847ADE /* LikeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2461523E2E80C00847ADE /* LikeView.storyboard */; };
+		0CA2461A23E2E83F00847ADE /* ShoppingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2461823E2E83F00847ADE /* ShoppingList.storyboard */; };
 		0CA2CE5423D6D4B100F16AE0 /* latestdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */; };
 		0CA5209F23CC3AC8003CD086 /* ClothDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */; };
 		0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */; };
@@ -46,6 +50,10 @@
 		0C9EFE0D23E0005800440799 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		0C9EFE0F23E0007100440799 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0CA2348123C710DD00E2D5E7 /* ClothInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothInformationCell.swift; sourceTree = "<group>"; };
+		0CA2461123E2E7AE00847ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Closet.storyboard; sourceTree = "<group>"; };
+		0CA2461323E2E7DD00847ADE /* EnterSize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterSize.storyboard; sourceTree = "<group>"; };
+		0CA2461623E2E80C00847ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LikeView.storyboard; sourceTree = "<group>"; };
+		0CA2461923E2E83F00847ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShoppingList.storyboard; sourceTree = "<group>"; };
 		0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = latestdata.csv; sourceTree = "<group>"; };
 		0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailViewController.swift; sourceTree = "<group>"; };
 		0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,10 @@
 		0CACA18323C5D49A00FEDE69 /* size */ = {
 			isa = PBXGroup;
 			children = (
+				0CA2461823E2E83F00847ADE /* ShoppingList.storyboard */,
+				0CA2461523E2E80C00847ADE /* LikeView.storyboard */,
+				0CA2461323E2E7DD00847ADE /* EnterSize.storyboard */,
+				0CA2461023E2E7AE00847ADE /* Closet.storyboard */,
 				0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */,
 				0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */,
 				0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */,
@@ -210,8 +222,12 @@
 			files = (
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
+				0CA2461A23E2E83F00847ADE /* ShoppingList.storyboard in Resources */,
+				0CA2461423E2E7DD00847ADE /* EnterSize.storyboard in Resources */,
 				0CACA18C23C5D49A00FEDE69 /* Main.storyboard in Resources */,
 				0CA2CE5423D6D4B100F16AE0 /* latestdata.csv in Resources */,
+				0CA2461223E2E7AE00847ADE /* Closet.storyboard in Resources */,
+				0CA2461723E2E80C00847ADE /* LikeView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +301,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0CA2461023E2E7AE00847ADE /* Closet.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA2461123E2E7AE00847ADE /* Base */,
+			);
+			name = Closet.storyboard;
+			sourceTree = "<group>";
+		};
+		0CA2461523E2E80C00847ADE /* LikeView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA2461623E2E80C00847ADE /* Base */,
+			);
+			name = LikeView.storyboard;
+			sourceTree = "<group>";
+		};
+		0CA2461823E2E83F00847ADE /* ShoppingList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA2461923E2E83F00847ADE /* Base */,
+			);
+			name = ShoppingList.storyboard;
+			sourceTree = "<group>";
+		};
 		0CACA18A23C5D49A00FEDE69 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
