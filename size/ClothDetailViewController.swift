@@ -87,6 +87,12 @@ class ClothDetailViewController: UIViewController {
             else{
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
             }
+            
+            if discountRateLabel.text == "0" {
+                discountRateLabel.text = ""
+                realPriceLabel.text = ""
+            }
+            
         }
 
 
