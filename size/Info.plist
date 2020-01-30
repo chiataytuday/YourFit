@@ -5,7 +5,7 @@
 	<key>UIStatusBarHidden</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>This application will use the camera for Augumeted Reality.</string>
+	<string>Size(이)가 사용자의 옷 사이즈 측정을 위해 카메라를 사용합니다.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
