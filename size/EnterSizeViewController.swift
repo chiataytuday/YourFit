@@ -112,6 +112,9 @@ class EnterSizeViewController: UIViewController {
         } catch {
             print(error)
         }
+        let clothesssssss = usersDB?.objects(UserSizeInformation.self)
+        print(clothesssssss)
+
     }
 }
 

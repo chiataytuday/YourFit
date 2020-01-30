@@ -10,7 +10,7 @@ import UIKit
 
 class SaveSizeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var UserClothName: UILabel!
+    //@IBOutlet weak var UserClothName: UILabel!
     @IBOutlet weak var UserWaistSize: UILabel!
     @IBOutlet weak var UserThighSize: UILabel!
     @IBOutlet weak var UserHemSize: UILabel!
