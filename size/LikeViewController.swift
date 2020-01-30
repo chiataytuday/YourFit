@@ -32,8 +32,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let db = likeClothes?[indexPath.row]{
             cell.brandLabel.text = db.brand
             cell.modelLabel.text = db.model
-            cell.priceLabel.text = db.price
-            cell.recommendSizeLabel.text = db.recommendSize
+            cell.priceLabel.text = "정상가 : " + db.price + "원"
+            cell.recommendSizeLabel.text = "추천 사이즈 : " + db.recommendSize
         }
         
            return cell
