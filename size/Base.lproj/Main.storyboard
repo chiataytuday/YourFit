@@ -94,7 +94,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" alignment="top" spacing="16" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2Z-JL-qzT">
-                                                    <rect key="frame" x="179" y="12" width="280" height="129.5"/>
+                                                    <rect key="frame" x="179" y="12" width="280" height="133.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-pi-71K">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
@@ -122,20 +122,21 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recommendSize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP0-z1-n81">
-                                                            <rect key="frame" x="0.0" y="74" width="137" height="35"/>
+                                                            <rect key="frame" x="0.0" y="76" width="122.5" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="zAb-nY-xiB"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQE-Vr-w31">
-                                                            <rect key="frame" x="0.0" y="101.5" width="280" height="28"/>
+                                                            <rect key="frame" x="0.0" y="105.5" width="270" height="28"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="WjE-3G-qa8"/>
+                                                                <constraint firstAttribute="width" constant="270" id="Zpz-MS-tWt"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -147,7 +148,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="KwZ-eR-Hh0" secondAttribute="bottom" id="H5e-Tg-w7r"/>
-                                                <constraint firstItem="f2Z-JL-qzT" firstAttribute="leading" secondItem="KwZ-eR-Hh0" secondAttribute="trailing" id="cpI-T2-yt8"/>
+                                                <constraint firstItem="f2Z-JL-qzT" firstAttribute="leading" secondItem="KwZ-eR-Hh0" secondAttribute="trailing" constant="2" id="cpI-T2-yt8"/>
                                                 <constraint firstItem="KwZ-eR-Hh0" firstAttribute="top" secondItem="4SC-jY-BEJ" secondAttribute="top" id="iFH-Ge-dHN"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -609,6 +610,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="barTintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
