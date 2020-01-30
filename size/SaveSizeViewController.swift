@@ -15,14 +15,27 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     var thighSize: String? = nil
     var hemSize: String? = nil
     var outseamSize: String? = nil
-    var sizeInformation: Results<UserSizeInformation>?
     let usersDB = try? Realm()
     var result: String? = nil
+    var sizeInformation: Results<UserSizeInformation>?
+    var count = Int() {
+        didSet{
+            DispatchQueue.main.async {
+                self.SaveSizeTableView.reloadData()
+            }
+        }
+    }
+
 
     //var sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize)
     
     @IBOutlet weak var SaveSizeTableView: UITableView!
-    
+    @IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
+
+    @IBAction func goShoppingButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toVC2", sender: "FROM VC4 TO VC2")
+
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sizeInformation!.count
      }
@@ -42,14 +55,25 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
 
         return true
     }
-
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            do{
+                print(self.sizeInformation![indexPath.row])
+                if let exsist = usersDB?.objects(UserSizeInformation.self).filter("id = '\(self.sizeInformation![indexPath.row].id)'") {
+                    try usersDB?.write {
+                        usersDB?.delete(exsist)
+                    }
+                }
+            } catch{
+                print("\(error)")
+
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
         
+
         
 //        else if editingStyle == .insert {
 //        }
@@ -71,16 +95,18 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     //        DestViewController.hemSize = hemValue.text!
     //        DestViewController.outseamSize = outseamValue.text!
     //        DestViewController.result = result
+
             if segue.identifier == "toVC2" {
                 if let DestViewController = segue.destination as? ViewController {
                     DestViewController.result = Int64(result!)!
                 }
             }
         }
-//    @IBAction func tableview(_ sender: Any) {
-//        self.performSegue(withIdentifier: "toVC2", sender: "FROM VC4 TO VC2")
-//    }
 
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "toVC2", sender: sizeInformation![indexPath.row])
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
         sizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
         self.SaveSizeTableView.reloadData()
