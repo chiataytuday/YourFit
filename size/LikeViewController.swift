@@ -33,7 +33,13 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.brandLabel.text = db.brand
             cell.modelLabel.text = db.model
             cell.priceLabel.text = "정상가 : " + db.price + "원"
-            cell.recommendSizeLabel.text = "추천 사이즈 : " + db.recommendSize
+            if db.recommendSize == "0" {
+                cell.recommendSizeLabel.text = "사이즈를 입력하시면 추천 사이즈로 추가하실 수 있습니다."
+            }
+            else {
+                cell.recommendSizeLabel.text = "추천 사이즈 : " + db.recommendSize
+            }
+            
         }
         
            return cell
