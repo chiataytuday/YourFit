@@ -25,10 +25,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     }
-
-
-    //var sizeInformation = ClothLengthInformation(waist: waistSize, thigh: thighSize, hem: hemSize, outseam: outseamSize)
-    
+    @IBOutlet weak var addSizeButton: UIButton!
     @IBOutlet weak var SaveSizeTableView: UITableView!
     @IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
 
@@ -67,16 +64,13 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        
-        
-
-        
-//        else if editingStyle == .insert {
-//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSizeButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
+        addSizeButton.layer.borderWidth = 2
+        addSizeButton.layer.cornerRadius = 15
         SaveSizeTableView.dataSource = self
         SaveSizeTableView.delegate = self
     }
@@ -101,6 +95,8 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         sizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
+
+        
         self.SaveSizeTableView.reloadData()
     }
 }

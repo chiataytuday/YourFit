@@ -15,7 +15,6 @@ class SaveSizeTableViewCell: UITableViewCell {
     @IBOutlet weak var UserThighSize: UILabel!
     @IBOutlet weak var UserHemSize: UILabel!
     @IBOutlet weak var UserOutseamSize: UILabel!
-    @IBOutlet weak var goShopping: UIButton!
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
