@@ -13,5 +13,5 @@ class LikeTableViewCell: UITableViewCell {
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var recommendSizeLabel: UILabel!
-    @IBOutlet var imageLabelll: UIImageView!
+    @IBOutlet var imageLabelll: UIImage!
 }

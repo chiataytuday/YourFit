@@ -88,14 +88,15 @@ class ViewController: UIViewController, UITableViewDataSource {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
-                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: #imageLiteral(resourceName: "2001004097"), modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
+                    let image = UIImage(named:"myimagee.png")!
+                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: image, modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
                 }
                 
             }
                 //입력된 사이즈가 있을 때
             else if Int64(csvRows[i][0]) == self.result{
-                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: #imageLiteral(resourceName: "2001991022"), modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
-                //                                var cl = Clothes()
+                let image = UIImage(named:"myimagee.png")!
+                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: image, modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
             }
         }
     }
@@ -108,7 +109,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.price.text = "가격 : " + rowData.price + "원"
         cell.discountRate.text = rowData.discountRate + "%"
         cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
-        //cell.imageee.image = rowData.clothImage
+        cell.imageee = rowData.clothImage
         return cell
     }
     

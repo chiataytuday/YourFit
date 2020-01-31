@@ -15,5 +15,5 @@ class ClothInformationCell: UITableViewCell {
     @IBOutlet weak var brand: UILabel!
     @IBOutlet weak var model: UILabel!
     @IBOutlet weak var price: UILabel!
-    @IBOutlet var imageee: UIImageView!
+    @IBOutlet var imageee: UIImage!
 }
