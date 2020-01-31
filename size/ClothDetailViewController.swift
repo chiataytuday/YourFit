@@ -27,7 +27,6 @@ class ClothDetailViewController: UIViewController {
     @IBOutlet weak var realPriceLabel: UILabel!
     @IBOutlet weak var discountRateLabel: UILabel!
     
-    
     @IBAction func gotoShop(_ sender: UIButton) {
         if let url = URL(string: clothDetail?.url ?? "http://naver.com"){
             UIApplication.shared.open(url, options: [:])
@@ -39,7 +38,7 @@ class ClothDetailViewController: UIViewController {
             if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothDetail!.model)'"), exsist.count != 0{
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
                 deleteClothData()
-                //Liked.shared.remove(store)
+                 //Liked.shared.remove(store)
             }
             else {
                 //Liked.shared.add(store)
@@ -59,7 +58,6 @@ class ClothDetailViewController: UIViewController {
                 //Liked.shared.remove(store)
             }
             else {
-                //Liked.shared.add(store)
                 likeButton.tintColor = UIColor.red
                 saveData()
                 let clothess = realm?.objects(Clothes.self)
@@ -69,31 +67,10 @@ class ClothDetailViewController: UIViewController {
         }
 
         }
+
         
     override func viewDidLoad() {
-        if clothDetail != nil {
-            
-            if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothDetail!.model)'"), exsist.count != 0{
-                likeButton.tintColor = UIColor.red
-            }
-            else{
-                likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
-            }
-        }
-        else if clothesDetail != nil {
-            if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothesDetail!.model)'"), exsist.count != 0{
-                likeButton.tintColor = UIColor.red
-            }
-            else{
-                likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
-            }
-            
-            if discountRateLabel.text == "0" {
-                discountRateLabel.text = ""
-                realPriceLabel.text = ""
-            }
-            
-        }
+        
 
 
         super.viewDidLoad()
@@ -120,6 +97,29 @@ class ClothDetailViewController: UIViewController {
         // 옵셔널
         if let cloth = clothDetail {
             modelLabel.text = cloth.model
+            
+        }
+        if clothDetail != nil {
+            
+            if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothDetail!.model)'"), exsist.count != 0{
+                likeButton.tintColor = UIColor.red
+            }
+            else{
+                likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
+            }
+        }
+        else if clothesDetail != nil {
+            if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothesDetail!.model)'"), exsist.count != 0{
+                likeButton.tintColor = UIColor.red
+            }
+            else{
+                likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
+            }
+            
+            if discountRateLabel.text == "0" {
+                discountRateLabel.text = ""
+                realPriceLabel.text = ""
+            }
             
         }
     }
@@ -150,6 +150,7 @@ class ClothDetailViewController: UIViewController {
                 realm?.add((clothes)!)
             }
         }
+        
     }
     func updateClothData(){
         try? realm?.write {
