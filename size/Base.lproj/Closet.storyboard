@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z5r-b0-1qK">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,19 +12,18 @@
             <objects>
                 <viewController id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zc-Ih-7OR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qtW-eR-JT6">
-                                <rect key="frame" x="0.0" y="131" width="414" height="682"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qtW-eR-JT6">
+                                <rect key="frame" x="0.0" y="50" width="768" height="974"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveSizeTableViewCell" rowHeight="155" id="slS-yM-vKZ" customClass="SaveSizeTableViewCell" customModule="size">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="slS-yM-vKZ" id="IJW-QR-6pa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-U8-08p">
@@ -92,25 +91,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ6-pt-qYi">
-                                <rect key="frame" x="334" y="93" width="60" height="30"/>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qtW-eR-JT6" firstAttribute="leading" secondItem="f43-Bx-XF9" secondAttribute="leading" id="6Ah-cU-tJT"/>
+                            <constraint firstItem="f43-Bx-XF9" firstAttribute="trailing" secondItem="qtW-eR-JT6" secondAttribute="trailing" id="72m-F1-hCK"/>
+                            <constraint firstItem="f43-Bx-XF9" firstAttribute="bottom" secondItem="qtW-eR-JT6" secondAttribute="bottom" id="qD6-If-abY"/>
+                            <constraint firstItem="qtW-eR-JT6" firstAttribute="top" secondItem="f43-Bx-XF9" secondAttribute="top" id="qWg-ln-lRq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f43-Bx-XF9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="옷장" id="Ljm-mr-rsQ">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" style="plain" id="6Os-hI-0Xc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WJ6-pt-qYi">
+                                <rect key="frame" x="688" y="14" width="60" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="DNI-9G-n3T"/>
                                 </constraints>
-                                <state key="normal" title="옷 추가"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" image="plus" catalog="system"/>
                                 <connections>
                                     <segue destination="N8D-5a-F9O" kind="presentation" id="37a-Ef-orf"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="WJ6-pt-qYi" firstAttribute="top" secondItem="f43-Bx-XF9" secondAttribute="top" constant="5" id="S2p-Ai-eiT"/>
-                            <constraint firstItem="f43-Bx-XF9" firstAttribute="trailing" secondItem="WJ6-pt-qYi" secondAttribute="trailing" constant="20" id="ZwI-9x-NTV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="f43-Bx-XF9"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="옷장" id="Ljm-mr-rsQ"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SaveSizeTableView" destination="qtW-eR-JT6" id="MSs-bc-qiM"/>
                         <outlet property="addSizeButton" destination="WJ6-pt-qYi" id="HO7-x2-0hl"/>
@@ -129,7 +135,7 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="person" catalog="system" selectedImage="person.fill" id="yRK-Vb-Pbf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7aC-Au-bmw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -157,5 +163,6 @@
     <resources>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
