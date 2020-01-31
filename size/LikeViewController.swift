@@ -114,7 +114,7 @@ extension UITableView {
         messageImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         messageImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
-        titleLabel.topAnchor.constraint(equalTo: messageImageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: messageImageView.bottomAnchor, constant: 25).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
         
         messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
@@ -145,7 +145,6 @@ extension UITableView {
     }
     
     func restore() {
-        
         self.backgroundView = nil
         self.separatorStyle = .singleLine
         

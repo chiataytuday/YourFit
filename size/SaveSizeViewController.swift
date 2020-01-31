@@ -28,17 +28,18 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-
-    
-
-    
     @IBOutlet weak var addSizeButton: UIButton!
     @IBOutlet weak var SaveSizeTableView: UITableView!
     @IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        
+        if sizeInformation?.count == 0 {
+            tableView.setEmptyView(title: "아직 옷장에 옷이 없습니다.", message: "자신의 사이즈를 추가해주세요", messageImage: #imageLiteral(resourceName: "2001991022"))
+            return 0
+        }
+        else {
+            tableView.restore()
+        }
         return sizeInformation!.count
     }
     
@@ -79,9 +80,6 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         saveIndex = 0
-        addSizeButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
-        addSizeButton.layer.borderWidth = 2
-        addSizeButton.layer.cornerRadius = 15
         SaveSizeTableView.dataSource = self
         SaveSizeTableView.delegate = self
     }
