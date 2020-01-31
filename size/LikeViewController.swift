@@ -28,8 +28,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         return likeClothes!.count
     }
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeTableViewCell", for: indexPath) as! LikeTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LikeTableViewCell", for: indexPath) as! LikeTableViewCell
         
         if let db = likeClothes?[indexPath.row]{
             cell.brandLabel.text = db.brand
@@ -44,8 +44,8 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         }
         
-           return cell
-       }
+        return cell
+    }
     
     @IBOutlet weak var likeTableView: UITableView!
     

@@ -26,27 +26,27 @@ class WebViewController: UIViewController, WKUIDelegate,WKNavigationDelegate {
         let url = URL(string: "http://naver.com")
         let request = URLRequest(url: url!)
         webView.load(request)
-// Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-// Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be recreated.
         
-}
-//alert 처리
+    }
+    //alert 처리
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String,
                  initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         let alertController = UIAlertController(title: "", message: message,
-        preferredStyle: .alert)
+                                                preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
             completionHandler()
             
         }))
         self.present(alertController, animated: true, completion: nil)
         
-}
-//confirm 처리
+    }
+    //confirm 처리
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
@@ -55,7 +55,7 @@ class WebViewController: UIViewController, WKUIDelegate,WKNavigationDelegate {
             completionHandler(false) }))
         self.present(alertController, animated: true, completion: nil)
         
-} //confirm 처리2
+    } //confirm 처리2
     func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
         let alertController = UIAlertController(title: "", message: prompt, preferredStyle: .alert)
         alertController.addTextField { (textField) in
@@ -76,7 +76,7 @@ class WebViewController: UIViewController, WKUIDelegate,WKNavigationDelegate {
         }))
         alertController.addAction(UIAlertAction(title: "취소", style: .default, handler: { (action) in completionHandler(nil) }))
         self.present(alertController, animated: true, completion: nil) }
-// href="_blank" 처리
+    // href="_blank" 처리
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         if navigationAction.targetFrame == nil {

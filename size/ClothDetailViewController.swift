@@ -16,7 +16,7 @@ class ClothDetailViewController: UIViewController {
     let realm = try? Realm() //db생성
     var clothes : Clothes?
     var mycloth : Results<Clothes>?
-
+    
     
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
@@ -38,17 +38,17 @@ class ClothDetailViewController: UIViewController {
             if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothDetail!.model)'"), exsist.count != 0{
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
                 deleteClothData()
-                 //Liked.shared.remove(store)
+                //Liked.shared.remove(store)
             }
             else {
                 //Liked.shared.add(store)
-                 likeButton.tintColor = UIColor.red
+                likeButton.tintColor = UIColor.red
                 saveData()
                 let clothess = realm?.objects(Clothes.self)
                 print(clothess)
             }
         }
-        
+            
         else {
             if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothesDetail!.model)'"), exsist.count != 0{
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
@@ -62,17 +62,17 @@ class ClothDetailViewController: UIViewController {
                 saveData()
                 let clothess = realm?.objects(Clothes.self)
                 print(clothess)
-
+                
             }
         }
-
-        }
-
         
+    }
+    
+    
     override func viewDidLoad() {
         
-
-
+        
+        
         super.viewDidLoad()
         //imageLabel?.image = clothDetail?.clothImage
         if clothDetail != nil{
@@ -92,7 +92,7 @@ class ClothDetailViewController: UIViewController {
             realPriceLabel.text = clothesDetail?.realPrice
         }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         // 옵셔널
         if let cloth = clothDetail {
@@ -130,15 +130,15 @@ class ClothDetailViewController: UIViewController {
     func inputDataToClothData (db : Clothes) -> Clothes {
         
         //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
-            db.model = clothDetail!.model
-            db.brand = clothDetail!.brand
-            db.price = clothDetail!.price
-            db.discountRate = clothDetail!.discountRate
-            db.realPrice = clothDetail!.realPrice
-            db.url = clothDetail!.url
-            db.recommendSize = clothDetail!.recommendSize
-            db.modelDetail = clothDetail!.modelDetail
-  
+        db.model = clothDetail!.model
+        db.brand = clothDetail!.brand
+        db.price = clothDetail!.price
+        db.discountRate = clothDetail!.discountRate
+        db.realPrice = clothDetail!.realPrice
+        db.url = clothDetail!.url
+        db.recommendSize = clothDetail!.recommendSize
+        db.modelDetail = clothDetail!.modelDetail
+        
         return db
     }
     func addClothData(){
@@ -159,11 +159,11 @@ class ClothDetailViewController: UIViewController {
     }
     func saveData(){
         addClothData()
-//        if realm?.objects(Clothes.self) == nil{
-//            addClothData()
-//        }else{
-//            updateClothData()
-//        }
+        //        if realm?.objects(Clothes.self) == nil{
+        //            addClothData()
+        //        }else{
+        //            updateClothData()
+        //        }
         //navigationController?.popViewController(animated: true)
     }
     func deleteClothData(){
@@ -182,7 +182,7 @@ class ClothDetailViewController: UIViewController {
                     }
                 }
             }
-
+            
         } catch{
             print("\(error)")
         }

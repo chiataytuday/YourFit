@@ -28,10 +28,10 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var addSizeButton: UIButton!
     @IBOutlet weak var SaveSizeTableView: UITableView!
     @IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sizeInformation!.count
-     }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SaveSizeTableViewCell", for: indexPath) as! SaveSizeTableViewCell
@@ -45,7 +45,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-
+        
         return true
     }
     
@@ -60,7 +60,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             } catch{
                 print("\(error)")
-
+                
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -78,16 +78,16 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
     }
     
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "toVC2" {
-                if let DestViewController = segue.destination as? ViewController {
-                    if result != nil {
-                        DestViewController.result = Int64(result!)!
-                    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toVC2" {
+            if let DestViewController = segue.destination as? ViewController {
+                if result != nil {
+                    DestViewController.result = Int64(result!)!
                 }
             }
         }
-
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         result = sizeInformation![indexPath.row].recommendSize
         performSegue(withIdentifier: "toVC2", sender: self.sizeInformation![indexPath.row].recommendSize)
@@ -95,7 +95,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         sizeInformation = usersDB?.objects(UserSizeInformation.self)  //.sorted(byKeyPath: "recommendSize", ascending: true)
-
+        
         
         self.SaveSizeTableView.reloadData()
     }

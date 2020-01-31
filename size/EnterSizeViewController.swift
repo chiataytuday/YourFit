@@ -13,9 +13,9 @@ class EnterSizeViewController: UIViewController {
     let usersDB = try? Realm()
     var userSize : UserSizeInformation?
     var count = 0
-
+    
     private let model = SizeTabularClassifier()
-
+    
     @IBOutlet weak var waistValue: UITextField!
     @IBOutlet weak var thighValue: UITextField!
     @IBOutlet weak var hemValue: UITextField!
@@ -43,7 +43,7 @@ class EnterSizeViewController: UIViewController {
                 print(prediction.sizeProbability)
                 result = prediction.size
                 print(result)
-
+                
                 if let high = prediction.sizeProbability[prediction.size] {
                     probability.text = "사용자의 추천 사이즈는 \(Int(high*100))% 확률로 \(prediction.size) 입니다."
                 }
@@ -54,7 +54,7 @@ class EnterSizeViewController: UIViewController {
         sizeSearchButton.alpha  = 1;
         goClosetButtonOutlet.alpha = 1;
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         sizeCheckButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
         sizeCheckButton.layer.borderWidth = 2
@@ -78,14 +78,14 @@ class EnterSizeViewController: UIViewController {
         outseamValue.text = String(data[3])
     }
     
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let DestViewController: ViewController = segue.destination as! ViewController
-//        DestViewController.waistSize = waistValue.text!
-//        DestViewController.thighSize = thighValue.text!
-//        DestViewController.hemSize = hemValue.text!
-//        DestViewController.outseamSize = outseamValue.text!
-//        DestViewController.result = result
+        //        let DestViewController: ViewController = segue.destination as! ViewController
+        //        DestViewController.waistSize = waistValue.text!
+        //        DestViewController.thighSize = thighValue.text!
+        //        DestViewController.hemSize = hemValue.text!
+        //        DestViewController.outseamSize = outseamValue.text!
+        //        DestViewController.result = result
         if segue.identifier == "toVC1" {
             if let DestViewController = segue.destination as? ViewController {
                 DestViewController.result = result
@@ -96,33 +96,33 @@ class EnterSizeViewController: UIViewController {
                 DestViewController.count = count
             }
         }
-        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     func inputSizeToUserSizeData (db : UserSizeInformation, waist: String, thigh: String, hem: String, outseam: String, recommendSize: String) -> UserSizeInformation {
-          
-          //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
+        
+        //Liked.share.saves에 있는 데이터 다 가져와서 . . . .넣고 싶은데... ㅠㅠㅠㅠㅠㅠㅠ
         db.waist = waist
         db.thigh = thigh
         db.hem = hem
         db.outseam = outseam
         db.recommendSize = recommendSize
         return db
-      }
+    }
     
     func addUserData(waist: String, thigh: String, hem: String, outseam: String, recommendSize: String){
         userSize = UserSizeInformation()
         userSize = inputSizeToUserSizeData(db: userSize!, waist: waist, thigh: thigh, hem: hem, outseam: outseam, recommendSize: recommendSize)
         //input Realm
         do{
-        try usersDB?.write {
-            if userSize != nil {
-                usersDB?.add(userSize!)
+            try usersDB?.write {
+                if userSize != nil {
+                    usersDB?.add(userSize!)
+                }
             }
-        }
         } catch {
             print(error)
         }
@@ -137,8 +137,8 @@ class UserSizeInformation: Object  {
     @objc dynamic var outseam = ""
     @objc dynamic var recommendSize = ""
     override static func primaryKey() -> String? {
-       return "id"
-   }
+        return "id"
+    }
 }
 
 
