@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vR7-Ps-nl2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="like" id="1cT-Ir-8lf"/>
+                    <navigationItem key="navigationItem" title="좋아요" id="1cT-Ir-8lf"/>
                     <connections>
                         <outlet property="likeTableView" destination="RzY-5V-uNb" id="uAY-Rp-ROo"/>
                         <segue destination="zfR-Ht-Lvy" kind="show" identifier="likeDetail" id="saF-PV-Vr8"/>

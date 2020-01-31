@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NanumGothicLight.otf</string>
 		<string>NanumGothicBold.otf</string>
 		<string>NanumGothic.otf</string>
 		<string>Binggraell.otf</string>
