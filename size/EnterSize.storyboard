@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BinggraeⅡ.otf">
+            <string>BinggraeII</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--EnterSize-->
         <scene sceneID="vGY-or-2l3">
@@ -16,11 +21,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="es0-64-Elx">
-                                <rect key="frame" x="146" y="344" width="122" height="208"/>
+                                <rect key="frame" x="146" y="342.5" width="122" height="211"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-xY-Pvo">
-                                        <rect key="frame" x="0.0" y="0.0" width="122" height="32"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="35"/>
+                                        <fontDescription key="fontDescription" name="BinggraeII" family="BinggraeⅡ" pointSize="17"/>
                                         <state key="normal" title="사이즈 측정하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -29,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-4A-MWt">
-                                        <rect key="frame" x="0.0" y="88" width="122" height="32"/>
+                                        <rect key="frame" x="0.0" y="91" width="122" height="32"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                         <state key="normal" title="직접 입력하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-1L-tbJ">
-                                        <rect key="frame" x="0.0" y="176" width="122" height="32"/>
+                                        <rect key="frame" x="0.0" y="179" width="122" height="32"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                         <state key="normal" title="옷장에서 가져오기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
