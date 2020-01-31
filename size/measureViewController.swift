@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class measureViewController: UIViewController, ARSCNViewDelegate {
-
+    
     var progressLevel = 0
     var measureSize :[Float] = [] //
     var realtimeSize :Float = 0.0
@@ -98,15 +98,15 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
                 onesizeMeasure = startValue.distance(from: endValue)
             }
             realtimeSize = onesizeMeasure
-            }
         }
-        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         //notReadyLabel.text = ""
         if progressLevel < 4{
-        resetValues()
-        measuring = true
+            resetValues()
+            measuring = true
         }
         else {
             print("측정을종료합니다.")
@@ -117,8 +117,8 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
         //notReadyLabel.text = "눌렀다가 떼주세요"
         measuring = false
         if progressLevel != 4{
-        measureSize.append(realtimeSize * 100)
-        progressLevel += 1
+            measureSize.append(realtimeSize * 100)
+            progressLevel += 1
         }
         
         if(progressLevel == 1){
@@ -128,15 +128,15 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
             outseamLabel.text = "\(measureSize[1])"
         }
         else if(progressLevel == 3){
-                   thighLabel.text = "\(measureSize[2])"
-               }
+            thighLabel.text = "\(measureSize[2])"
+        }
         else if(progressLevel == 4){
-                   hemLabel.text = "\(measureSize[3])"
+            hemLabel.text = "\(measureSize[3])"
             endOfMeasure.isHidden = false
-               }
+        }
         
-}
-   
+    }
+    
     
     @IBOutlet weak var endOfMeasure: UIButton!
     
