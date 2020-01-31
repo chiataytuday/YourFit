@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NanumGothicBold.otf</string>
+		<string>NanumGothic.otf</string>
+		<string>Binggraell.otf</string>
 		<string>BMEULJIRO.otf</string>
 	</array>
 	<key>UIStatusBarHidden</key>
