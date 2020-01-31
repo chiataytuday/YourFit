@@ -22,7 +22,7 @@ class ClothDetailViewController: UIViewController {
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     //@IBOutlet weak var recommendSizeLabel: UILabel!
-    @IBOutlet weak var imageLabel: UIImageView!
+    @IBOutlet weak var imageLabel: UIImage!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var realPriceLabel: UILabel!
     @IBOutlet weak var discountRateLabel: UILabel!
@@ -52,6 +52,7 @@ class ClothDetailViewController: UIViewController {
         else {
             if let exsist = realm?.objects(Clothes.self).filter("model = '\(clothesDetail!.model)'"), exsist.count != 0{
                 likeButton.tintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
+                //let image = UIImage(named:"\().png")!
                 clothDetail = Cloth(model: clothesDetail!.model, brand: clothesDetail!.brand, price: clothesDetail!.price, discountRate: clothesDetail!.discountRate, realPrice: clothesDetail!.realPrice,clothImage: #imageLiteral(resourceName: "Image"), modelDetail: clothesDetail!.modelDetail, url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+clothesDetail!.modelDetail, recommendSize: clothesDetail!.recommendSize)
                 deleteClothData()
                 //navigationController?.popViewController(animated: true)
@@ -74,7 +75,6 @@ class ClothDetailViewController: UIViewController {
         
         
         super.viewDidLoad()
-        //imageLabel?.image = clothDetail?.clothImage
         if clothDetail != nil{
             brandLabel.text = clothDetail?.brand
             modelLabel.text = clothDetail?.model
@@ -82,6 +82,8 @@ class ClothDetailViewController: UIViewController {
             priceLabel.text = "가격 : " + clothDetail!.price + "원"
             discountRateLabel.text = "할인율 : " + clothDetail!.discountRate + "%"
             realPriceLabel.text = "할인가 : " + String(clothDetail!.realPrice) + "원"
+            imageLabel = clothDetail?.clothImage
+
         }
         else if clothesDetail != nil {
             brandLabel.text = clothesDetail?.brand
@@ -90,6 +92,7 @@ class ClothDetailViewController: UIViewController {
             priceLabel.text = clothesDetail?.price
             discountRateLabel.text = clothesDetail?.discountRate
             realPriceLabel.text = clothesDetail?.realPrice
+            //imageLabel = clothesDetail?.clothImage
         }
     }
     
@@ -138,6 +141,7 @@ class ClothDetailViewController: UIViewController {
         db.url = clothDetail!.url
         db.recommendSize = clothDetail!.recommendSize
         db.modelDetail = clothDetail!.modelDetail
+        //db.clothImage = clothDetail!.clothImage
         
         return db
     }
@@ -196,7 +200,7 @@ class Clothes: Object  {
     @objc dynamic var price = ""
     @objc dynamic var discountRate = ""
     @objc dynamic var realPrice = ""
-    @objc dynamic var clothImage = ""
+    //@objc dynamic var clothImage: UIImage
     @objc dynamic var url = ""
     @objc dynamic var recommendSize = ""
     

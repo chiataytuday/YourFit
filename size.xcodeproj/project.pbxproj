@@ -492,7 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5JAW5BSGYK;
+				DEVELOPMENT_TEAM = 7VD3DRZ7QS;
 				INFOPLIST_FILE = size/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,7 +502,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size123123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5JAW5BSGYK;
+				DEVELOPMENT_TEAM = 7VD3DRZ7QS;
 				INFOPLIST_FILE = size/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +525,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size123123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
