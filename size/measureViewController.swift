@@ -81,6 +81,13 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
             self.detectObjects()
         }
     }
+    let normalize: ((Float) -> Float) = { (input) in
+             return round(input * 1000) / 1000
+         }
+     //   normalize(95.121100)  // 95.121
+     //   normalize(97.996778)  // 97.997
+      
+    
     
     func detectObjects() {
         var onesizeMeasure:Float = 0.0
@@ -117,7 +124,7 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
         //notReadyLabel.text = "눌렀다가 떼주세요"
         measuring = false
         if progressLevel != 4{
-            measureSize.append(realtimeSize * 100)
+            measureSize.append(normalize((realtimeSize * 100)))
             progressLevel += 1
         }
         

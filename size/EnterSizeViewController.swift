@@ -71,6 +71,7 @@ class EnterSizeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         waistValue.text = String(data[0])
         thighValue.text = String(data[1])

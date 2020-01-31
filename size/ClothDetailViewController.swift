@@ -79,9 +79,9 @@ class ClothDetailViewController: UIViewController {
             brandLabel.text = clothDetail?.brand
             modelLabel.text = clothDetail?.model
             //recommendSizeLabel.text = clothDetail?.recommendSize
-            priceLabel.text = clothDetail?.price
-            discountRateLabel.text = clothDetail?.discountRate
-            realPriceLabel.text = clothDetail?.realPrice
+            priceLabel.text = "가격 : " + clothDetail!.price + "원"
+            discountRateLabel.text = "할인율 : " + clothDetail!.discountRate + "%"
+            realPriceLabel.text = "할인가 : " + String(clothDetail!.realPrice) + "원"
         }
         else if clothesDetail != nil {
             brandLabel.text = clothesDetail?.brand
