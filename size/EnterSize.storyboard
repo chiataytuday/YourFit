@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="BMEULJIRO.otf">
+            <string>BMEULJIRO</string>
+        </array>
         <array key="BinggraeⅡ.otf">
             <string>BinggraeII</string>
         </array>
@@ -74,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-406" y="-1448"/>
         </scene>
-        <!--Measure View Controller-->
+        <!--눌렀다가 떼면 측정이됩니다 ^0^-->
         <scene sceneID="REF-rA-gs8">
             <objects>
                 <viewController id="6mH-8T-Xit" customClass="measureViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,66 +112,66 @@
                                     <constraint firstAttribute="width" constant="110" id="3eE-dX-a3U"/>
                                     <constraint firstAttribute="height" constant="40" id="OAJ-vK-r5A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-3S-nF3">
-                                <rect key="frame" x="20" y="702" width="140.5" height="110"/>
+                                <rect key="frame" x="20" y="710" width="131" height="102"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-Mg-WwD">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="102"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WI-u1-f8e">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSt-rG-H1E">
-                                                <rect key="frame" x="0.0" y="29.5" width="47" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="27.5" width="42.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허벅지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-Or-wuC">
-                                                <rect key="frame" x="0.0" y="59" width="47" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="55" width="42.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밑단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-8U-tlY">
-                                                <rect key="frame" x="0.0" y="88.5" width="47" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="82.5" width="42.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-4a-dOr">
-                                        <rect key="frame" x="47" y="0.0" width="93.5" height="110"/>
+                                        <rect key="frame" x="42.5" y="0.0" width="88.5" height="102"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95q-Wk-pY8">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eri-tL-syp">
-                                                <rect key="frame" x="0.0" y="29.5" width="93.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="27.5" width="88.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODh-9W-CB0">
-                                                <rect key="frame" x="0.0" y="59" width="93.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="55" width="88.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlm-Tk-cJR">
-                                                <rect key="frame" x="0.0" y="88.5" width="93.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="82.5" width="88.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -182,7 +185,7 @@
                                     <constraint firstAttribute="width" constant="127" id="ZhW-48-6f2"/>
                                     <constraint firstAttribute="height" constant="48" id="tAY-SD-Fy4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                 <state key="normal" title="측정 끝">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -207,7 +210,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OgL-S2-fUG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kN9-SA-Ktk"/>
+                    <navigationItem key="navigationItem" title="눌렀다가 떼면 측정이됩니다 ^0^" id="kN9-SA-Ktk"/>
                     <connections>
                         <outlet property="aimLabel" destination="DHg-gE-oGd" id="DWl-W4-H3C"/>
                         <outlet property="endOfMeasure" destination="F0l-Dw-gJC" id="SdK-NM-nUe"/>
@@ -420,6 +423,6 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FhZ-Na-PUD"/>
+        <segue reference="CTH-lI-qLq"/>
     </inferredMetricsTieBreakers>
 </document>

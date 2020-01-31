@@ -7,8 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NanumGothicLight.otf">
-            <string>NanumGothicOTFLight</string>
+        <array key="BMEULJIRO.otf">
+            <string>BMEULJIRO</string>
+        </array>
+        <array key="BinggraeⅡ.otf">
+            <string>BinggraeII</string>
         </array>
     </customFonts>
     <scenes>
@@ -31,44 +34,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-U8-08p">
-                                                    <rect key="frame" x="15" y="2" width="14.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-U8-08p">
+                                                    <rect key="frame" x="15" y="2" width="36" height="23"/>
+                                                    <fontDescription key="fontDescription" name="BinggraeII" family="BinggraeⅡ" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="27" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-7V-NQY">
-                                                    <rect key="frame" x="141" y="0.0" width="134.5" height="145"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="37" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-7V-NQY">
+                                                    <rect key="frame" x="141" y="0.0" width="147.5" height="145"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="nki-el-EZS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="145"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="nki-el-EZS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="43.5" height="145"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="waist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-cH-nDl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="85.5"/>
-                                                                    <fontDescription key="fontDescription" name="NanumGothicOTFLight" family="NanumGothicOTF" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="82.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-NL-dcC">
-                                                                    <rect key="frame" x="0.0" y="124.5" width="41.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="125.5" width="43.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-K1-l8N">
-                                                            <rect key="frame" x="68.5" y="0.0" width="66" height="145"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-K1-l8N">
+                                                            <rect key="frame" x="80.5" y="0.0" width="67" height="145"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="thigh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-Ua-9Qo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="38.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="80.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="outseam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NF-dD-v4R">
-                                                                    <rect key="frame" x="0.0" y="59.5" width="66" height="85.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="125.5" width="67" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -142,7 +145,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="23"/>
                             <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

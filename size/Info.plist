@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NanumGothicLight.otf</string>
-		<string>NanumGothicBold.otf</string>
-		<string>NanumGothic.otf</string>
-		<string>Binggraell.otf</string>
-		<string>BMEULJIRO.otf</string>
-	</array>
-	<key>UIStatusBarHidden</key>
-	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>Size(이)가 사용자의 옷 사이즈 측정을 위해 카메라를 사용합니다.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -37,6 +25,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Size(이)가 사용자의 옷 사이즈 측정을 위해 카메라를 사용합니다.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumGothicLight.otf</string>
+		<string>NanumGothicBold.otf</string>
+		<string>NanumGothic.otf</string>
+		<string>Binggraell.otf</string>
+		<string>BMEULJIRO.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -64,6 +62,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
