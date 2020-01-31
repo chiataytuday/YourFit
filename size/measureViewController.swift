@@ -25,7 +25,6 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var hemLabel: UILabel!
     @IBOutlet weak var outseamLabel: UILabel!
     
-    
     let session = ARSession()
     let vectorZero = SCNVector3()
     let sessionConfig: ARConfiguration = ARWorldTrackingConfiguration()
@@ -34,6 +33,7 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
     var endValue = SCNVector3()
     
     override func viewDidLoad() {
+         notReadyLabel.isHidden = false
         endOfMeasure.isHidden = true
         super.viewDidLoad()
         setupScene()
@@ -82,7 +82,7 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     let normalize: ((Float) -> Float) = { (input) in
-             return round(input * 1000) / 1000
+             return round(input * 100) / 100
          }
      //   normalize(95.121100)  // 95.121
      //   normalize(97.996778)  // 97.997
@@ -116,7 +116,6 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
             measuring = true
         }
         else {
-            print("측정을종료합니다.")
         }
     }
     
