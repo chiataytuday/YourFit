@@ -33,19 +33,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="27" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-7V-NQY">
-                                                    <rect key="frame" x="141" y="0.0" width="132" height="145"/>
+                                                    <rect key="frame" x="141" y="0.0" width="133" height="145"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="nki-el-EZS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="39" height="145"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="145"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="waist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-cH-nDl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="39" height="85.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="85.5"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-NL-dcC">
-                                                                    <rect key="frame" x="0.0" y="124.5" width="39" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="124.5" width="40" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-K1-l8N">
-                                                            <rect key="frame" x="66" y="0.0" width="66" height="145"/>
+                                                            <rect key="frame" x="67" y="0.0" width="66" height="145"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="thigh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-Ua-9Qo">
                                                                     <rect key="frame" x="0.0" y="0.0" width="38.5" height="20.5"/>

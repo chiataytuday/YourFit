@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C193E7F23E42FD500F59408 /* BMEULJIRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */; };
 		0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9C936923CDD3D800F07D3C /* WebKit.framework */; };
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMEULJIRO.otf; sourceTree = "<group>"; };
 		0C9C936623CDC4A500F07D3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0C9C936923CDD3D800F07D3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C193E7D23E42F3A00F59408 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		0C9C936823CDD3D700F07D3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		0CACA18323C5D49A00FEDE69 /* size */ = {
 			isa = PBXGroup;
 			children = (
+				0C193E7D23E42F3A00F59408 /* font */,
 				0CA2461823E2E83F00847ADE /* ShoppingList.storyboard */,
 				0CA2461523E2E80C00847ADE /* LikeView.storyboard */,
 				0CA2461323E2E7DD00847ADE /* EnterSize.storyboard */,
@@ -221,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
+				0C193E7F23E42FD500F59408 /* BMEULJIRO.otf in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
 				0CA2461A23E2E83F00847ADE /* ShoppingList.storyboard in Resources */,
 				0CA2461423E2E7DD00847ADE /* EnterSize.storyboard in Resources */,
