@@ -93,7 +93,6 @@ class ViewController: UIViewController, UITableViewDataSource {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
-//                    let image = UIImage(named:"myimagee.png")!
                     ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
                 }
                 
@@ -102,6 +101,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             else if Int64(csvRows[i][0]) == self.result{
 //                let image = UIImage(named:"myimagee.png")!
                 ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: "\(csvRows[i][5])", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
             }
         }
     }

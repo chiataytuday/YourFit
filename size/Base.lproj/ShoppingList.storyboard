@@ -185,10 +185,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="S0n-94-gNU">
-                                                    <rect key="frame" x="4" y="0.0" width="406" height="607"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-gv-IoT">
                                                     <rect key="frame" x="20" y="615" width="101" height="165.5"/>
                                                     <subviews>
@@ -258,17 +254,27 @@
                                                         <action selector="gotoShop:" destination="n4c-lG-e7G" eventType="touchUpInside" id="mJG-hl-QaE"/>
                                                     </connections>
                                                 </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle-full" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-KJ-9aP">
+                                                    <rect key="frame" x="168" y="506" width="15" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="rjn-D7-eYV">
+                                                    <rect key="frame" x="204" y="506" width="15" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1708321043" translatesAutoresizingMaskIntoConstraints="NO" id="Pqb-xM-KSe">
+                                                    <rect key="frame" x="0.0" y="69" width="414" height="429"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="centerY" secondItem="dUB-SQ-Dkw" secondAttribute="centerY" id="AVT-8E-B2M"/>
-                                                <constraint firstItem="mpq-gv-IoT" firstAttribute="top" secondItem="S0n-94-gNU" secondAttribute="bottom" constant="8" id="Fnf-I5-nhe"/>
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="top" secondItem="tnq-FT-zUV" secondAttribute="bottom" constant="43.5" id="HS7-ZZ-Uhw"/>
+                                                <constraint firstItem="Pqb-xM-KSe" firstAttribute="top" secondItem="XTO-OW-DC6" secondAttribute="top" constant="20" symbolic="YES" id="MrY-qW-9Qv"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dUB-SQ-Dkw" secondAttribute="bottom" constant="32" id="OkY-Z6-R1S"/>
-                                                <constraint firstItem="S0n-94-gNU" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leading" constant="4" id="Ub0-0E-bXZ"/>
-                                                <constraint firstItem="S0n-94-gNU" firstAttribute="top" secondItem="XTO-OW-DC6" secondAttribute="top" id="WFa-GS-xLY"/>
+                                                <constraint firstItem="Pqb-xM-KSe" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leading" id="V9W-r4-Dwu"/>
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="tnq-FT-zUV" secondAttribute="leading" id="eTl-4q-L3H"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pqb-xM-KSe" secondAttribute="trailing" id="gwG-ZJ-eRJ"/>
                                                 <constraint firstItem="mpq-gv-IoT" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" id="nO3-t4-XLM"/>
-                                                <constraint firstAttribute="trailing" secondItem="S0n-94-gNU" secondAttribute="trailing" constant="4" id="pWS-AQ-ky5"/>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="trailing" secondItem="XTO-OW-DC6" secondAttribute="trailingMargin" id="zxt-p7-CNp"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -287,11 +293,13 @@
                     <connections>
                         <outlet property="brandLabel" destination="Wuj-KV-OYP" id="GN8-KC-fRx"/>
                         <outlet property="discountRateLabel" destination="V1Q-uE-2Xq" id="Aal-Xc-hCR"/>
-                        <outlet property="imageLabel" destination="S0n-94-gNU" id="JtT-M5-NWV"/>
+                        <outlet property="first" destination="5MZ-KJ-9aP" id="LVz-mN-16Z"/>
+                        <outlet property="imageLabel" destination="Pqb-xM-KSe" id="PKD-K6-hwW"/>
                         <outlet property="likeButton" destination="f7d-of-hPe" id="oWK-5Y-1OO"/>
                         <outlet property="modelLabel" destination="3Ui-gp-PzP" id="11P-u0-Wvo"/>
                         <outlet property="priceLabel" destination="NsM-5U-wux" id="BIT-I8-bnu"/>
                         <outlet property="realPriceLabel" destination="tnq-FT-zUV" id="M1b-73-6Pb"/>
+                        <outlet property="second" destination="rjn-D7-eYV" id="PZh-WH-cSR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6T-lF-OyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -337,9 +345,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="466" height="607"/>
+        <image name="1708321043" width="473" height="511"/>
         <image name="bag" catalog="system" width="64" height="64"/>
         <image name="bag.fill" catalog="system" width="64" height="64"/>
+        <image name="circle" width="12" height="12"/>
+        <image name="circle-full" width="12" height="12"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
