@@ -176,15 +176,15 @@
                         <sections>
                             <tableViewSection id="Sfc-7G-JHY">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="850" id="7LD-PA-hIc">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="850"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="900" id="7LD-PA-hIc">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="900"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7LD-PA-hIc" id="XTO-OW-DC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-gv-IoT">
-                                                    <rect key="frame" x="20" y="565" width="101" height="165.5"/>
+                                                    <rect key="frame" x="20" y="615" width="101" height="165.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-KV-OYP">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="18"/>
@@ -228,7 +228,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7d-of-hPe">
-                                                    <rect key="frame" x="369" y="778.5" width="25" height="24"/>
+                                                    <rect key="frame" x="369" y="828.5" width="25" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="Fyf-rD-qlE"/>
                                                     </constraints>
@@ -240,7 +240,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUB-SQ-Dkw">
-                                                    <rect key="frame" x="20" y="774" width="89" height="33"/>
+                                                    <rect key="frame" x="20" y="824" width="89" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="c3z-db-p3Q"/>
                                                     </constraints>
@@ -252,7 +252,6 @@
                                                         <action selector="gotoShop:" destination="n4c-lG-e7G" eventType="touchUpInside" id="mJG-hl-QaE"/>
                                                     </connections>
                                                 </button>
-<<<<<<< HEAD
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HF-Cd-JIY">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -263,33 +262,11 @@
                                                     <rect key="frame" x="188" y="537" width="39" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pageControl>
-=======
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khf-gv-Ljq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="577"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                    <viewLayoutGuide key="contentLayoutGuide" id="GK0-w5-oAE"/>
-                                                    <viewLayoutGuide key="frameLayoutGuide" id="1Qp-yL-Uvj"/>
-                                                </scrollView>
-                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="wyw-uL-0qI">
-                                                    <rect key="frame" x="195.5" y="555.5" width="23" height="37"/>
-                                                    <color key="pageIndicatorTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </pageControl>
-
->>>>>>> 6538446f398afe148ec01ed75fcc01e4e898143d
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="centerY" secondItem="dUB-SQ-Dkw" secondAttribute="centerY" id="AVT-8E-B2M"/>
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="top" secondItem="tnq-FT-zUV" secondAttribute="bottom" constant="43.5" id="HS7-ZZ-Uhw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dUB-SQ-Dkw" secondAttribute="bottom" constant="32" id="OkY-Z6-R1S"/>
-<<<<<<< HEAD
-=======
-                                                <constraint firstItem="wyw-uL-0qI" firstAttribute="centerY" secondItem="Wuj-KV-OYP" secondAttribute="centerY" id="SLN-0l-aGY"/>
-                                                <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="tnq-FT-zUV" secondAttribute="leading" id="eTl-4q-L3H"/>
-                                                <constraint firstItem="wyw-uL-0qI" firstAttribute="centerX" secondItem="XTO-OW-DC6" secondAttribute="centerX" id="ijV-8o-0re"/>
-                                                <constraint firstItem="S0n-94-gNU" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leading" constant="4" id="Ub0-0E-bXZ"/>
-                                                <constraint firstItem="S0n-94-gNU" firstAttribute="top" secondItem="XTO-OW-DC6" secondAttribute="top" id="WFa-GS-xLY"/>
->>>>>>> 6538446f398afe148ec01ed75fcc01e4e898143d
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="tnq-FT-zUV" secondAttribute="leading" id="eTl-4q-L3H"/>
                                                 <constraint firstItem="mpq-gv-IoT" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" id="nO3-t4-XLM"/>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="trailing" secondItem="XTO-OW-DC6" secondAttribute="trailingMargin" id="zxt-p7-CNp"/>
@@ -310,23 +287,12 @@
                     <connections>
                         <outlet property="brandLabel" destination="Wuj-KV-OYP" id="GN8-KC-fRx"/>
                         <outlet property="discountRateLabel" destination="V1Q-uE-2Xq" id="Aal-Xc-hCR"/>
-<<<<<<< HEAD
                         <outlet property="likeButton" destination="f7d-of-hPe" id="oWK-5Y-1OO"/>
                         <outlet property="modelLabel" destination="3Ui-gp-PzP" id="11P-u0-Wvo"/>
                         <outlet property="pageControl" destination="qfg-dL-5Ok" id="5KD-Rh-aDE"/>
                         <outlet property="priceLabel" destination="NsM-5U-wux" id="BIT-I8-bnu"/>
                         <outlet property="realPriceLabel" destination="tnq-FT-zUV" id="M1b-73-6Pb"/>
                         <outlet property="scrollView" destination="1HF-Cd-JIY" id="yiA-i8-599"/>
-=======
-
-                        <outlet property="imageLabel" destination="S0n-94-gNU" id="JtT-M5-NWV"/>
-                        <outlet property="likeButton" destination="f7d-of-hPe" id="oWK-5Y-1OO"/>
-                        <outlet property="modelLabel" destination="3Ui-gp-PzP" id="11P-u0-Wvo"/>
-                        <outlet property="pageControl" destination="wyw-uL-0qI" id="J9z-DA-JYi"/>
-                        <outlet property="priceLabel" destination="NsM-5U-wux" id="BIT-I8-bnu"/>
-                        <outlet property="realPriceLabel" destination="tnq-FT-zUV" id="M1b-73-6Pb"/>
-                        <outlet property="scrollView" destination="khf-gv-Ljq" id="cBT-Ht-b52"/>
->>>>>>> 6538446f398afe148ec01ed75fcc01e4e898143d
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6T-lF-OyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -478,11 +444,6 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
-=======
-
-        <image name="Image" width="466" height="607"/>
->>>>>>> 6538446f398afe148ec01ed75fcc01e4e898143d
         <image name="bag" catalog="system" width="64" height="64"/>
         <image name="bag.fill" catalog="system" width="64" height="64"/>
         <image name="heart" catalog="system" width="64" height="54"/>
