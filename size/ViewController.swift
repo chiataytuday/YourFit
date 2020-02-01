@@ -84,12 +84,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         data = cleanRows(file: data!)
         let csvRows = csv(data: data!)
         ClothMenu.removeAll()
-        for i in 1...254 {
+        for i in 1...343 {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
 //                    let image = UIImage(named:"myimagee.png")!
-                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: "myimagee.png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
+                    ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
                 }
                 
             }
