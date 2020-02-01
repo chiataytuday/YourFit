@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGF-0a-eT6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -18,16 +18,16 @@
         <!--EnterSize-->
         <scene sceneID="vGY-or-2l3">
             <objects>
-                <viewController storyboardIdentifier="EnterSize" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZFu-IF-sxN" userLabel="EnterSize" customClass="FirstEnterSizeViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZFu-IF-sxN" userLabel="EnterSize" customClass="FirstEnterSizeViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XaT-mz-VcE" customClass="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="es0-64-Elx">
-                                <rect key="frame" x="148" y="386.5" width="118" height="123"/>
+                                <rect key="frame" x="146" y="342.5" width="122" height="211"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-xY-Pvo">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="35"/>
                                         <fontDescription key="fontDescription" name="BinggraeII" family="BinggraeⅡ" pointSize="17"/>
                                         <state key="normal" title="사이즈 측정하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,13 +37,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-4A-MWt">
-                                        <rect key="frame" x="0.0" y="91" width="118" height="32"/>
+                                        <rect key="frame" x="0.0" y="91" width="122" height="32"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                         <state key="normal" title="직접 입력하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="vRW-jx-uEk" kind="show" id="FhZ-Na-PUD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-1L-tbJ">
+                                        <rect key="frame" x="0.0" y="179" width="122" height="32"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <state key="normal" title="옷장에서 가져오기">
+                                            <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goClosetButton:" destination="ZFu-IF-sxN" eventType="touchUpInside" id="czL-W4-djR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -59,6 +69,7 @@
                     <navigationItem key="navigationItem" title="SIZE" id="n6B-XB-cAh"/>
                     <connections>
                         <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC2" unwindAction="fromVC4ToVC2WithSegue:" id="qJS-AB-M8Z"/>
+                        <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC5" unwindAction="fromVC6ToVC5WithSegue:" id="18w-rv-Aoj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -380,12 +391,7 @@
         <!--SIZE-->
         <scene sceneID="yxC-v4-gum">
             <objects>
-<<<<<<< HEAD
                 <navigationController storyboardIdentifier="EnterSize" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGF-0a-eT6" sceneMemberID="viewController">
-=======
-
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGF-0a-eT6" sceneMemberID="viewController">
->>>>>>> c08c05058cd4eb9a18aefc42d216b941df5a4b95
                     <tabBarItem key="tabBarItem" title="SIZE" image="house" catalog="system" selectedImage="house.fill" id="UFi-x4-WLB"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="njT-le-JrK"/>
