@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="BMEULJIRO.otf">
+            <string>BMEULJIRO</string>
+        </array>
         <array key="BinggraeⅡ.otf">
             <string>BinggraeII</string>
         </array>
@@ -21,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-pg-pjL">
-                                <rect key="frame" x="0.0" y="178" width="414" height="684"/>
+                                <rect key="frame" x="0.0" y="178" width="414" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClothInformationCell" rowHeight="240" id="zO6-Sv-Ban" customClass="ClothInformationCell" customModule="size" customModuleProvider="target">
@@ -124,6 +127,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rhh-3v-CcF" firstAttribute="centerY" secondItem="f5i-vh-EXC" secondAttribute="centerY" id="19z-Rm-9YH"/>
                             <constraint firstItem="Nok-pg-pjL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="1xd-vH-Gl7"/>
@@ -150,7 +154,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
-                                    <action selector="selectInCloset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WtY-Hy-onj"/>
+                                    <segue destination="JyV-WC-APR" kind="presentation" id="ELH-fZ-zGf"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -298,10 +302,116 @@
             </objects>
             <point key="canvasLocation" x="-928" y="-548"/>
         </scene>
+        <!--Open Closet View Controller-->
+        <scene sceneID="GWz-lj-EF6">
+            <objects>
+                <viewController id="JyV-WC-APR" customClass="OpenClosetViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uue-Xf-ubA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iep-Ir-XrG">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OpenClosetViewCell" rowHeight="155" id="n0j-ih-rJp" customClass="OpenClosetViewCell" customModule="size" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n0j-ih-rJp" id="rWo-gb-dlb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khL-HK-R3s">
+                                                    <rect key="frame" x="15" y="2" width="36" height="23"/>
+                                                    <fontDescription key="fontDescription" name="BinggraeII" family="BinggraeⅡ" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="37" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VtV-Xd-qOE">
+                                                    <rect key="frame" x="141" y="0.0" width="148" height="145"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-w7-cNl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="43.5" height="145"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="waist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWc-OR-bBd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="82.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-Re-YeY">
+                                                                    <rect key="frame" x="0.0" y="125.5" width="43.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="ewc-WE-PfM">
+                                                            <rect key="frame" x="81" y="0.0" width="67" height="145"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="thigh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="won-8Z-hVO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="80.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="outseam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6Z-yx-mEF">
+                                                                    <rect key="frame" x="0.0" y="125.5" width="67" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="khL-HK-R3s" firstAttribute="top" secondItem="rWo-gb-dlb" secondAttribute="top" constant="2" id="RKb-m1-AYt"/>
+                                                <constraint firstItem="VtV-Xd-qOE" firstAttribute="centerX" secondItem="rWo-gb-dlb" secondAttribute="centerX" id="c92-zl-4jw"/>
+                                                <constraint firstItem="VtV-Xd-qOE" firstAttribute="top" secondItem="rWo-gb-dlb" secondAttribute="top" constant="5" id="joL-Us-i9a"/>
+                                                <constraint firstAttribute="bottom" secondItem="VtV-Xd-qOE" secondAttribute="bottom" constant="5" id="kXP-pC-oAU"/>
+                                                <constraint firstItem="VtV-Xd-qOE" firstAttribute="centerY" secondItem="rWo-gb-dlb" secondAttribute="centerY" id="mHQ-BZ-h2c"/>
+                                                <constraint firstItem="khL-HK-R3s" firstAttribute="leading" secondItem="rWo-gb-dlb" secondAttribute="leading" constant="15" id="tBQ-8v-Fwq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="openHem" destination="UgC-Re-YeY" id="6hA-fw-YEC"/>
+                                            <outlet property="openIndex" destination="khL-HK-R3s" id="MHe-aW-64z"/>
+                                            <outlet property="openOutseam" destination="B6Z-yx-mEF" id="VfE-Bl-O75"/>
+                                            <outlet property="openThigh" destination="won-8Z-hVO" id="eZH-Ev-6gc"/>
+                                            <outlet property="openWaist" destination="JWc-OR-bBd" id="v4R-Sg-qRG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="옷장의 사이즈를 클릭하시면 해당 사이즈로 옷을 검색합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-kB-UVs">
+                                <rect key="frame" x="8" y="20" width="399" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YhV-fP-AOo"/>
+                    </view>
+                    <connections>
+                        <outlet property="OpenClosetTableView" destination="Iep-Ir-XrG" id="ILQ-T2-hVc"/>
+                        <segue destination="SMO-BO-9cU" kind="unwind" identifier="toVC2" unwindAction="fromVC4ToVC2WithSegue:" id="dkH-cE-reb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LU-pU-oQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SMO-BO-9cU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="-649.55357142857144"/>
+        </scene>
         <!--shopping-->
         <scene sceneID="nJK-4q-INk">
             <objects>
-                <navigationController storyboardIdentifier="ShoppingList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t6a-Ta-6Yf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ShoppingList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" toolbarHidden="NO" id="t6a-Ta-6Yf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="shopping" image="bag" catalog="system" selectedImage="bag.fill" id="ry9-Ed-fBd"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="v3L-gK-7gT"/>
@@ -316,6 +426,7 @@
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

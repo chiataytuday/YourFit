@@ -32,9 +32,6 @@
                                         <state key="normal" title="사이즈 측정하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="6mH-8T-Xit" kind="show" id="q7j-TZ-TSA"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-4A-MWt">
                                         <rect key="frame" x="0.0" y="91" width="118" height="32"/>
@@ -42,9 +39,6 @@
                                         <state key="normal" title="직접 입력하기">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="vRW-jx-uEk" kind="show" id="FhZ-Na-PUD"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -64,7 +58,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7b6-2R-hwc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-406" y="-1448"/>
+            <point key="canvasLocation" x="-880" y="-2111"/>
         </scene>
         <!--눌렀다가 떼면 측정이됩니다 ^0^-->
         <scene sceneID="REF-rA-gs8">
@@ -182,10 +176,21 @@
                                     <segue destination="vRW-jx-uEk" kind="push" identifier="measure" id="CTH-lI-qLq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaE-cT-XFd">
+                                <rect key="frame" x="267" y="710" width="87" height="32"/>
+                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                <state key="normal" title="직접 입력하기">
+                                    <color key="titleColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vRW-jx-uEk" kind="show" id="6ra-lG-chd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="odj-Ec-2Vg" firstAttribute="trailing" secondItem="OgL-S2-fUG" secondAttribute="trailing" id="5lx-Jy-LXs"/>
+                            <constraint firstItem="OgL-S2-fUG" firstAttribute="bottom" secondItem="ZaE-cT-XFd" secondAttribute="bottom" constant="120" id="74l-T1-hIN"/>
                             <constraint firstItem="OgL-S2-fUG" firstAttribute="bottom" secondItem="F0l-Dw-gJC" secondAttribute="bottom" constant="50" id="BSD-AV-7Cz"/>
                             <constraint firstItem="B0B-3S-nF3" firstAttribute="leading" secondItem="OgL-S2-fUG" secondAttribute="leading" constant="20" id="CYX-S3-MTB"/>
                             <constraint firstItem="OgL-S2-fUG" firstAttribute="trailing" secondItem="F0l-Dw-gJC" secondAttribute="trailing" constant="40" id="F50-k7-3ji"/>
@@ -195,6 +200,7 @@
                             <constraint firstItem="odj-Ec-2Vg" firstAttribute="leading" secondItem="OgL-S2-fUG" secondAttribute="leading" id="fEO-Le-ncv"/>
                             <constraint firstItem="Ms7-h4-8I9" firstAttribute="top" secondItem="OgL-S2-fUG" secondAttribute="top" constant="40" id="mJg-Tx-PCV"/>
                             <constraint firstAttribute="bottom" secondItem="odj-Ec-2Vg" secondAttribute="bottom" constant="20" symbolic="YES" id="mnF-Ra-qiT"/>
+                            <constraint firstItem="ZaE-cT-XFd" firstAttribute="leading" secondItem="odj-Ec-2Vg" secondAttribute="trailing" constant="-147" id="pIL-d0-UPH"/>
                             <constraint firstItem="odj-Ec-2Vg" firstAttribute="top" secondItem="OgL-S2-fUG" secondAttribute="top" id="xS6-bJ-wla"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OgL-S2-fUG"/>
@@ -399,7 +405,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZFu-IF-sxN" kind="relationship" relationship="rootViewController" id="3fq-Wd-Fs7"/>
+                        <segue destination="6mH-8T-Xit" kind="relationship" relationship="rootViewController" id="6Rm-yN-GeL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yo-tG-LUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -412,6 +418,6 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FhZ-Na-PUD"/>
+        <segue reference="CTH-lI-qLq"/>
     </inferredMetricsTieBreakers>
 </document>
