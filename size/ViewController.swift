@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         data = cleanRows(file: data!)
         let csvRows = csv(data: data!)
         ClothMenu.removeAll()
-        for i in 1...79 {
+        for i in 1...159 {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
