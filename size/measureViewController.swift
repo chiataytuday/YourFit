@@ -46,7 +46,7 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        endOfMeasure.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
+        endOfMeasure.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
         endOfMeasure.layer.borderWidth = 2
         endOfMeasure.layer.cornerRadius = 2
     }
