@@ -18,7 +18,7 @@
         <!--옷장-->
         <scene sceneID="SWk-D5-4ZK">
             <objects>
-                <viewController id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveSizeViewController" id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zc-Ih-7OR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveSizeTableViewCell" rowHeight="155" id="slS-yM-vKZ" customClass="SaveSizeTableViewCell" customModule="size">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SaveSizeTableViewCell" rowHeight="155" id="slS-yM-vKZ" customClass="SaveSizeTableViewCell" customModule="size">
                                         <rect key="frame" x="0.0" y="28" width="414" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="slS-yM-vKZ" id="IJW-QR-6pa">
@@ -117,7 +117,7 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
-                                    <segue destination="N8D-5a-F9O" kind="presentation" id="37a-Ef-orf"/>
+                                    <segue destination="N8D-5a-F9O" kind="presentation" id="9Lq-Ic-hxJ"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -136,7 +136,7 @@
         <!--Setting-->
         <scene sceneID="RHg-KF-Zv2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z5r-b0-1qK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Closet" automaticallyAdjustsScrollViewInsets="NO" id="z5r-b0-1qK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="person" catalog="system" selectedImage="person.fill" id="yRK-Vb-Pbf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7aC-Au-bmw">
@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="-1997.1014492753625" y="1195.9821428571429"/>
         </scene>
-        <!--UINavigationController-fGF-0a-eT6-->
+        <!--EnterSize-->
         <scene sceneID="YZp-im-aj2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UINavigationController-fGF-0a-eT6" id="N8D-5a-F9O" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="EnterSize" referencedIdentifier="EnterSize" id="N8D-5a-F9O" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqv-AK-bxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-431" y="593"/>

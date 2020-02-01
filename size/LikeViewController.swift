@@ -41,7 +41,7 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             else {
                 cell.recommendSizeLabel.text = "추천 사이즈 : " + db.recommendSize
             }
-            //cell.imageLabelll = db.clothImage
+            cell.imageLabelll.image = UIImage(named: db.clothImage)
         }
         
         return cell
