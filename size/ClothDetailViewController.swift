@@ -10,16 +10,20 @@ import UIKit
 import RealmSwift
 
 
-class ClothDetailViewController: UITableViewController {
+class ClothDetailViewController: UITableViewController{
     var clothDetail: Cloth? = nil
     var clothesDetail: Clothes? = nil
     var againClothDetail: Clothes? = nil
     let realm = try? Realm() //db생성
     var clothes : Clothes?
     var mycloth : Results<Clothes>?
-    var i = Int()
-    var images: [String] = ["2001004097","2001991022"]
+    var colors:[UIColor] = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow]
+    var images = [UIImage]()
     
+    
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -38,29 +42,8 @@ class ClothDetailViewController: UITableViewController {
         }
     }
     
-   
-    
-    @objc func SwipeLeftImage(){
-          if i<images.count-1{
-              i+=1
-              imageLabel.image = UIImage(named: "2001004097")
-              first.image = UIImage(named: "circle")
-              second.image = UIImage(named: "circle-full")
-              second.isHighlighted = true
-          }else{}
-      }
-      @objc func SwipeRightImage(){
-          if i<=images.count-1 && i>0{
-              i-=1
-              imageLabel.image = UIImage(named: //clothDetail!.clothImage
-                "1803607189"
-            )
-              first.image = UIImage(named: "circle-full")
-              second.image = UIImage(named: "circle")
-              second.isHighlighted = false
-              first.isHighlighted = false
-          }else{}
-      }
+   // imageLabel.image = UIImage(named: "2001004097")
+
     
     
     
@@ -97,24 +80,33 @@ class ClothDetailViewController: UITableViewController {
         
     }
     
+   
     
     override func viewDidLoad() {
-        
-        
-        
+
         super.viewDidLoad()
-        //이미지 스와이프
         
-        let swipeLeftGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeLeftImage))
-           imageLabel.isUserInteractionEnabled = true
-           swipeLeftGesture.direction = UISwipeGestureRecognizer.Direction.left
-           imageLabel.addGestureRecognizer(swipeLeftGesture)
-           
-           let swipeRightGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeRightImage))
-           swipeRightGesture.direction = UISwipeGestureRecognizer.Direction.right
-           imageLabel.addGestureRecognizer(swipeRightGesture)
-           
+        configurePageControl()
         
+        scrollView.delegate = self
+        scrollView.isPagingEnabled = true
+        images = [UIImage(named: "2001004097")!,UIImage(named: "2001991020")!]
+        pageControl.numberOfPages = 2
+        
+        
+        for i in 0..<images.count{
+            let imageView = UIImageView()
+            let x = self.scrollView.frame.size.width * CGFloat(i)
+            imageView.frame = CGRect(x: x, y: 0, width: self.scrollView.frame.width
+                , height: self.scrollView.frame.height)
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = images[i]
+            
+            scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(i + 1)
+            scrollView.addSubview(imageView)
+        }
+        
+        print(scrollView)
         
         if clothDetail != nil{
             brandLabel.text = clothDetail?.brand
@@ -123,7 +115,7 @@ class ClothDetailViewController: UITableViewController {
             priceLabel.text = "가격 : " + clothDetail!.price + "원"
             discountRateLabel.text = "할인율 : " + clothDetail!.discountRate + "%"
             realPriceLabel.text = "할인가 : " + String(clothDetail!.realPrice) + "원"
-            imageLabel.image = UIImage(named: clothDetail!.clothImage)
+            //imageLabel.image = UIImage(named: clothDetail!.clothImage)
 
 
         }
@@ -134,7 +126,7 @@ class ClothDetailViewController: UITableViewController {
             priceLabel.text = clothesDetail?.price
             discountRateLabel.text = clothesDetail?.discountRate
             realPriceLabel.text = clothesDetail?.realPrice
-            imageLabel.image = UIImage(named: clothesDetail!.clothImage)
+            //imageLabel.image = UIImage(named: clothesDetail!.clothImage)
         }
         
         
@@ -205,9 +197,14 @@ class ClothDetailViewController: UITableViewController {
             clothes = inputDataToClothData(db: clothes!)
         }
     }
+    
     func saveData(){
         addClothData()
     }
+   
+        
+
+    
     func deleteClothData(){
         do{
             if clothDetail != nil {
@@ -228,6 +225,25 @@ class ClothDetailViewController: UITableViewController {
         } catch{
             print("\(error)")
         }
+    }
+    func changePage(sender: AnyObject) -> () {
+        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
+        scrollView.setContentOffset(CGPoint(x:x, y:0), animated: true)
+    }
+    func configurePageControl() {
+           // The total number of pages that are available is based on how many available colors we have.
+           self.pageControl.numberOfPages = colors.count
+           self.pageControl.currentPage = 0
+           self.pageControl.tintColor = UIColor.red
+           self.pageControl.pageIndicatorTintColor = UIColor.black
+           self.pageControl.currentPageIndicatorTintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
+           self.view.addSubview(pageControl)
+
+       }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
     }
 }
 

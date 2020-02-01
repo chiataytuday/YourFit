@@ -114,7 +114,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.price.text = "가격 : " + rowData.price + "원"
         cell.discountRate.text = rowData.discountRate + "%"
         cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
-        print(rowData.clothImage)
         cell.thumbnail.image = UIImage(named: rowData.clothImage)
         return cell
     }
