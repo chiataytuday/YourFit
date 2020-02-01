@@ -235,7 +235,7 @@ class ClothDetailViewController: UITableViewController{
            self.pageControl.numberOfPages = colors.count
            self.pageControl.currentPage = 0
            self.pageControl.tintColor = UIColor.red
-           self.pageControl.pageIndicatorTintColor = UIColor.black
+           self.pageControl.pageIndicatorTintColor = UIColor(red: 162/255, green: 144/255, blue: 207/255, alpha: 1)
            self.pageControl.currentPageIndicatorTintColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1)
            self.view.addSubview(pageControl)
 

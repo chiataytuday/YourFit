@@ -258,15 +258,17 @@
                                                     <viewLayoutGuide key="contentLayoutGuide" id="EAl-Ph-Wmm"/>
                                                     <viewLayoutGuide key="frameLayoutGuide" id="O8d-PK-sa0"/>
                                                 </scrollView>
-                                                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-dL-5Ok">
-                                                    <rect key="frame" x="188" y="537" width="39" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-dL-5Ok">
+                                                    <rect key="frame" x="188" y="605" width="39" height="37"/>
+                                                    <color key="tintColor" red="0.63378520609149624" green="0.56544887991495163" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </pageControl>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="qfg-dL-5Ok" firstAttribute="centerX" secondItem="XTO-OW-DC6" secondAttribute="centerX" id="25V-Md-MvW"/>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="centerY" secondItem="dUB-SQ-Dkw" secondAttribute="centerY" id="AVT-8E-B2M"/>
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="top" secondItem="tnq-FT-zUV" secondAttribute="bottom" constant="43.5" id="HS7-ZZ-Uhw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dUB-SQ-Dkw" secondAttribute="bottom" constant="32" id="OkY-Z6-R1S"/>
+                                                <constraint firstItem="qfg-dL-5Ok" firstAttribute="centerY" secondItem="Wuj-KV-OYP" secondAttribute="centerY" id="Rb7-88-Osv"/>
                                                 <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="tnq-FT-zUV" secondAttribute="leading" id="eTl-4q-L3H"/>
                                                 <constraint firstItem="mpq-gv-IoT" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" id="nO3-t4-XLM"/>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="trailing" secondItem="XTO-OW-DC6" secondAttribute="trailingMargin" id="zxt-p7-CNp"/>
@@ -384,10 +386,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="옷장의 사이즈를 클릭하시면 해당 사이즈로 옷을 검색합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-kB-UVs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="옷장의 사이즈를 클릭하시면 해당 사이즈로 옷을 검색합니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-kB-UVs">
                                 <rect key="frame" x="8" y="20" width="399" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
