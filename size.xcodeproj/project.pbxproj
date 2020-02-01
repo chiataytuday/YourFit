@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C12F47623E577E100187A31 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C12F47523E577E100187A31 /* NavigationController.swift */; };
 		0C193E7F23E42FD500F59408 /* BMEULJIRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */; };
 		0C193E8123E4361700F59408 /* BinggraeⅡ.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8023E4361700F59408 /* BinggraeⅡ.otf */; };
 		0C193E8323E436A800F59408 /* NanumGothicLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8223E436A800F59408 /* NanumGothicLight.otf */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C12F47523E577E100187A31 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMEULJIRO.otf; sourceTree = "<group>"; };
 		0C193E8023E4361700F59408 /* BinggraeⅡ.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BinggraeⅡ.otf"; sourceTree = "<group>"; };
 		0C193E8223E436A800F59408 /* NanumGothicLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicLight.otf; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */,
 				0C9E844B23E13962009CE23B /* SaveSizeTableViewCell.swift */,
 				0C9E844D23E17E14009CE23B /* FirstEnterSizeViewController.swift */,
+				0C12F47523E577E100187A31 /* NavigationController.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */,
 				0CACA18723C5D49A00FEDE69 /* SceneDelegate.swift in Sources */,
 				0C9E844E23E17E14009CE23B /* FirstEnterSizeViewController.swift in Sources */,
+				0C12F47623E577E100187A31 /* NavigationController.swift in Sources */,
 				0C9EFE1023E0007100440799 /* Extensions.swift in Sources */,
 				0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */,
 				0CA2348223C710DD00E2D5E7 /* ClothInformationCell.swift in Sources */,
@@ -502,7 +506,6 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size330123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -526,12 +529,10 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size330123;
 				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size123123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			
 			};
 			name = Release;
 		};
