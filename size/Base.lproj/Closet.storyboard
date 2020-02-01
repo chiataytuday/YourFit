@@ -18,7 +18,7 @@
         <!--옷장-->
         <scene sceneID="SWk-D5-4ZK">
             <objects>
-                <viewController id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveSizeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zc-Ih-7OR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
         <!--Setting-->
         <scene sceneID="RHg-KF-Zv2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z5r-b0-1qK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Closet" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z5r-b0-1qK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="person" catalog="system" selectedImage="person.fill" id="yRK-Vb-Pbf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7aC-Au-bmw">
