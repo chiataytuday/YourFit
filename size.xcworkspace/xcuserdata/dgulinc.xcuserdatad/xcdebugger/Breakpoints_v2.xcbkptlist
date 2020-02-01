@@ -14,6 +14,10 @@
             filePath = "size/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+
             startingLineNumber = "112"
             endingLineNumber = "112"
             landmarkName = "tableView(_:cellForRowAt:)"
@@ -33,6 +37,22 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26F8E541-349D-4693-AF0B-9F188E5B638F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "size/LikeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
