@@ -48,7 +48,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bHB-nN-zAt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VBj-th-fhW" customClass="TabBarController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="VBj-th-fhW" customClass="TabBarController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Rl-Lh-gDb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -57,7 +57,7 @@
                         <color key="selectedImageTintColor" red="0.3077723517" green="0.28587672939999997" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YNQ-8t-wZ9" kind="relationship" relationship="viewControllers" id="HTX-ru-FJJ"/>
+                        <segue destination="YNQ-8t-wZ9" kind="relationship" relationship="viewControllers" id="OmM-Sc-gf1"/>
                         <segue destination="HBq-eF-4PP" kind="relationship" relationship="viewControllers" id="kdH-Q3-1Uo"/>
                         <segue destination="UNd-E0-qXf" kind="relationship" relationship="viewControllers" id="Dlq-tl-Zxy"/>
                     </connections>
@@ -93,15 +93,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciE-3N-AZ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2996" y="1004"/>
+            <point key="canvasLocation" x="-3589" y="340"/>
         </scene>
-        <!--UINavigationController-fGF-0a-eT6-->
+        <!--EnterSize-->
         <scene sceneID="ZIv-Ry-NzE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UINavigationController-fGF-0a-eT6" storyboardName="EnterSize" referencedIdentifier="UINavigationController-fGF-0a-eT6" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="EnterSize" storyboardName="EnterSize" referencedIdentifier="EnterSize" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQf-Jv-QdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2289" y="-693"/>
+            <point key="canvasLocation" x="-3059" y="50"/>
         </scene>
         <!--LikeView-->
         <scene sceneID="oLl-qy-BHW">
@@ -111,25 +111,25 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IH7-l0-cKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2997" y="285"/>
+            <point key="canvasLocation" x="-3486" y="285"/>
         </scene>
-        <!--UINavigationController-t6a-Ta-6Yf-->
+        <!--ShoppingList-->
         <scene sceneID="OcO-K5-w7E">
             <objects>
-                <viewControllerPlaceholder storyboardName="ShoppingList" referencedIdentifier="UINavigationController-t6a-Ta-6Yf" id="YNQ-8t-wZ9" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ShoppingList" referencedIdentifier="ShoppingList" id="YNQ-8t-wZ9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kC3-Tj-CgM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iU-eG-7BS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3137" y="10"/>
+            <point key="canvasLocation" x="-3464" y="224"/>
         </scene>
-        <!--UIViewController-HRN-c6-WTb-->
+        <!--ShoppingLists-->
         <scene sceneID="dGS-yX-ZcV">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-HRN-c6-WTb" storyboardName="ShoppingList" referencedIdentifier="UIViewController-HRN-c6-WTb" id="YOc-wA-qIm" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ShoppingLists" storyboardName="ShoppingList" referencedIdentifier="ShoppingLists" id="YOc-wA-qIm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDu-S1-obk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2271" y="-518"/>
+            <point key="canvasLocation" x="-3038" y="150"/>
         </scene>
     </scenes>
 </document>

@@ -113,7 +113,7 @@
                     <navigationItem key="navigationItem" title="좋아요" id="1cT-Ir-8lf"/>
                     <connections>
                         <outlet property="likeTableView" destination="RzY-5V-uNb" id="uAY-Rp-ROo"/>
-                        <segue destination="zfR-Ht-Lvy" kind="show" identifier="likeDetail" id="saF-PV-Vr8"/>
+                        <segue destination="zfR-Ht-Lvy" kind="show" identifier="likeDetail" id="JL2-bX-Ajl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYO-zU-xJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
         <!--like-->
         <scene sceneID="IsZ-KS-MEf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BBA-HL-xth" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Like" automaticallyAdjustsScrollViewInsets="NO" id="BBA-HL-xth" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="like" image="heart" catalog="system" selectedImage="heart.fill" id="veu-Qe-jxX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A5S-IO-UuD">
@@ -145,10 +145,12 @@
             </objects>
             <point key="canvasLocation" x="-2997" y="285"/>
         </scene>
-        <!--UIViewController-HRN-c6-WTb-->
+        <!--ShoppingLists-->
         <scene sceneID="5wp-tL-ISd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-HRN-c6-WTb" id="zfR-Ht-Lvy" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ShoppingLists" id="zfR-Ht-Lvy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bu9-md-Jku"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOx-dK-K81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1309" y="-218"/>

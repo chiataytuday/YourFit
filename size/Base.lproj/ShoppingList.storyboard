@@ -108,7 +108,7 @@
                                     <constraint firstAttribute="height" constant="45" id="mEc-Ft-YfJ"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="oBV-zo-Ha2" kind="presentation" id="kkB-oZ-I8X"/>
+                                    <segue destination="oBV-zo-Ha2" kind="presentation" id="hhS-aY-vvx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5i-vh-EXC">
@@ -154,7 +154,7 @@
         <!--View Controller-->
         <scene sceneID="0Fm-vY-ci6">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-HRN-c6-WTb" id="HRN-c6-WTb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShoppingLists" id="HRN-c6-WTb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zrG-A0-ey9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,7 +309,7 @@
         <!--shopping-->
         <scene sceneID="nJK-4q-INk">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController-t6a-Ta-6Yf" automaticallyAdjustsScrollViewInsets="NO" id="t6a-Ta-6Yf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ShoppingList" automaticallyAdjustsScrollViewInsets="NO" id="t6a-Ta-6Yf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="shopping" image="bag" catalog="system" selectedImage="bag.fill" id="ry9-Ed-fBd"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="v3L-gK-7gT"/>
@@ -335,10 +335,10 @@
             </objects>
             <point key="canvasLocation" x="-2997" y="-591"/>
         </scene>
-        <!--UINavigationController-fGF-0a-eT6-->
+        <!--EnterSize-->
         <scene sceneID="ZIv-Ry-NzE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UINavigationController-fGF-0a-eT6" storyboardName="EnterSize" referencedIdentifier="UINavigationController-fGF-0a-eT6" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="EnterSize" storyboardName="EnterSize" referencedIdentifier="EnterSize" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQf-Jv-QdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1337" y="-1038"/>
