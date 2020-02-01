@@ -391,7 +391,7 @@
         <!--SIZE-->
         <scene sceneID="yxC-v4-gum">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController-fGF-0a-eT6" automaticallyAdjustsScrollViewInsets="NO" id="fGF-0a-eT6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EnterSize" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGF-0a-eT6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SIZE" image="house" catalog="system" selectedImage="house.fill" id="UFi-x4-WLB"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="njT-le-JrK"/>
@@ -423,6 +423,6 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CTH-lI-qLq"/>
+        <segue reference="FhZ-Na-PUD"/>
     </inferredMetricsTieBreakers>
 </document>
