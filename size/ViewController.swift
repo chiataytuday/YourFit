@@ -18,12 +18,12 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 if self.result != 0 {
                     self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
-                    self.SizeChooseLabel.text = "다른 옷 사이즈로 측정하기"
+                    self.SizeChooseLabel.text = "다른 옷 사이즈로 검색하기"
                     
                 }
                 else {
                     self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
-                    self.SizeChooseLabel.text = "사이즈 측정하기"
+                    self.SizeChooseLabel.text = "사이즈 입력하기"
                 }
                 self.addFittering()
                 self.clothTableView.reloadData()
@@ -32,6 +32,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     @IBOutlet weak var SizeChooseLabel: UILabel!
     @IBOutlet weak var sizeChooseButton: UIButton!
+    @IBAction func selectInCloset(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Closet", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SaveSizeViewController") as! SaveSizeViewController
+        self.present(controller, animated: true, completion: nil)
+    }
     
     
     
@@ -88,13 +93,15 @@ class ViewController: UIViewController, UITableViewDataSource {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
+//                    let image = UIImage(named:"myimagee.png")!
                     ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
                 }
                 
             }
                 //입력된 사이즈가 있을 때
             else if Int64(csvRows[i][0]) == self.result{
-                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: "\(csvRows[i][5])", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
+//                let image = UIImage(named:"myimagee.png")!
+                ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
             }
         }
     }
@@ -134,7 +141,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         else {
             self.recommendLabelz.text = "사이즈를 입력하시면 추천 사이즈를 확인하실 수 있습니다."
-            self.SizeChooseLabel.text = "사이즈 검색하기"
+            self.SizeChooseLabel.text = "사이즈 입력하기"
         }
     }
     
@@ -165,3 +172,4 @@ extension ViewController: UITableViewDelegate{
         performSegue(withIdentifier: "clothDetail", sender: self.ClothMenu[indexPath.row])
     }
 }
+

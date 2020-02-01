@@ -18,7 +18,7 @@
         <!--옷장-->
         <scene sceneID="SWk-D5-4ZK">
             <objects>
-                <viewController id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveSizeViewController" id="f0z-8b-HKw" customClass="SaveSizeViewController" customModule="size" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zc-Ih-7OR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
