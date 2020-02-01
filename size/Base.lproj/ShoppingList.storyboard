@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t6a-Ta-6Yf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -117,6 +117,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxj-lQ-k3U">
+                                <rect key="frame" x="376" y="11" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -138,7 +143,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="쇼핑" id="jFM-wX-9m9"/>
+                    <navigationItem key="navigationItem" title="쇼핑" id="jFM-wX-9m9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="BX0-W9-Za1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cbi-G6-CSl">
+                                <rect key="frame" x="376" y="11" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="selectInCloset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WtY-Hy-onj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SizeChooseLabel" destination="f5i-vh-EXC" id="lok-xw-jQW"/>
                         <outlet property="clothTableView" destination="Nok-pg-pjL" id="jWt-ch-geJ"/>
@@ -151,6 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-1998.5507246376812" y="-592.63392857142856"/>
         </scene>
+
         <!--View Controller-->
         <scene sceneID="0Fm-vY-ci6">
             <objects>
@@ -167,10 +184,11 @@
             </objects>
             <point key="canvasLocation" x="-926.08695652173924" y="-591.29464285714278"/>
         </scene>
+
         <!--Cloth Detail View Controller-->
         <scene sceneID="S67-Kh-TDB">
             <objects>
-                <tableViewController id="n4c-lG-e7G" customClass="ClothDetailViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ClothDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n4c-lG-e7G" customClass="ClothDetailViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="74M-HY-F9o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,12 +322,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6T-lF-OyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201.44927536231884" y="-587.27678571428567"/>
+            <point key="canvasLocation" x="-928" y="-548"/>
         </scene>
         <!--shopping-->
         <scene sceneID="nJK-4q-INk">
             <objects>
-                <navigationController storyboardIdentifier="ShoppingList" automaticallyAdjustsScrollViewInsets="NO" id="t6a-Ta-6Yf" sceneMemberID="viewController">
+
+                <navigationController storyboardIdentifier="ShoppingList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t6a-Ta-6Yf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="shopping" image="bag" catalog="system" selectedImage="bag.fill" id="ry9-Ed-fBd"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="v3L-gK-7gT"/>
@@ -338,7 +357,8 @@
         <!--EnterSize-->
         <scene sceneID="ZIv-Ry-NzE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="EnterSize" storyboardName="EnterSize" referencedIdentifier="EnterSize" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
+
+                <viewControllerPlaceholder storyboardIdentifier="UINavigationController-fGF-0a-eT6" storyboardName="EnterSize" id="oBV-zo-Ha2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQf-Jv-QdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1337" y="-1038"/>
@@ -351,5 +371,6 @@
         <image name="circle" width="12" height="12"/>
         <image name="circle-full" width="12" height="12"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
