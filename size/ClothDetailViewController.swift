@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 class ClothDetailViewController: UITableViewController {
     var clothDetail: Cloth? = nil
     var clothesDetail: Clothes? = nil
@@ -16,7 +17,8 @@ class ClothDetailViewController: UITableViewController {
     let realm = try? Realm() //db생성
     var clothes : Clothes?
     var mycloth : Results<Clothes>?
-    
+    var i = Int()
+    var images: [String] = ["2001004097","2001991022"]
     
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
@@ -27,11 +29,40 @@ class ClothDetailViewController: UITableViewController {
     @IBOutlet weak var realPriceLabel: UILabel!
     @IBOutlet weak var discountRateLabel: UILabel!
     
+    @IBOutlet weak var first: UIImageView!
+    @IBOutlet weak var second: UIImageView!
+    
     @IBAction func gotoShop(_ sender: UIButton) {
         if let url = URL(string: clothDetail?.url ?? "http://naver.com"){
             UIApplication.shared.open(url, options: [:])
         }
     }
+    
+   
+    
+    @objc func SwipeLeftImage(){
+          if i<images.count-1{
+              i+=1
+              imageLabel.image = UIImage(named: "2001004097")
+              first.image = UIImage(named: "circle")
+              second.image = UIImage(named: "circle-full")
+              second.isHighlighted = true
+          }else{}
+      }
+      @objc func SwipeRightImage(){
+          if i<=images.count-1 && i>0{
+              i-=1
+              imageLabel.image = UIImage(named: //clothDetail!.clothImage
+                "1803607189"
+            )
+              first.image = UIImage(named: "circle-full")
+              second.image = UIImage(named: "circle")
+              second.isHighlighted = false
+              first.isHighlighted = false
+          }else{}
+      }
+    
+    
     
     @IBAction func onClick(_ sender: Any) {
         if clothDetail != nil {
@@ -45,7 +76,6 @@ class ClothDetailViewController: UITableViewController {
                 likeButton.tintColor = UIColor.red
                 saveData()
                 let clothess = realm?.objects(Clothes.self)
-                print(clothess)
             }
         }
             
@@ -62,7 +92,6 @@ class ClothDetailViewController: UITableViewController {
                 likeButton.tintColor = UIColor.red
                 saveData()
                 let clothess = realm?.objects(Clothes.self)
-                print(clothess)
                 
             }
         }
@@ -75,6 +104,19 @@ class ClothDetailViewController: UITableViewController {
         
         
         super.viewDidLoad()
+        //이미지 스와이프
+        
+        let swipeLeftGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeLeftImage))
+           imageLabel.isUserInteractionEnabled = true
+           swipeLeftGesture.direction = UISwipeGestureRecognizer.Direction.left
+           imageLabel.addGestureRecognizer(swipeLeftGesture)
+           
+           let swipeRightGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeRightImage))
+           swipeRightGesture.direction = UISwipeGestureRecognizer.Direction.right
+           imageLabel.addGestureRecognizer(swipeRightGesture)
+           
+        
+        
         if clothDetail != nil{
             brandLabel.text = clothDetail?.brand
             modelLabel.text = clothDetail?.model
@@ -82,7 +124,7 @@ class ClothDetailViewController: UITableViewController {
             priceLabel.text = "가격 : " + clothDetail!.price + "원"
             discountRateLabel.text = "할인율 : " + clothDetail!.discountRate + "%"
             realPriceLabel.text = "할인가 : " + String(clothDetail!.realPrice) + "원"
-            imageLabel.image = UIImage(named: clothDetail!.clothImage)
+           
 
         }
         else if clothesDetail != nil {
@@ -94,6 +136,8 @@ class ClothDetailViewController: UITableViewController {
             realPriceLabel.text = clothesDetail?.realPrice
             //imageLabel = clothesDetail?.clothImage
         }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
