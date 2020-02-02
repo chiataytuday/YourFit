@@ -38,8 +38,16 @@ class ClothDetailViewController: UITableViewController{
     @IBOutlet weak var second: UIImageView!
     
     @IBAction func gotoShop(_ sender: UIButton) {
+        if clothDetail?.url != nil{
         if let url = URL(string: clothDetail?.url ?? "http://naver.com"){
             UIApplication.shared.open(url, options: [:])
+            }
+            
+        }
+        else{
+            if let url = URL(string: clothesDetail?.url ?? "http://naver.com"){
+            UIApplication.shared.open(url, options: [:])
+            }
         }
     }
     
