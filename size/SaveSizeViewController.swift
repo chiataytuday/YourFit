@@ -30,7 +30,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var addSizeButton: UIButton!
     @IBOutlet weak var SaveSizeTableView: UITableView!
-    //@IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
+    @IBAction func fromVC6ToVC5 (segue : UIStoryboardSegue) {}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if sizeInformation?.count == 0 {
