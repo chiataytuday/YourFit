@@ -51,7 +51,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.UserThighSize.text = db.thigh + "cm"
             cell.UserHemSize.text = db.hem + "cm"
             cell.UserOutseamSize.text = db.outseam + "cm"
-            cell.recommendSize.text = db.recommendSize
+            cell.recommendSize?.text = "추천 사이즈 " + db.recommendSize
             //result = db.recommendSize
         }
         return cell
@@ -68,6 +68,7 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
                 if let exsist = usersDB?.objects(UserSizeInformation.self).filter("id = '\(self.sizeInformation![indexPath.row].id)'") {
                     try usersDB?.write {
                         usersDB?.delete(exsist)
+                        count -= 1
                     }
                 }
             } catch{
