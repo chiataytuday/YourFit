@@ -114,9 +114,10 @@ class ClothDetailViewController: UITableViewController{
         for i in 0..<images.count{
             let imageView = UIImageView()
             let x = self.scrollView.frame.size.width * CGFloat(i)
-            imageView.frame = CGRect(x: x, y: 0, width: self.scrollView.frame.width
+            imageView.frame = CGRect(x: x, y: 0, width: self.scrollView.frame.width-30
                 , height: self.scrollView.frame.height)
             imageView.contentMode = .scaleAspectFit
+            
             imageView.image = images[i]
             
             scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(i + 1)
