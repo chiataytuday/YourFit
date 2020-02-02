@@ -107,34 +107,24 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kdo-16-nAX">
-                                                    <rect key="frame" x="266" y="118.5" width="124.5" height="18"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천사이즈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVN-vd-wVb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75.5" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="16"/>
-                                                            <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM4-fc-ldW">
-                                                            <rect key="frame" x="85.5" y="0.0" width="39" height="18"/>
-                                                            <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="16"/>
-                                                            <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="추천사이즈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVN-vd-wVb">
+                                                    <rect key="frame" x="244" y="127" width="134" height="9"/>
+                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="16"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LVN-vd-wVb" secondAttribute="bottom" constant="8" id="8aY-4c-4s4"/>
                                                 <constraint firstItem="Ozw-U8-08p" firstAttribute="leading" secondItem="IJW-QR-6pa" secondAttribute="leading" constant="15" id="HSv-ru-mX6"/>
                                                 <constraint firstItem="tdt-8b-Jbd" firstAttribute="leading" secondItem="Ozw-U8-08p" secondAttribute="trailing" constant="13" id="Lds-T1-oCb"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kdo-16-nAX" secondAttribute="bottom" constant="7.5" id="OBx-Oj-SbS"/>
-                                                <constraint firstItem="kdo-16-nAX" firstAttribute="leading" secondItem="4NF-dD-v4R" secondAttribute="trailing" constant="89" id="RXT-6D-u3T"/>
                                                 <constraint firstItem="afZ-2A-24j" firstAttribute="leading" secondItem="tdt-8b-Jbd" secondAttribute="trailing" constant="16.5" id="Ykt-FD-9cf"/>
+                                                <constraint firstAttribute="trailing" secondItem="LVN-vd-wVb" secondAttribute="trailing" constant="35.5" id="bnw-Eb-pWY"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="afZ-2A-24j" secondAttribute="bottom" constant="7.5" id="eoW-Zn-M5i"/>
                                                 <constraint firstItem="tdt-8b-Jbd" firstAttribute="top" secondItem="IJW-QR-6pa" secondAttribute="topMargin" constant="7.5" id="erT-Cm-mxI"/>
                                                 <constraint firstItem="afZ-2A-24j" firstAttribute="top" secondItem="IJW-QR-6pa" secondAttribute="topMargin" constant="7.5" id="kL6-vc-0vJ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tdt-8b-Jbd" secondAttribute="bottom" constant="7.5" id="keS-pb-YsZ"/>
+                                                <constraint firstItem="LVN-vd-wVb" firstAttribute="top" secondItem="IJW-QR-6pa" secondAttribute="topMargin" constant="116" id="lkK-Hv-ACS"/>
                                                 <constraint firstItem="Ozw-U8-08p" firstAttribute="top" secondItem="IJW-QR-6pa" secondAttribute="top" constant="13" id="yTR-Zx-l1J"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -144,7 +134,7 @@
                                             <outlet property="UserOutseamSize" destination="4NF-dD-v4R" id="QHe-4i-eor"/>
                                             <outlet property="UserThighSize" destination="zYG-Ua-9Qo" id="tg6-Ly-Pq8"/>
                                             <outlet property="UserWaistSize" destination="OuA-cH-nDl" id="M2r-eI-QEa"/>
-                                            <outlet property="recommendSize" destination="yM4-fc-ldW" id="Cwt-lA-c7m"/>
+                                            <outlet property="recommendSize" destination="LVN-vd-wVb" id="hMu-E4-OEj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

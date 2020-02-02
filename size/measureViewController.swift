@@ -131,13 +131,13 @@ class measureViewController: UIViewController, ARSCNViewDelegate {
             waistLabel.text = "\(measureSize[0])"
         }
         else if(progressLevel == 2){
-            outseamLabel.text = "\(measureSize[1])"
+            thighLabel.text = "\(measureSize[1])"
         }
         else if(progressLevel == 3){
-            thighLabel.text = "\(measureSize[2])"
+            hemLabel.text = "\(measureSize[2])"
         }
         else if(progressLevel == 4){
-            hemLabel.text = "\(measureSize[3])"
+            outseamLabel.text = "\(measureSize[3])"
             endOfMeasure.isHidden = false
         }
         

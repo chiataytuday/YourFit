@@ -403,8 +403,8 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천사이즈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwM-oq-K8I">
-                                                    <rect key="frame" x="257" y="115.00000000000001" width="105" height="32.666666666666671"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="추천사이즈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwM-oq-K8I">
+                                                    <rect key="frame" x="241" y="115" width="121" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -417,7 +417,6 @@
                                                 <constraint firstItem="f1j-ny-hm4" firstAttribute="top" secondItem="WLq-a8-Au9" secondAttribute="topMargin" constant="7.5" id="CeY-YY-7Nv"/>
                                                 <constraint firstItem="hwM-oq-K8I" firstAttribute="top" secondItem="WLq-a8-Au9" secondAttribute="top" constant="114.99999999999994" id="Ecr-cY-LIn"/>
                                                 <constraint firstItem="f1j-ny-hm4" firstAttribute="leading" secondItem="Y76-9I-PlD" secondAttribute="trailing" constant="7.5" id="JEi-nc-nRa"/>
-                                                <constraint firstItem="hwM-oq-K8I" firstAttribute="leading" secondItem="6XF-zv-NnI" secondAttribute="trailing" constant="80" id="JKI-ZF-0op"/>
                                                 <constraint firstAttribute="bottom" secondItem="hwM-oq-K8I" secondAttribute="bottom" constant="7.5" id="RQS-RB-dZ7"/>
                                                 <constraint firstAttribute="trailing" secondItem="hwM-oq-K8I" secondAttribute="trailing" constant="13" id="T6x-QJ-NYL"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Xjt-cr-Wiy" secondAttribute="bottom" constant="7.5" id="Vsu-h0-Okm"/>

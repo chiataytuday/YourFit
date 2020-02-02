@@ -49,8 +49,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-3S-nF3">
-                                <rect key="frame" x="20" y="636" width="132" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-3S-nF3">
+                                <rect key="frame" x="20" y="636" width="139" height="92"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-Mg-WwD">
                                         <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="92"/>
@@ -61,19 +61,19 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSt-rG-H1E">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허벅지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSt-rG-H1E">
                                                 <rect key="frame" x="0.0" y="25" width="43.666666666666664" height="17"/>
                                                 <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허벅지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-Or-wuC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밑단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-Or-wuC">
                                                 <rect key="frame" x="0.0" y="50" width="43.666666666666664" height="17"/>
                                                 <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밑단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-8U-tlY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-8U-tlY">
                                                 <rect key="frame" x="0.0" y="75" width="43.666666666666664" height="17"/>
                                                 <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +82,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-4a-dOr">
-                                        <rect key="frame" x="43.666666666666664" y="0.0" width="88.333333333333343" height="92"/>
+                                        <rect key="frame" x="50.666666666666679" y="0.0" width="88.333333333333314" height="92"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95q-Wk-pY8">
                                                 <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="17"/>
@@ -159,12 +159,12 @@
                     <connections>
                         <outlet property="aimLabel" destination="DHg-gE-oGd" id="DWl-W4-H3C"/>
                         <outlet property="endOfMeasure" destination="F0l-Dw-gJC" id="SdK-NM-nUe"/>
-                        <outlet property="hemLabel" destination="rlm-Tk-cJR" id="bJm-9A-49I"/>
+                        <outlet property="hemLabel" destination="ODh-9W-CB0" id="EF6-op-Tlv"/>
                         <outlet property="notReadyLabel" destination="Iuv-V2-Bkd" id="yUl-tE-m4y"/>
-                        <outlet property="outseamLabel" destination="Eri-tL-syp" id="SWu-Ea-ueo"/>
+                        <outlet property="outseamLabel" destination="rlm-Tk-cJR" id="zU1-QU-LsK"/>
                         <outlet property="resultLabel" destination="Ms7-h4-8I9" id="Efz-NV-AfY"/>
                         <outlet property="sceneView" destination="odj-Ec-2Vg" id="RjT-fy-2QF"/>
-                        <outlet property="thighLabel" destination="ODh-9W-CB0" id="2pS-ne-F6l"/>
+                        <outlet property="thighLabel" destination="Eri-tL-syp" id="Zmg-zp-A4r"/>
                         <outlet property="waistLabel" destination="95q-Wk-pY8" id="RVW-6R-kjN"/>
                     </connections>
                 </viewController>

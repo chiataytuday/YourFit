@@ -16,6 +16,7 @@
 		0C193E8923E447B300F59408 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8823E447B300F59408 /* NanumGothicBold.otf */; };
 		0C654DA023E6E3350048F108 /* 경기천년제목OTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C654D9F23E6E3350048F108 /* 경기천년제목OTF_Bold.otf */; };
 		0C654DA223E6E34B0048F108 /* 경기천년제목OTF_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C654DA123E6E34B0048F108 /* 경기천년제목OTF_Medium.otf */; };
+		0C654DA423E6EA900048F108 /* SizeTabularClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0C654DA323E6EA900048F108 /* SizeTabularClassifier.mlmodel */; };
 		0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9C936923CDD3D800F07D3C /* WebKit.framework */; };
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */; };
@@ -41,7 +42,6 @@
 		0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18D23C5D49E00FEDE69 /* Assets.xcassets */; };
 		0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */; };
 		0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19823C5D4C900FEDE69 /* Cloth.swift */; };
-		0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */; };
 		0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */; };
 		4F37F7395482B78462CEC3EB /* Pods_size.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525D2E2C950ADEFB6CA4215E /* Pods_size.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +56,7 @@
 		0C193E8823E447B300F59408 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
 		0C654D9F23E6E3350048F108 /* 경기천년제목OTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "경기천년제목OTF_Bold.otf"; sourceTree = "<group>"; };
 		0C654DA123E6E34B0048F108 /* 경기천년제목OTF_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "경기천년제목OTF_Medium.otf"; sourceTree = "<group>"; };
+		0C654DA323E6EA900048F108 /* SizeTabularClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SizeTabularClassifier.mlmodel; sourceTree = "<group>"; };
 		0C9C936623CDC4A500F07D3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0C9C936923CDD3D800F07D3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		0CACA19023C5D49E00FEDE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CACA19223C5D49E00FEDE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CACA19823C5D4C900FEDE69 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
-		0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SizeTabularClassifier.mlmodel; sourceTree = "<group>"; };
 		0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterSizeViewController.swift; sourceTree = "<group>"; };
 		24B75E6A397F5A073A394954 /* Pods-size.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-size.release.xcconfig"; path = "Target Support Files/Pods-size/Pods-size.release.xcconfig"; sourceTree = "<group>"; };
 		3076F0CA438099541527D701 /* Pods-size.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-size.debug.xcconfig"; path = "Target Support Files/Pods-size/Pods-size.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 				0CA2461523E2E80C00847ADE /* LikeView.storyboard */,
 				0CA2461323E2E7DD00847ADE /* EnterSize.storyboard */,
 				0CA2461023E2E7AE00847ADE /* Closet.storyboard */,
+				0C654DA323E6EA900048F108 /* SizeTabularClassifier.mlmodel */,
 				0CA2CE5323D6D4B100F16AE0 /* latestdata.csv */,
-				0CD5A47F23D57764000281A8 /* SizeTabularClassifier.mlmodel */,
 				0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */,
 				0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */,
 				0CACA18823C5D49A00FEDE69 /* ViewController.swift */,
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD5A48023D57764000281A8 /* SizeTabularClassifier.mlmodel in Sources */,
+				0C654DA423E6EA900048F108 /* SizeTabularClassifier.mlmodel in Sources */,
 				0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */,
 				0CA5EEC723CEFDF0005C43E3 /* LikeViewController.swift in Sources */,
 				0CA6955F23E6673A00CCFB35 /* ClothInformationCollectionViewCell.swift in Sources */,
