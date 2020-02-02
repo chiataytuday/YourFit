@@ -10,7 +10,28 @@ import UIKit
 import RealmSwift
 
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var clothInformationView: UICollectionView!
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ClothMenu.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = clothInformationView.dequeueReusableCell(withReuseIdentifier: "ClothInformationCollectionViewCell", for: indexPath) as! ClothInformationCollectionViewCell
+        let rowData = self.ClothMenu[indexPath.row]
+        cell.modelName?.text = rowData.model
+        cell.brand?.text = rowData.brand
+        //cell.price.text = "가격 : " + rowData.price + "원"
+        cell.discountRate?.text = rowData.discountRate + "%"
+        cell.realPrice?.text = rowData.realPrice + "원"
+        cell.thumbnail?.image = UIImage(named: rowData.clothImage)
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 0.2
+        cell.layer.cornerRadius = 5
+        return cell
+    }
+    
     var userInfo: UserSizeInformation? = nil
     var result = Int64() {
         didSet {
@@ -26,7 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     self.SizeChooseLabel.text = "사이즈 입력하기"
                 }
                 self.addFittering()
-                self.clothTableView.reloadData()
+                self.clothInformationView.reloadData()
             }
         }
     }
@@ -93,46 +114,33 @@ class ViewController: UIViewController, UITableViewDataSource {
             //입력된 사이즈가 없을 때
             if result == 0 {
                 if csvRows[i][5] != csvRows[i-1][5]{
-//                    let image = UIImage(named:"myimagee.png")!
+                    //                    let image = UIImage(named:"myimagee.png")!
                     ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9],clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: "0"))
                 }
                 
             }
                 //입력된 사이즈가 있을 때
             else if Int64(csvRows[i][0]) == self.result{
-//                let image = UIImage(named:"myimagee.png")!
+                //                let image = UIImage(named:"myimagee.png")!
                 ClothMenu.append(Cloth(model: csvRows[i][10], brand: csvRows[i][6], price: csvRows[i][7], discountRate: csvRows[i][8], realPrice: csvRows[i][9], clothImage: "\(csvRows[i][5]).png", modelDetail: csvRows[i][5], url: "http://spao.elandmall.com/goods/initGoodsDetail.action?goods_no="+csvRows[i][5], recommendSize: csvRows[i][0]))
             }
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClothInformationCell", for: indexPath) as! ClothInformationCell
-        let rowData = self.ClothMenu[indexPath.row]
-        cell.model.text = rowData.model
-        cell.brand.text = rowData.brand
-        cell.price.text = "가격 : " + rowData.price + "원"
-        cell.discountRate.text = rowData.discountRate + "%"
-        cell.realPrice.text = "할인가 : " + rowData.realPrice + "원"
-        cell.thumbnail.image = UIImage(named: rowData.clothImage)
-        return cell
-    }
     
     @IBOutlet weak var recommendLabelz: UILabel!
     
     @IBAction func fromVC3ToVC1 (segue : UIStoryboardSegue) {}
     @IBAction func fromVC4ToVC2 (segue : UIStoryboardSegue) {}
     
-    
-    @IBOutlet weak var clothTableView: UITableView!
     var ClothMenu:[Cloth] = []
     
     override func viewDidLoad() {
         
         addFittering()
         super.viewDidLoad()
-        clothTableView.dataSource = self
-        clothTableView.delegate = self
+        clothInformationView.dataSource = self
+        clothInformationView.delegate = self
         
         if self.result != 0 {
             self.recommendLabelz.text = "\(self.result)로 검색한 결과 입니다."
@@ -143,6 +151,35 @@ class ViewController: UIViewController, UITableViewDataSource {
             self.SizeChooseLabel.text = "사이즈 입력하기"
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = clothInformationView.frame.width / 2 - 2
+        let height = clothInformationView.frame.height / 1.8
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+//    // 사이즈
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let collectionViewCellWithd = clothInformationView.frame.width / 3 - 1
+//        return CGSize(width: collectionViewCellWithd, height: collectionViewCellWithd)
+//    }
+//
+//    //위아래 라인 간격
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 1
+//    }
+//
+//    //옆 라인 간격
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 1
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "clothDetail" {
@@ -160,15 +197,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         sizeChooseButton.layer.borderColor = UIColor(red: 78/255, green: 73/255, blue: 207/255, alpha: 1).cgColor
         sizeChooseButton.layer.borderWidth = 2
         sizeChooseButton.layer.cornerRadius = 2
-        self.clothTableView.reloadData()
+        self.clothInformationView.reloadData()
     }
     
 }
 
-extension ViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+extension ViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "clothDetail", sender: self.ClothMenu[indexPath.row])
+        
     }
+    
 }
 
