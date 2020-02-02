@@ -14,6 +14,8 @@
 		0C193E8323E436A800F59408 /* NanumGothicLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8223E436A800F59408 /* NanumGothicLight.otf */; };
 		0C193E8723E436B900F59408 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8623E436B900F59408 /* NanumGothic.otf */; };
 		0C193E8923E447B300F59408 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C193E8823E447B300F59408 /* NanumGothicBold.otf */; };
+		0C654DA023E6E3350048F108 /* 경기천년제목OTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C654D9F23E6E3350048F108 /* 경기천년제목OTF_Bold.otf */; };
+		0C654DA223E6E34B0048F108 /* 경기천년제목OTF_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C654DA123E6E34B0048F108 /* 경기천년제목OTF_Medium.otf */; };
 		0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9C936923CDD3D800F07D3C /* WebKit.framework */; };
 		0C9DC4B723D05E160023392E /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */; };
 		0C9E844A23E137B0009CE23B /* SaveSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E844923E137B0009CE23B /* SaveSizeViewController.swift */; };
@@ -52,6 +54,8 @@
 		0C193E8223E436A800F59408 /* NanumGothicLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicLight.otf; sourceTree = "<group>"; };
 		0C193E8623E436B900F59408 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
 		0C193E8823E447B300F59408 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
+		0C654D9F23E6E3350048F108 /* 경기천년제목OTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "경기천년제목OTF_Bold.otf"; sourceTree = "<group>"; };
+		0C654DA123E6E34B0048F108 /* 경기천년제목OTF_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "경기천년제목OTF_Medium.otf"; sourceTree = "<group>"; };
 		0C9C936623CDC4A500F07D3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0C9C936923CDD3D800F07D3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0C9DC4B623D05E160023392E /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				0C193E8223E436A800F59408 /* NanumGothicLight.otf */,
 				0C193E8823E447B300F59408 /* NanumGothicBold.otf */,
 				0C193E8023E4361700F59408 /* BinggraeⅡ.otf */,
+				0C654D9F23E6E3350048F108 /* 경기천년제목OTF_Bold.otf */,
+				0C654DA123E6E34B0048F108 /* 경기천년제목OTF_Medium.otf */,
 				0C193E8623E436B900F59408 /* NanumGothic.otf */,
 				0C193E7E23E42FD500F59408 /* BMEULJIRO.otf */,
 			);
@@ -252,8 +258,10 @@
 				0C193E8723E436B900F59408 /* NanumGothic.otf in Resources */,
 				0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */,
 				0C193E7F23E42FD500F59408 /* BMEULJIRO.otf in Resources */,
+				0C654DA023E6E3350048F108 /* 경기천년제목OTF_Bold.otf in Resources */,
 				0C193E8123E4361700F59408 /* BinggraeⅡ.otf in Resources */,
 				0CACA18E23C5D49E00FEDE69 /* Assets.xcassets in Resources */,
+				0C654DA223E6E34B0048F108 /* 경기천년제목OTF_Medium.otf in Resources */,
 				0CA2461A23E2E83F00847ADE /* ShoppingList.storyboard in Resources */,
 				0CA2461423E2E7DD00847ADE /* EnterSize.storyboard in Resources */,
 				0C193E8923E447B300F59408 /* NanumGothicBold.otf in Resources */,

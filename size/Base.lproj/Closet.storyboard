@@ -199,7 +199,7 @@
                         <color key="tintColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="23"/>
+                            <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="22"/>
                             <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
