@@ -99,7 +99,15 @@ class ClothDetailViewController: UITableViewController{
 //        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
-        images = [UIImage(named: "2001004097")!,UIImage(named: "2001991020")!]
+        if clothDetail?.clothImage != nil{
+            let imageURL = clothDetail!.modelDetail + "-1"
+            images = [UIImage(named: clothDetail!.clothImage)!, UIImage(named: imageURL)!]
+            
+        }
+        else{
+            let imageURL = clothesDetail!.modelDetail + "-1"
+            images = [UIImage(named: clothesDetail!.clothImage)!,UIImage(named: imageURL)!]
+        }
         pageControl.numberOfPages = 2
         
          
@@ -120,9 +128,9 @@ class ClothDetailViewController: UITableViewController{
             brandLabel.text = clothDetail?.brand
             modelLabel.text = clothDetail?.model
             //recommendSizeLabel.text = clothDetail?.recommendSize
-            priceLabel.text = "가격 : " + clothDetail!.price + "원"
-            discountRateLabel.text = "할인 : " + clothDetail!.discountRate + "%"
-            realPriceLabel.text = "혜택가 : " + String(clothDetail!.realPrice) + "원"
+            priceLabel.text = "가격  " + clothDetail!.price + "원"
+            discountRateLabel.text = "할인  " + clothDetail!.discountRate + "%"
+            realPriceLabel.text = String(clothDetail!.realPrice) + "원"
             //imageLabel.image = UIImage(named: clothDetail!.clothImage)
 
 
@@ -131,9 +139,9 @@ class ClothDetailViewController: UITableViewController{
             brandLabel.text = clothesDetail?.brand
             modelLabel.text = clothesDetail?.model
             //recommendSizeLabel.text = clothesDetail?.recommendSize
-            priceLabel.text = "가격 : " + clothesDetail!.price + "원 "
-            discountRateLabel.text = "할인 : " + clothesDetail!.discountRate + "%"
-            realPriceLabel.text = "혜택가 : " + clothesDetail!.realPrice + "원"
+            priceLabel.text = "가격  " + clothesDetail!.price + "원 "
+            discountRateLabel.text = "할인  " + clothesDetail!.discountRate + "%"
+            realPriceLabel.text = clothesDetail!.realPrice + "원"
             //imageLabel.image = UIImage(named: clothesDetail!.clothImage)
         }
         
