@@ -58,7 +58,6 @@ class ClothDetailViewController: UITableViewController{
                 //Liked.shared.add(store)
                 likeButton.tintColor = UIColor.red
                 saveData()
-                let clothess = realm?.objects(Clothes.self)
             }
         }
             
@@ -73,8 +72,6 @@ class ClothDetailViewController: UITableViewController{
             else {
                 likeButton.tintColor = UIColor.red
                 saveData()
-                let clothess = realm?.objects(Clothes.self)
-                
             }
         }
         
