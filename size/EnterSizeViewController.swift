@@ -40,9 +40,7 @@ class EnterSizeViewController: UIViewController {
             let hem = Double(hemValue.text ?? ""),
             let outseam = Double(outseamValue.text ?? "") {
             if let prediction = try? model.prediction(waist: waist, thigh: thigh, hem: hem, outseam: outseam) {
-                print(prediction.sizeProbability)
                 result = prediction.size
-                print(result)
                 
                 if let high = prediction.sizeProbability[prediction.size] {
                     probability.text = "사용자의 추천 사이즈는 \(Int(high*100))% 확률로 \(prediction.size) 입니다."

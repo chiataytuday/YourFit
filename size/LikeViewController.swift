@@ -20,7 +20,7 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if likeClothes?.count == 0 {
-            tableView.setEmptyView(title: "아직 좋아요를 누른 상품이 없습니다.", message: "원하는 옷을 좋아요 목록에 .... 아 멘트 뭐라하지", messageImage: #imageLiteral(resourceName: "2001991022"))
+            tableView.setEmptyView(title: "아직 좋아요를 누른 상품이 없습니다.", message: "마음에 드는 옷을 추가해주세요.", messageImage: #imageLiteral(resourceName: "2001991022"))
             return 0
         }
         else {
@@ -34,7 +34,7 @@ class LikeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let db = likeClothes?[indexPath.row]{
             cell.brandLabel.text = db.brand
             cell.modelLabel.text = db.model
-            cell.priceLabel.text = "정상가 : " + db.price + "원"
+            cell.priceLabel.text = "할인가 : " + db.realPrice + "원"
             if db.recommendSize == "0" {
                 cell.recommendSizeLabel.text = "사이즈를 입력하시면 추천 사이즈로 추가하실 수 있습니다."
             }
