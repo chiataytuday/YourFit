@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = clothInformationView.dequeueReusableCell(withReuseIdentifier: "ClothInformationCollectionViewCell", for: indexPath) as! ClothInformationCollectionViewCell
         let rowData = self.ClothMenu[indexPath.row]
+        
         cell.modelName?.text = rowData.model
         cell.brand?.text = rowData.brand
         //cell.price.text = "가격 : " + rowData.price + "원"
@@ -154,8 +155,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = clothInformationView.frame.width / 2 - 2
-        let height = clothInformationView.frame.height / 1.8
-        return CGSize(width: width, height: height)
+        return CGSize(width: width, height: width * 1.35)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

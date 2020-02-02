@@ -19,6 +19,7 @@ class ClothDetailViewController: UITableViewController{
     var mycloth : Results<Clothes>?
     var colors:[UIColor] = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow]
     var images = [UIImage]()
+    @IBOutlet var clothDetailTableView: UITableView!
     
     
     
@@ -80,7 +81,7 @@ class ClothDetailViewController: UITableViewController{
         
     }
     
-   
+    
     
     override func viewDidLoad() {
 
@@ -88,6 +89,9 @@ class ClothDetailViewController: UITableViewController{
         
         configurePageControl()
         
+       // clothDetailTableView.frame.height = 
+        
+//        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         images = [UIImage(named: "2001004097")!,UIImage(named: "2001991020")!]
@@ -106,7 +110,6 @@ class ClothDetailViewController: UITableViewController{
             scrollView.addSubview(imageView)
         }
         
-        print(scrollView)
         
         if clothDetail != nil{
             brandLabel.text = clothDetail?.brand
