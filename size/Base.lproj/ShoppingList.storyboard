@@ -83,7 +83,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="modelnamenamenamenamenamenamenamename">
                                                             <attributes>
-                                                                <font key="NSFont" metaFont="menu" size="11"/>
+                                                                <font key="NSFont" metaFont="message" size="11"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
