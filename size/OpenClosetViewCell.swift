@@ -15,5 +15,6 @@ class OpenClosetViewCell: UITableViewCell {
     @IBOutlet weak var openThigh: UILabel!
     @IBOutlet weak var openOutseam: UILabel!
     @IBOutlet weak var openIndex: UILabel!
+    @IBOutlet weak var openRecommendSize: UILabel!
     
 }

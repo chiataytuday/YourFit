@@ -40,11 +40,12 @@ class OpenClosetViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OpenClosetViewCell", for: indexPath) as! OpenClosetViewCell
         if let db = sizeInformation?[indexPath.row]{
-            cell.openIndex.text = "no." + String(indexPath.row + 1)
-            cell.openWaist.text = "허리 : " + db.waist + "cm"
-            cell.openThigh.text = "허벅지 : " + db.thigh + "cm"
-            cell.openHem.text = "밑단 : " + db.hem + "cm"
-            cell.openOutseam.text = "총장 : " + db.outseam + "cm"
+            cell.openIndex.text = String(indexPath.row + 1)
+            cell.openWaist.text = db.waist + "cm"
+            cell.openThigh.text = db.thigh + "cm"
+            cell.openHem.text = db.hem + "cm"
+            cell.openOutseam.text = db.outseam + "cm"
+            cell.openRecommendSize?.text = "추천 사이즈 : " + db.recommendSize
             //result = db.recommendSize
         }
         return cell
