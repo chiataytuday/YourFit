@@ -34,6 +34,9 @@ class EnterSizeViewController: UIViewController {
     @IBAction func searchClothButton(_ sender: Any) {
         self.performSegue(withIdentifier: "toVC1", sender: "FROM VC3 TO VC1")
     }
+    
+    
+    
     @IBAction func runPredict(_ sender: Any) {
         if let waist = Double(waistValue.text ?? ""),
             let thigh = Double(thighValue.text ?? ""),

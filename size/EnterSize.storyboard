@@ -10,56 +10,8 @@
         <array key="BMEULJIRO.otf">
             <string>BMEULJIRO</string>
         </array>
-        <array key="BinggraeⅡ.otf">
-            <string>BinggraeII</string>
-        </array>
     </customFonts>
     <scenes>
-        <!--EnterSize-->
-        <scene sceneID="vGY-or-2l3">
-            <objects>
-                <viewController storyboardIdentifier="EnterSize" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZFu-IF-sxN" userLabel="EnterSize" customClass="FirstEnterSizeViewController" customModule="size" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XaT-mz-VcE" customClass="MainView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="es0-64-Elx">
-                                <rect key="frame" x="148" y="386.5" width="118" height="123"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-xY-Pvo">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="35"/>
-                                        <fontDescription key="fontDescription" name="BinggraeII" family="BinggraeⅡ" pointSize="17"/>
-                                        <state key="normal" title="사이즈 측정하기">
-                                            <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-4A-MWt">
-                                        <rect key="frame" x="0.0" y="91" width="118" height="32"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                        <state key="normal" title="직접 입력하기">
-                                            <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="es0-64-Elx" firstAttribute="centerX" secondItem="XaT-mz-VcE" secondAttribute="centerX" id="kRW-QP-Jw1"/>
-                            <constraint firstItem="es0-64-Elx" firstAttribute="centerY" secondItem="XaT-mz-VcE" secondAttribute="centerY" id="sCg-7h-uDd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yw9-M4-ryt"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="SIZE" id="n6B-XB-cAh"/>
-                    <connections>
-                        <segue destination="7b6-2R-hwc" kind="unwind" identifier="toVC2" unwindAction="fromVC4ToVC2WithSegue:" id="qJS-AB-M8Z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eJw-lJ-A8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="7b6-2R-hwc" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-880" y="-2111"/>
-        </scene>
         <!--눌렀다가 떼면 측정이됩니다 ^0^-->
         <scene sceneID="REF-rA-gs8">
             <objects>
@@ -236,8 +188,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-M4-6Eq">
-                                <rect key="frame" x="20" y="752" width="374" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="probability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-M4-6Eq">
+                                <rect key="frame" x="20" y="731.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -353,7 +305,6 @@
                             <constraint firstItem="TPS-Sn-lMK" firstAttribute="centerX" secondItem="h1c-MC-W6d" secondAttribute="centerX" id="TDG-DT-0A8"/>
                             <constraint firstItem="iqa-M4-6Eq" firstAttribute="bottom" secondItem="1d2-8T-0fp" secondAttribute="bottom" constant="30" id="UiJ-P4-O8s"/>
                             <constraint firstItem="eyy-Kq-x0G" firstAttribute="trailing" secondItem="iqa-M4-6Eq" secondAttribute="trailing" constant="20" id="bEF-Oq-8Oe"/>
-                            <constraint firstItem="1d2-8T-0fp" firstAttribute="centerX" secondItem="h1c-MC-W6d" secondAttribute="centerX" id="dsZ-T3-AI6"/>
                             <constraint firstItem="eyy-Kq-x0G" firstAttribute="trailing" secondItem="97y-oi-nh4" secondAttribute="trailing" constant="30" id="h3U-44-ud8"/>
                             <constraint firstItem="iqa-M4-6Eq" firstAttribute="leading" secondItem="eyy-Kq-x0G" secondAttribute="leading" constant="20" id="mF4-30-hwh"/>
                             <constraint firstItem="SAS-Kh-5LI" firstAttribute="centerX" secondItem="h1c-MC-W6d" secondAttribute="centerX" id="pFM-Cc-YW0"/>
@@ -375,7 +326,7 @@
                         <outlet property="thighValue" destination="jtC-aW-Y28" id="XRI-vY-oLO"/>
                         <outlet property="waistValue" destination="23J-or-RzW" id="r6F-W1-vgn"/>
                         <segue destination="Cz5-Kd-g1i" kind="unwind" identifier="toVC1" unwindAction="fromVC3ToVC1WithSegue:" id="qD9-hd-epT"/>
-                        <segue destination="Cz5-Kd-g1i" kind="unwind" identifier="toVC5" unwindAction="fromVC6ToVC5WithSegue:" id="4rx-lq-PSh"/>
+                        <segue destination="Cz5-Kd-g1i" kind="unwind" identifier="toVC5" unwindAction="fromVC6ToVC5WithSegue:" id="JLQ-9V-FeF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBS-Z8-tLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -386,7 +337,7 @@
         <!--SIZE-->
         <scene sceneID="yxC-v4-gum">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGF-0a-eT6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EnterSize" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGF-0a-eT6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SIZE" image="house" catalog="system" selectedImage="house.fill" id="UFi-x4-WLB"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="njT-le-JrK"/>
