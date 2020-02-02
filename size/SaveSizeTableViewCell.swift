@@ -16,7 +16,8 @@ class SaveSizeTableViewCell: UITableViewCell {
     @IBOutlet weak var UserHemSize: UILabel!
     @IBOutlet weak var UserOutseamSize: UILabel!
     @IBOutlet weak var SaveClothIndex: UILabel!
-
+    @IBOutlet weak var recommendSize: UILabel!
+    
 
 }
 

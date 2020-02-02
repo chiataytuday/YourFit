@@ -46,11 +46,12 @@ class SaveSizeViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SaveSizeTableViewCell", for: indexPath) as! SaveSizeTableViewCell
         if let db = sizeInformation?[indexPath.row]{
-            cell.SaveClothIndex.text = "no." + String(indexPath.row + 1)
-            cell.UserWaistSize.text = "허리 : " + db.waist + "cm"
-            cell.UserThighSize.text = "허벅지 : " + db.thigh + "cm"
-            cell.UserHemSize.text = "밑단 : " + db.hem + "cm"
-            cell.UserOutseamSize.text = "총장 : " + db.outseam + "cm"
+            cell.SaveClothIndex.text = String(indexPath.row + 1)
+            cell.UserWaistSize.text = db.waist + "cm"
+            cell.UserThighSize.text = db.thigh + "cm"
+            cell.UserHemSize.text = db.hem + "cm"
+            cell.UserOutseamSize.text = db.outseam + "cm"
+            cell.recommendSize.text = db.recommendSize
             //result = db.recommendSize
         }
         return cell
