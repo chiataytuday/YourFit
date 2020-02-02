@@ -7,8 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="BMEULJIRO.otf">
-            <string>BMEULJIRO</string>
+        <array key="경기천년제목OTF_Medium.otf">
+            <string>GyeonggiTitleMOTF</string>
         </array>
     </customFonts>
     <scenes>
@@ -45,66 +45,66 @@
                                     <constraint firstAttribute="width" constant="110" id="3eE-dX-a3U"/>
                                     <constraint firstAttribute="height" constant="40" id="OAJ-vK-r5A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-3S-nF3">
-                                <rect key="frame" x="20" y="626.66666666666663" width="130.66666666666666" height="101.33333333333337"/>
+                                <rect key="frame" x="20" y="636" width="132" height="92"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-Mg-WwD">
-                                        <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="101.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="92"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WI-u1-f8e">
-                                                <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="19.333333333333332"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSt-rG-H1E">
-                                                <rect key="frame" x="0.0" y="27.333333333333371" width="42.333333333333336" height="19.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="25" width="43.666666666666664" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허벅지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-Or-wuC">
-                                                <rect key="frame" x="0.0" y="54.66666666666675" width="42.333333333333336" height="19.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="50" width="43.666666666666664" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밑단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-8U-tlY">
-                                                <rect key="frame" x="0.0" y="82" width="42.333333333333336" height="19.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="75" width="43.666666666666664" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-4a-dOr">
-                                        <rect key="frame" x="42.333333333333336" y="0.0" width="88.333333333333314" height="101.33333333333333"/>
+                                        <rect key="frame" x="43.666666666666664" y="0.0" width="88.333333333333343" height="92"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95q-Wk-pY8">
-                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="19.333333333333332"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eri-tL-syp">
-                                                <rect key="frame" x="0.0" y="27.333333333333371" width="88.333333333333329" height="19.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="25" width="88.333333333333329" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODh-9W-CB0">
-                                                <rect key="frame" x="0.0" y="54.66666666666675" width="88.333333333333329" height="19.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="50" width="88.333333333333329" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="측정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlm-Tk-cJR">
-                                                <rect key="frame" x="0.0" y="82" width="88.333333333333329" height="19.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="75" width="88.333333333333329" height="17"/>
+                                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -118,7 +118,7 @@
                                     <constraint firstAttribute="width" constant="127" id="ZhW-48-6f2"/>
                                     <constraint firstAttribute="height" constant="48" id="tAY-SD-Fy4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                 <state key="normal" title="측정 끝">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -127,10 +127,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaE-cT-XFd">
-                                <rect key="frame" x="228" y="626" width="87" height="32"/>
-                                <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="17"/>
+                                <rect key="frame" x="228" y="629" width="92" height="29"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="17"/>
                                 <state key="normal" title="직접 입력하기">
-                                    <color key="titleColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="vRW-jx-uEk" kind="show" id="6ra-lG-chd"/>
@@ -186,8 +186,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="probability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-M4-6Eq">
-                                <rect key="frame" x="20" y="647.66666666666663" width="335" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-M4-6Eq">
+                                <rect key="frame" x="20" y="668" width="335" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.28627450980000002" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -345,7 +345,7 @@
                         <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="BMEULJIRO" family="BM EULJIRO" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="GyeonggiTitleMOTF" family="GyeonggiTitleOTF" pointSize="22"/>
                             <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
