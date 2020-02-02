@@ -83,7 +83,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="modelnamenamenamenamenamenamenamename">
                                                             <attributes>
-                                                                <font key="NSFont" metaFont="menu" size="11"/>
+                                                                <font key="NSFont" metaFont="message" size="11"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -180,7 +180,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-gv-IoT">
-                                                    <rect key="frame" x="20" y="422.33333333333331" width="77" height="158.33333333333331"/>
+                                                    <rect key="frame" x="25" y="455.66666666666669" width="131.33333333333334" height="158.33333333333331"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-KV-OYP">
                                                             <rect key="frame" x="0.0" y="0.0" width="39.666666666666664" height="18"/>
@@ -189,7 +189,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-gp-PzP">
-                                                            <rect key="frame" x="0.0" y="33" width="62" height="18.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="33" width="116.33333333333333" height="18.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
@@ -201,17 +201,28 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="discount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-uE-2Xq">
-                                                            <rect key="frame" x="0.0" y="101.00000000000006" width="62.666666666666664" height="19.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="100.99999999999994" width="62.666666666666664" height="19.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="realPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-FT-zUV">
-                                                            <rect key="frame" x="0.0" y="135.33333333333331" width="77" height="23"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
-                                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="liM-qU-eNv">
+                                                            <rect key="frame" x="0.0" y="135.33333333333331" width="131.33333333333334" height="23"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="혜택가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhc-fe-geB">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="realPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-FT-zUV">
+                                                                    <rect key="frame" x="54.333333333333329" y="0.0" width="76.999999999999986" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="3Ui-gp-PzP" secondAttribute="trailing" constant="15" id="Iza-95-sd0"/>
@@ -230,7 +241,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUB-SQ-Dkw">
-                                                    <rect key="frame" x="20" y="624" width="89" height="33"/>
+                                                    <rect key="frame" x="25" y="624" width="89" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="c3z-db-p3Q"/>
                                                     </constraints>
@@ -256,10 +267,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="centerY" secondItem="dUB-SQ-Dkw" secondAttribute="centerY" id="AVT-8E-B2M"/>
-                                                <constraint firstItem="dUB-SQ-Dkw" firstAttribute="top" secondItem="tnq-FT-zUV" secondAttribute="bottom" constant="43.5" id="HS7-ZZ-Uhw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dUB-SQ-Dkw" secondAttribute="bottom" constant="32" id="OkY-Z6-R1S"/>
-                                                <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="tnq-FT-zUV" secondAttribute="leading" id="eTl-4q-L3H"/>
-                                                <constraint firstItem="mpq-gv-IoT" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" id="nO3-t4-XLM"/>
+                                                <constraint firstItem="dUB-SQ-Dkw" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" constant="5" id="PEO-cy-cbQ"/>
+                                                <constraint firstItem="dUB-SQ-Dkw" firstAttribute="top" secondItem="mpq-gv-IoT" secondAttribute="bottom" constant="10" id="mlp-lK-Z3E"/>
+                                                <constraint firstItem="mpq-gv-IoT" firstAttribute="leading" secondItem="XTO-OW-DC6" secondAttribute="leadingMargin" constant="5" id="nO3-t4-XLM"/>
                                                 <constraint firstItem="f7d-of-hPe" firstAttribute="trailing" secondItem="XTO-OW-DC6" secondAttribute="trailingMargin" id="zxt-p7-CNp"/>
                                             </constraints>
                                         </tableViewCellContentView>
