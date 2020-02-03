@@ -61,20 +61,30 @@
 								</header>
 								<ul class="features">
 									<li>
-										<span class="icon solid major style1 fa-code"></span>
+										<span class="image"><img width="300" height = "600" src="images/2.png" alt="측정" /></span>
 										<h3>사이즈 측정</h3>
 										<p>ARKit 활용</p>
 									</li>
 									<li>
-										<span class="icon major style3 fa-copy"></span>
+										<span class="image"><img width="300" height = "600" src="images/2.png" alt="추천" /></span>
 										<h3>사이즈 추천</h3>
-										<p>coreML Tabular Classifier </p>
+										<p>CoreML Tabular Classifier </p>
 									</li>
+									
+								</ul>
+								<ul class="features">
 									<li>
-										<span class="icon major style5 fa-gem"></span>
+										<span class="image"><img width="300" height = "600" src="images/3.png" alt="옷장" /></span>
 										<h3>옷장</h3>
-										<p>realm db 이용해서 데이터 저장</p>
+										<p>Realm DB 이용해서 데이터 저장</p>
 									</li>
+
+									<li>
+										<span class="image"><img width="300" height = "600" src="images/4.png" alt="좋아요" /></span>
+										<h3>좋아요</h3>
+										<p>Realm DB 이용해서 데이터 저장</p>
+									</li>
+
 								</ul>
 								<footer class="major">
 									<!-- <ul class="actions special">
@@ -95,24 +105,34 @@
 										<h3>사이즈 측정</h3>
 									</li>
 								</ul>
-								 <p class="content">바지 사이즈를 측정하기 위해 아이폰 기본앱인 측정앱에서 사용하는<br> ARKit 를 사용하여 시작지점과 끝지점을 카메라로 측정하여 바지의<br> 허리,허벅지,밑단,총장에 대한 길이 정보를 저장.</p>
-
+								 <p>바지 사이즈를 측정하기 위해 아이폰 기본앱인 측정앱에서 사용하는<br> ARKit 를 사용하여 시작지점과 끝지점을 카메라로 측정하여<br> 바지의 허리,허벅지,밑단,총장에 대한 길이 정보를 저장.</p>
+ 0
 								<ul class="features">
 									<li>
 										<span class="icon major style3 fa-copy"></span>
 										<h3>사이즈 추천</h3>
 									</li>
 								</ul>
-								<p class="content">쇼핑몰의 옷의 길이에 대한 정보들을 csv파일로 저장하여 필요한 데이터셋을 확보 한 후 
-									CoreML Tabular Classifier 를 사용 한 후 허리 , 허벅지 , 밑단 , 총장을 feature 값으로 설정하고 예측하려고 하는 size를 target으로 설정해 학습한 모델을 통해 입력받은 옷의 정보와 가장 비슷한 사이즈를 찾아낼 수 있으며, 이 사이즈를 필터로 같은 사이즈의 옷들만 검색하여 쇼핑할 수 있도록 함.
+								<p>쇼핑몰의 옷의 길이에 대한 정보들을 csv파일로 저장하여<br> 필요한 데이터셋을 확보 한 후 
+									CoreML Tabular Classifier 를 사용 한 후 <br> 허리 , 허벅지 , 밑단 , 총장을 feature 값으로 설정하고<br> 예측하려고 하는 size를 target으로 설정해 학습한 모델을 통해 <br>
+									입력받은 옷의 정보와 가장 비슷한 사이즈를 찾아낼 수 있으며,<br> 이 사이즈를 필터로 같은 사이즈의 옷들만 검색하여 쇼핑할 수 있도록 함.
 								</p>
 								<ul class="features">
 									<li>
 										<span class="icon major style5 fa-gem"></span>
-										<h3>옷장 + 좋아요 <<< 좋아요도 넣어줘야하지않을까 정인앙??</h3>
+										<h3>옷장</h3>
 									</li>
 								</ul>
-								<p class="content"></p>
+								<p>측정을 통해 얻은 옷의 수치 정보를 Realm DB를 이용해 사용자의 디바이스에 저장해주어<BR> 한번 측정한 옷의 정보를 다시 입력하지 않도록 함. </p>
+								<ul class="features">
+									<li>
+										<span class="icon major style5 fa-gem"></span>
+										<h3>좋아요</h3>
+									</li>
+								</ul>
+								<p>쇼핑 리스트에서 마음에 드는 옷에 있는 하트 버튼을 눌렀을 때<br>
+									 그 옷에 대한 정보를 Realm DB를 이용해 사용자 디바이스에 저장해 <br>
+									  좋아요 탭에서 마음에 드는 옷들을 모아 볼 수 있도록 함. </p>
 								<footer class="major">
 									<!-- <ul class="actions special">
 										<li><a href="generic.html" class="button">Learn More</a></li>
