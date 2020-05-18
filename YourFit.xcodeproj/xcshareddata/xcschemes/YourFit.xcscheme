@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CACA18023C5D49A00FEDE69"
-               BuildableName = "size.app"
-               BlueprintName = "size"
-               ReferencedContainer = "container:size.xcodeproj">
+               BuildableName = "YourFit.app"
+               BlueprintName = "YourFit"
+               ReferencedContainer = "container:YourFit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CACA18023C5D49A00FEDE69"
-            BuildableName = "size.app"
-            BlueprintName = "size"
-            ReferencedContainer = "container:size.xcodeproj">
+            BuildableName = "YourFit.app"
+            BlueprintName = "YourFit"
+            ReferencedContainer = "container:YourFit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CACA18023C5D49A00FEDE69"
-            BuildableName = "size.app"
-            BlueprintName = "size"
-            ReferencedContainer = "container:size.xcodeproj">
+            BuildableName = "YourFit.app"
+            BlueprintName = "YourFit"
+            ReferencedContainer = "container:YourFit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

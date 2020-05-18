@@ -76,7 +76,7 @@
 		0CA5209E23CC3AC8003CD086 /* ClothDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailViewController.swift; sourceTree = "<group>"; };
 		0CA5EEC623CEFDF0005C43E3 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		0CA6955D23E6673A00CCFB35 /* ClothInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothInformationCollectionViewCell.swift; sourceTree = "<group>"; };
-		0CACA18123C5D49A00FEDE69 /* size.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = size.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CACA18123C5D49A00FEDE69 /* YourFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CACA18423C5D49A00FEDE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CACA18623C5D49A00FEDE69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0CACA18823C5D49A00FEDE69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		0CACA18223C5D49A00FEDE69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CACA18123C5D49A00FEDE69 /* size.app */,
+				0CACA18123C5D49A00FEDE69 /* YourFit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,9 +198,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CACA18023C5D49A00FEDE69 /* size */ = {
+		0CACA18023C5D49A00FEDE69 /* YourFit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CACA19523C5D49E00FEDE69 /* Build configuration list for PBXNativeTarget "size" */;
+			buildConfigurationList = 0CACA19523C5D49E00FEDE69 /* Build configuration list for PBXNativeTarget "YourFit" */;
 			buildPhases = (
 				0ECAE4D9AA8B44D7CF67868D /* [CP] Check Pods Manifest.lock */,
 				0CACA17D23C5D49A00FEDE69 /* Sources */,
@@ -212,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = size;
+			name = YourFit;
 			productName = size;
-			productReference = 0CACA18123C5D49A00FEDE69 /* size.app */;
+			productReference = 0CACA18123C5D49A00FEDE69 /* YourFit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CACA17C23C5D49A00FEDE69 /* Build configuration list for PBXProject "size" */;
+			buildConfigurationList = 0CACA17C23C5D49A00FEDE69 /* Build configuration list for PBXProject "YourFit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -245,7 +245,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CACA18023C5D49A00FEDE69 /* size */,
+				0CACA18023C5D49A00FEDE69 /* YourFit */,
 			);
 		};
 /* End PBXProject section */
@@ -519,7 +519,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size330123;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YourFit;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -542,7 +542,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.minproject.size123123123;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YourFit;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -551,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CACA17C23C5D49A00FEDE69 /* Build configuration list for PBXProject "size" */ = {
+		0CACA17C23C5D49A00FEDE69 /* Build configuration list for PBXProject "YourFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CACA19323C5D49E00FEDE69 /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CACA19523C5D49E00FEDE69 /* Build configuration list for PBXNativeTarget "size" */ = {
+		0CACA19523C5D49E00FEDE69 /* Build configuration list for PBXNativeTarget "YourFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CACA19623C5D49E00FEDE69 /* Debug */,

@@ -26,7 +26,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Size(이)가 사용자의 옷 사이즈 측정을 위해 카메라를 사용합니다.</string>
+	<string>YourFit(이)가 사용자의 옷 사이즈 측정을 위해 카메라를 사용합니다.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>경기천년제목OTF_Bold.otf</string>
