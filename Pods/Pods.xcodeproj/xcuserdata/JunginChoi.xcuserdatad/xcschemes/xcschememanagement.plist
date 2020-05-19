@@ -4,16 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-size.xcscheme_^#shared#^_</key>
+		<key>Pods-YourFit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Realm.xcscheme_^#shared#^_</key>
+		<key>Realm.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>

@@ -43,7 +43,7 @@
 		0CACA19123C5D49E00FEDE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CACA18F23C5D49E00FEDE69 /* LaunchScreen.storyboard */; };
 		0CACA19923C5D4C900FEDE69 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CACA19823C5D4C900FEDE69 /* Cloth.swift */; };
 		0CD5A48223D58007000281A8 /* EnterSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */; };
-		4F37F7395482B78462CEC3EB /* Pods_size.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525D2E2C950ADEFB6CA4215E /* Pods_size.framework */; };
+		1491089BB0A68C6C23373843 /* Pods_YourFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CA5667FF0121A3C9CA7E47 /* Pods_YourFit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +88,9 @@
 		0CD5A48123D58007000281A8 /* EnterSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterSizeViewController.swift; sourceTree = "<group>"; };
 		24B75E6A397F5A073A394954 /* Pods-size.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-size.release.xcconfig"; path = "Target Support Files/Pods-size/Pods-size.release.xcconfig"; sourceTree = "<group>"; };
 		3076F0CA438099541527D701 /* Pods-size.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-size.debug.xcconfig"; path = "Target Support Files/Pods-size/Pods-size.debug.xcconfig"; sourceTree = "<group>"; };
-		525D2E2C950ADEFB6CA4215E /* Pods_size.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_size.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49CE1DBE24153C0096F496C8 /* Pods-YourFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourFit.release.xcconfig"; path = "Target Support Files/Pods-YourFit/Pods-YourFit.release.xcconfig"; sourceTree = "<group>"; };
+		7FE698A2F2D0DDA2B5F4688D /* Pods-YourFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourFit.debug.xcconfig"; path = "Target Support Files/Pods-YourFit/Pods-YourFit.debug.xcconfig"; sourceTree = "<group>"; };
+		D5CA5667FF0121A3C9CA7E47 /* Pods_YourFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 				0C9EFE0B23E0004700440799 /* ARKit.framework in Frameworks */,
 				0C9EFE0C23E0004700440799 /* libswiftARKit.tbd in Frameworks */,
 				0C9C936A23CDD3D800F07D3C /* WebKit.framework in Frameworks */,
-				4F37F7395482B78462CEC3EB /* Pods_size.framework in Frameworks */,
+				1491089BB0A68C6C23373843 /* Pods_YourFit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +130,7 @@
 				0C9EFE0923E0004700440799 /* ARKit.framework */,
 				0C9EFE0A23E0004700440799 /* libswiftARKit.tbd */,
 				0C9C936923CDD3D800F07D3C /* WebKit.framework */,
-				525D2E2C950ADEFB6CA4215E /* Pods_size.framework */,
+				D5CA5667FF0121A3C9CA7E47 /* Pods_YourFit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,7 +138,7 @@
 		0CACA17823C5D49A00FEDE69 = {
 			isa = PBXGroup;
 			children = (
-				0CACA18323C5D49A00FEDE69 /* size */,
+				0CACA18323C5D49A00FEDE69 /* YourFit */,
 				0CACA18223C5D49A00FEDE69 /* Products */,
 				0C9C936823CDD3D700F07D3C /* Frameworks */,
 				AB5C29C0416AA8524F304983 /* Pods */,
@@ -151,7 +153,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0CACA18323C5D49A00FEDE69 /* size */ = {
+		0CACA18323C5D49A00FEDE69 /* YourFit */ = {
 			isa = PBXGroup;
 			children = (
 				0C193E7D23E42F3A00F59408 /* font */,
@@ -183,7 +185,7 @@
 				0C0A924E23E5A77500548DFF /* OpenClosetViewCell.swift */,
 				0CA6955D23E6673A00CCFB35 /* ClothInformationCollectionViewCell.swift */,
 			);
-			path = size;
+			path = YourFit;
 			sourceTree = "<group>";
 		};
 		AB5C29C0416AA8524F304983 /* Pods */ = {
@@ -191,6 +193,8 @@
 			children = (
 				3076F0CA438099541527D701 /* Pods-size.debug.xcconfig */,
 				24B75E6A397F5A073A394954 /* Pods-size.release.xcconfig */,
+				7FE698A2F2D0DDA2B5F4688D /* Pods-YourFit.debug.xcconfig */,
+				49CE1DBE24153C0096F496C8 /* Pods-YourFit.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -291,7 +295,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-size-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-YourFit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,15 +308,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-size/Pods-size-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YourFit/Pods-YourFit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-size/Pods-size-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YourFit/Pods-YourFit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-size/Pods-size-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourFit/Pods-YourFit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -504,7 +508,7 @@
 		};
 		0CACA19623C5D49E00FEDE69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3076F0CA438099541527D701 /* Pods-size.debug.xcconfig */;
+			baseConfigurationReference = 7FE698A2F2D0DDA2B5F4688D /* Pods-YourFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,7 +531,7 @@
 		};
 		0CACA19723C5D49E00FEDE69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24B75E6A397F5A073A394954 /* Pods-size.release.xcconfig */;
+			baseConfigurationReference = 49CE1DBE24153C0096F496C8 /* Pods-YourFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
